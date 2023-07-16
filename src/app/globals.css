@@ -15,8 +15,8 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background-color: rgb(var(--background-rgb));
+  /* color: rgb(var(--foreground-rgb));
+  background-color: rgb(var(--background-rgb)); */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
