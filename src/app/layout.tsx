@@ -7,7 +7,7 @@ import Data from "@/data/data.json";
 const data = Data.data;
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.URL ?? "http://localhost:3000"),
+  metadataBase: new URL(process.env.URL ?? "https://bodycare-yumin.com"),
   title: data.info.title,
   description: data.info.description,
   openGraph: {
