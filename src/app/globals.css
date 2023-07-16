@@ -3,25 +3,46 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --foreground-rgb: 51, 51, 51;
+  --background-rgb: 254, 254, 254;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --foreground-rgb: 254, 254, 254;
+    --background-rgb: 51, 51, 51;
   }
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: rgb(var(--background-rgb));
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+figure.mask img {
+  -webkit-mask-image: url(../../public/images/svg/shape-01-8s.svg);
+  mask-image: url(../../public/images/svg/shape-01-8s.svg);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  @media (min-width: 375px) {
+    -webkit-mask-size: 390px;
+    mask-size: 390px;
+  }
+  @media (min-width: 768px) {
+    -webkit-mask-size: 900px;
+    mask-size: 900px;
+  }
+  @media (min-width: 1024px) {
+    -webkit-mask-size: 450px;
+    mask-size: 450px;
+  }
+  @media (min-width: 1280px) {
+    -webkit-mask-size: 490px;
+    mask-size: 490px;
+  }
 }

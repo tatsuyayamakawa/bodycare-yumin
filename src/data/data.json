@@ -1,0 +1,15 @@
+{
+	"data": {
+		"info": {
+			"domain": "https://bodycare-yumin.com",
+			"image": "/ogp.png",
+			"title": "手もみ整体 癒眠｜山形で自律神経を改善するための整体サロン",
+			"description": "手もみ整体 癒眠では、日々のストレスで乱れがちな自律神経の改善と、健康な体を取り戻すための自然治癒力を高めるサポートをいたします。"
+		},
+		"sns": {
+			"instagram": "https://www.instagram.com/bodycare_yumin",
+			"github": "https://github.com/tatsuyayamakawa/bodycare-yumin",
+			"qiita": "https://qiita.com/tatsuyayamakawa"
+		}
+	}
+}
