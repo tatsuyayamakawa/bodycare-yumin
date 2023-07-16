@@ -42,15 +42,11 @@ const SectionHeader = ({
   };
 
   return (
-    <div
-      className={
-        isAlign ? "my-10 text-center" : "my-10 mobile:mx-10 laptop:mx-14"
-      }
-    >
+    <div className={isAlign ? "my-10 text-center" : "mx-10 my-10 laptop:mx-14"}>
       <h2
         aria-label={`${heading2}`}
         role="heading"
-        className="mb-4 font-zenmincho font-bold leading-relaxed text-primary mobile:text-3xl laptop:text-5xl"
+        className="mb-4 font-zenmincho text-3xl font-bold leading-relaxed text-primary laptop:text-5xl"
       >
         {heading2.split(" ").map((word, index) => {
           return (
@@ -84,7 +80,7 @@ const SectionHeader = ({
       <h3
         aria-label={`${heading3}`}
         role="heading"
-        className="font-allura font-normal leading-normal text-accent mobile:text-2xl laptop:text-4xl"
+        className="font-allura text-2xl font-normal leading-normal text-accent laptop:text-4xl"
       >
         {heading3.split(" ").map((word, index) => {
           return (

@@ -51,7 +51,7 @@ const About = () => {
                 sizes="100vw"
                 quality={75}
                 placeholder="blur"
-                className="rounded-lg mobile:m-auto mobile:mt-6 mobile:hidden laptop:absolute laptop:right-0 laptop:top-0 laptop:z-10 laptop:block"
+                className="m-auto mt-6 hidden rounded-lg laptop:absolute laptop:right-0 laptop:top-0 laptop:z-10 laptop:block"
               />
             </figure>
           </motion.div>

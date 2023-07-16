@@ -29,7 +29,7 @@ figure.mask img {
   mask-repeat: no-repeat;
   -webkit-mask-position: center;
   mask-position: center;
-  @media (min-width: 375px) {
+  @media (min-width: 360px) {
     -webkit-mask-size: 390px;
     mask-size: 390px;
   }

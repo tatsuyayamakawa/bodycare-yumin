@@ -48,7 +48,7 @@ const Profile = () => {
 
   return (
     <section className="laptop:container">
-      <div className="my-24 flex items-center mobile:mx-10 mobile:flex-col mobile:gap-10 laptop:mx-20 laptop:flex-row laptop:gap-20 desktop:mx-52">
+      <div className="mx-10 my-24 flex flex-col items-center gap-10 laptop:mx-20 laptop:flex-row laptop:gap-20 desktop:mx-52">
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -60,7 +60,7 @@ const Profile = () => {
           </figure>
         </motion.div>
         <div>
-          <h2 className="mb-6 font-notojp font-medium text-accent mobile:text-2xl laptop:text-3xl">
+          <h2 className="mb-6 font-notojp text-2xl font-medium text-accent laptop:text-3xl">
             {heading2.split(" ").map((word, index) => {
               return (
                 <motion.div
@@ -90,7 +90,7 @@ const Profile = () => {
               );
             })}
           </h2>
-          <h3 className="mb-10 font-zenmincho font-bold text-primary mobile:text-4xl laptop:text-5xl">
+          <h3 className="mb-10 font-zenmincho text-4xl font-bold text-primary laptop:text-5xl">
             {heading3.split(" ").map((word, index) => {
               return (
                 <motion.div
@@ -120,7 +120,7 @@ const Profile = () => {
               );
             })}
           </h3>
-          <h4 className="mb-6 font-notojp font-medium text-primary mobile:text-xl laptop:text-2xl">
+          <h4 className="mb-6 font-notojp text-xl font-medium text-primary laptop:text-2xl">
             {heading4.split(" ").map((word, index) => {
               return (
                 <motion.div

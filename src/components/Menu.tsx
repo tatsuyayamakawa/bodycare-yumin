@@ -48,7 +48,7 @@ const Menu = () => {
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 1200 120"
           preserveAspectRatio="none"
-          className="block w-[calc(200%_+_1.3px)] origin-center rotate-180 mobile:h-10 desktop:h-20"
+          className="block h-10 w-[calc(200%_+_1.3px)] origin-center rotate-180 desktop:h-20"
         >
           <path
             d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
@@ -73,7 +73,7 @@ const Menu = () => {
           whileInView="visible"
           variants={container}
           viewport={{ once: true }}
-          className="flex items-center justify-center gap-6 laptop:container mobile:flex-col laptop:flex-row"
+          className="flex flex-col items-center justify-center gap-6 laptop:container laptop:flex-row"
         >
           {menus.map((menu) => {
             return (
@@ -108,24 +108,24 @@ const Menu = () => {
           whileInView="visible"
           variants={scale}
           viewport={{ once: true }}
-          className="mb-4 mt-8 flex flex-col items-center"
+          className="mx-10 mb-4 mt-8 flex flex-col items-center"
         >
           <a href="https://lin.ee/wzPQgmv" target="_blank" className="mx-auto">
             <Button
               color="green"
-              className="flex gap-3 px-8 py-5 font-notojp text-xl font-bold"
+              className="flex gap-3 px-8 py-5 font-notojp text-lg font-bold laptop:text-2xl"
             >
               <CalendarDaysIcon strokeWidth={2} className="h-7 w-7" />
               LINEで予約する
             </Button>
           </a>
-          <p className="mt-4 font-notojp text-sm font-normal text-gray-25">
+          <p className="mt-8 font-notojp text-sm font-normal text-gray-25">
             <a
               href="https://kosodate.pref.yamagata.jp/passport"
               target="_blank"
-              className="text-link"
+              className="underline"
             >
-              やまがた子育て応援パスポート
+              子育て応援パスポート
             </a>
             のご提示で&#34;10%割引&#34;できます！
           </p>
@@ -136,7 +136,7 @@ const Menu = () => {
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 1200 120"
           preserveAspectRatio="none"
-          className="block w-[calc(200%_+_1.3px)] mobile:h-10 desktop:h-20"
+          className="block h-10 w-[calc(200%_+_1.3px)] desktop:h-20"
         >
           <path
             d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"

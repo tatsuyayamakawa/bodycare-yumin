@@ -48,7 +48,7 @@ const Media = () => {
   return (
     <section className="laptop:container">
       <div className="my-24 tablet:mx-10 desktop:mx-40">
-        <h2 className="mb-10 text-center font-notojp font-bold text-accent mobile:mx-10 mobile:text-2xl laptop:text-4xl">
+        <h2 className="mx-10 mb-10 text-center font-notojp text-2xl font-bold text-accent laptop:text-4xl">
           {heading2.split(" ").map((word, index) => {
             return (
               <motion.div
@@ -83,7 +83,7 @@ const Media = () => {
           whileInView="visible"
           variants={display}
           viewport={{ once: true }}
-          className="flex items-center justify-between gap-10 bg-gray-10 p-10 mobile:flex-col tablet:rounded-lg laptop:flex-row"
+          className="flex flex-col items-center justify-between gap-10 bg-gray-10 p-10 tablet:rounded-lg laptop:flex-row"
         >
           <ImageWrapper src={media01Image} alt="はつらつ元気 2014年9月号" />
           <ImageWrapper src={media02Image} alt="特集掲載ページ" />

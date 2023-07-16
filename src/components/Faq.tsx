@@ -93,7 +93,7 @@ const Faq = () => {
           whileInView="visible"
           variants={container}
           viewport={{ once: true }}
-          className="my-10 mobile:mx-5"
+          className="mx-5 my-10"
         >
           {questions.map((question) => {
             return (
@@ -102,19 +102,19 @@ const Faq = () => {
                 icon={<Icon id={question.id} open={open} />}
                 animate={customAnimation}
                 key={question.id}
-                className="mobile:[&:not(:first-of-type)]:mt-5 laptop:[&:not(:first-of-type)]:mt-10"
+                className="[&:not(:first-of-type)]:mt-5 laptop:[&:not(:first-of-type)]:mt-10"
               >
                 <motion.div variants={item}>
                   <AccordionHeader
                     className="rounded-lg border-b-0 bg-gray-200 px-6 py-4"
                     onClick={() => handleOpen(question.id)}
                   >
-                    <h4 className="flex items-center font-notojp font-normal text-gray-75 before:mr-5 before:font-b612mono before:content-['Q'] mobile:text-base mobile:before:text-2xl laptop:text-lg before:laptop:text-3xl">
+                    <h4 className="flex items-center font-notojp text-base font-normal text-gray-75 before:mr-5 before:font-b612mono before:text-2xl before:content-['Q'] laptop:text-lg before:laptop:text-3xl">
                       {question.question}
                     </h4>
                   </AccordionHeader>
                   <AccordionBody className="mt-5 px-6">
-                    <p className="whitespace-pre-wrap font-notojp font-normal tracking-widest text-gray-50 mobile:text-sm laptop:text-base">
+                    <p className="whitespace-pre-wrap font-notojp text-sm font-normal tracking-widest text-gray-50 laptop:text-base">
                       {question.answer}
                     </p>
                   </AccordionBody>
