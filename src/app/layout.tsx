@@ -37,7 +37,7 @@ export default function RootLayout({
 }) {
   return (
     <html
-      lang="jp-JP"
+      lang="ja-JP"
       className={`${notojp.variable} ${zenmincho.variable} ${allura.variable} ${b612mono.variable}`}
     >
       <Script
