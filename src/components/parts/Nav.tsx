@@ -62,6 +62,7 @@ const Nav = () => {
 
       {/* ハンバーガーボタン */}
       <button
+        aria-label="メインメニュー"
         className="flex flex-col items-center justify-center lg:hidden"
         onClick={handleClick}
       >
