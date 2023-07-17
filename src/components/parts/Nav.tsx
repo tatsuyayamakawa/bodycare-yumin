@@ -5,9 +5,10 @@ import { motion } from "framer-motion";
 import { Link as Scroll } from "react-scroll";
 
 // デスクトップ版ナビゲーション
-const CustomLink = ({ to, title, className }: NavProps) => {
+const CustomLink = ({ href, to, title, className }: NavProps) => {
   return (
     <Scroll
+      href={href}
       to={to}
       smooth={true}
       duration={600}
@@ -84,9 +85,19 @@ const Nav = () => {
       {/* グローバルナビゲーション */}
       <div className="hidden items-center justify-between lg:flex">
         <nav className="font-notojp text-lg font-normal text-primary">
-          <CustomLink to="about" title="癒眠について" className="mr-4" />
-          <CustomLink to="menu" title="料金" className="mx-4" />
-          <CustomLink to="access" title="アクセス" className="ml-4" />
+          <CustomLink
+            href="#about"
+            to="about"
+            title="癒眠について"
+            className="mr-4"
+          />
+          <CustomLink href="#menu" to="menu" title="料金" className="mx-4" />
+          <CustomLink
+            href="#access"
+            to="access"
+            title="アクセス"
+            className="ml-4"
+          />
         </nav>
       </div>
 
@@ -99,18 +110,21 @@ const Nav = () => {
         >
           <nav className="flex flex-col items-center justify-center font-notojp text-lg font-normal text-white">
             <CustomMobileLink
+              href="#about"
               to="about"
               title="癒眠について"
               className=""
               toggle={handleClick}
             />
             <CustomMobileLink
+              href="#menu"
               to="menu"
               title="料金"
               className=""
               toggle={handleClick}
             />
             <CustomMobileLink
+              href="#access"
               to="access"
               title="アクセス"
               className=""

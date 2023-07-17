@@ -15,6 +15,7 @@ type ImageWrapperProps = {
 
 // Nav.tsx
 type NavProps = {
+	href: string;
 	to: string;
 	title: string;
 	className: string;
