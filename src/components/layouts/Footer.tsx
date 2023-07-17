@@ -73,17 +73,17 @@ const Footer = () => {
       <div className="mx-10 my-10 border border-gray-25/20" />
       <div className="mx-10 flex flex-col items-center justify-between gap-10 laptop:flex-row">
         <div className="flex flex-col items-center justify-between ">
-          <small className="mx-10 mb-5 font-notojp text-sm font-normal text-gray-50">
+          <small className="mx-10 mb-5 font-notojp text-sm font-normal text-gray-75">
             &copy; 手もみ整体 癒眠
           </small>
-          <p className="font-notojp text-sm font-normal text-gray-50">
+          <p className="font-notojp text-sm font-normal text-gray-75">
             《適格請求書発行事業者登録番号》
           </p>
-          <p className="font-notojp text-sm font-normal text-gray-50">
+          <p className="font-notojp text-sm font-normal text-gray-75">
             T8 8108 1135 4453
           </p>
         </div>
-        <div className="mx-10 flex justify-center gap-10 font-notojp text-sm font-normal text-gray-50">
+        <div className="mx-10 flex justify-center gap-10 font-notojp text-sm font-normal text-gray-75">
           <a href={data.sns.instagram} aria-label="Instagram" target="_blank">
             <FaInstagram fontSize={40} />
           </a>
