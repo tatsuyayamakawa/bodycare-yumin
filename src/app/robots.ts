@@ -1,4 +1,7 @@
 import { MetadataRoute } from 'next'
+import Data from "@/data/data.json";
+
+const data = Data.data;
 
 export default function robots(): MetadataRoute.Robots {
 	return {
@@ -7,6 +10,6 @@ export default function robots(): MetadataRoute.Robots {
 			allow: '/',
 			disallow: '/private/',
 		},
-		sitemap: 'http://localhost:3000/sitemap.xml',
+		sitemap: `${data.info.domain}/sitemap.xml`,
 	}
 }
