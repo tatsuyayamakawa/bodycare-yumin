@@ -84,7 +84,10 @@ const Nav = () => {
 
       {/* グローバルナビゲーション */}
       <div className="hidden items-center justify-between lg:flex">
-        <nav className="font-notojp text-lg font-normal text-primary">
+        <nav
+          aria-label="グローバルナビゲーション"
+          className="font-notojp text-lg font-normal text-primary"
+        >
           <CustomLink
             href="#about"
             to="about"
@@ -108,7 +111,10 @@ const Nav = () => {
           animate={{ scale: 1, opacity: 1 }}
           className="fixed left-1/2 top-1/2 z-30 min-w-[70vw] -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-between rounded-lg bg-black/40 py-32 text-center backdrop-blur-md lg:hidden"
         >
-          <nav className="flex flex-col items-center justify-center font-notojp text-lg font-normal text-white">
+          <nav
+            aria-label="グローバルナビゲーション"
+            className="flex flex-col items-center justify-center font-notojp text-lg font-normal text-white"
+          >
             <CustomMobileLink
               href="#about"
               to="about"

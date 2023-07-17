@@ -22,7 +22,11 @@ const Footer = () => {
           viewport={{ once: true }}
           className="w-full laptop:w-1/2 desktop:w-2/6"
         >
-          <a href="https://lin.ee/wzPQgmv" target="_blank">
+          <a
+            href="https://lin.ee/wzPQgmv"
+            aria-label="LINEで予約"
+            target="_blank"
+          >
             <Button
               color="white"
               className="w-full bg-white px-10 py-5 font-notojp text-lg font-bold text-primary laptop:text-2xl"
@@ -45,7 +49,11 @@ const Footer = () => {
           viewport={{ once: true }}
           className="w-full laptop:w-1/2 desktop:w-2/6"
         >
-          <a href="https://forms.gle/a8qo8Cr1snXYHTMp8" target="_blank">
+          <a
+            href="https://forms.gle/a8qo8Cr1snXYHTMp8"
+            aria-label="お問い合わせ"
+            target="_blank"
+          >
             <Button
               color="white"
               className="w-full bg-white py-5 font-notojp text-lg font-bold text-primary laptop:text-2xl"
@@ -76,13 +84,13 @@ const Footer = () => {
           </p>
         </div>
         <div className="mx-10 flex justify-center gap-10 font-notojp text-sm font-normal text-gray-50">
-          <a href={data.sns.instagram} target="_blank">
+          <a href={data.sns.instagram} aria-label="Instagram" target="_blank">
             <FaInstagram fontSize={40} />
           </a>
-          <a href={data.sns.github} target="_blank">
+          <a href={data.sns.github} aria-label="Github" target="_blank">
             <FaGithub fontSize={40} />
           </a>
-          <a href={data.sns.qiita} target="_blank">
+          <a href={data.sns.qiita} aria-label="Qiita" target="_blank">
             <SiQiita fontSize={40} />
           </a>
         </div>
