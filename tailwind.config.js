@@ -33,12 +33,10 @@ module.exports = withMT({
 				'secondary': '#EFEBE9',
 				'accent': '#FF9933',
 				'white': '#FEFEFE',
-				'black': '#333333',
 				'gray-10': '#EEEEEE',
 				'gray-25': '#AAAAAA',
 				'gray-50': '#707070',
 				'gray-75': '#444444',
-				'link': '#0d87e0'
 			},
 			backgroundImage: {
 				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
