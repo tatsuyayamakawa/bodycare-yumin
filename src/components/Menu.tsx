@@ -119,7 +119,7 @@ const Menu = () => {
               LINEで予約する
             </Button>
           </a>
-          <p className="mt-8 font-notojp text-sm font-normal text-gray-25">
+          <p className="mt-8 font-notojp text-sm font-normal text-gray-50">
             <a
               href="https://kosodate.pref.yamagata.jp/passport"
               target="_blank"

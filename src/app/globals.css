@@ -3,20 +3,22 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 51, 51, 51;
+  --foreground-rgb: 68, 68, 68;
   --background-rgb: 254, 254, 254;
 }
 
+/* ダークモードは保留
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 254, 254, 254;
     --background-rgb: 51, 51, 51;
   }
 }
+*/
 
 body {
-  /* color: rgb(var(--foreground-rgb));
-  background-color: rgb(var(--background-rgb)); */
+  color: rgb(var(--foreground-rgb));
+  background-color: rgb(var(--background-rgb));
   margin: 0;
   padding: 0;
   box-sizing: border-box;
