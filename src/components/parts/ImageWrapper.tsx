@@ -12,6 +12,10 @@ export default function ImageWrapper({
           src={src}
           alt={alt}
           sizes="100vw"
+          style={{
+            width: "100%",
+            height: "auto",
+          }}
           quality={75}
           placeholder="blur"
           className={`${className} relative object-contain`}
