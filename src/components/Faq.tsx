@@ -1,6 +1,7 @@
 "use client";
 
 import HeadingTemp from "@/components/parts/SectionHeader";
+import { ArrowDown } from "@/components/parts/SvgIcons";
 import { useState } from "react";
 import {
   Accordion,
@@ -9,23 +10,6 @@ import {
 } from "@material-tailwind/react";
 import { motion } from "framer-motion";
 import { container, item } from "@/utiles/motion";
-
-const Icon = ({ id, open }: IconProps) => {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      className={`${
-        id === open ? "ml-auto rotate-180 text-gray-50" : ""
-      } ml-auto h-5 w-5 text-gray-50 transition-transform`}
-      fill="none"
-      viewBox="0 0 24 24"
-      stroke="currentColor"
-      strokeWidth={4}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-    </svg>
-  );
-};
 
 const Faq = () => {
   const [open, setOpen] = useState(0);
@@ -99,7 +83,7 @@ const Faq = () => {
             return (
               <Accordion
                 open={open === question.id}
-                icon={<Icon id={question.id} open={open} />}
+                icon={<ArrowDown id={question.id} open={open} />}
                 animate={customAnimation}
                 key={question.id}
                 className="[&:not(:first-of-type)]:mt-5 laptop:[&:not(:first-of-type)]:mt-10"
