@@ -48,9 +48,7 @@ const About = () => {
                 width={618}
                 height={414}
                 alt="アロマディフューザーと骨格模型"
-                sizes="100vw"
                 quality={75}
-                placeholder="blur"
                 className="m-auto mt-6 hidden rounded-lg laptop:absolute laptop:right-0 laptop:top-0 laptop:z-10 laptop:block"
               />
             </figure>

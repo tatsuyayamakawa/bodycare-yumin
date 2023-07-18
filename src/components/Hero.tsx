@@ -13,7 +13,7 @@ const Hero = () => {
           height={480}
           alt="手もみ整体 癒眠 待合室写真"
           quality={75}
-          placeholder="blur"
+          priority
           className="mx-auto desktop:rounded-lg"
         />
       </figure>

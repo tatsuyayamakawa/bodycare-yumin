@@ -55,7 +55,7 @@ const Nav = () => {
             width={225}
             height={27}
             alt="手もみ整体 癒眠｜山形で自律神経を改善するための整体サロン"
-            placeholder="blur"
+            priority
           />
         </figure>
       </h1>
