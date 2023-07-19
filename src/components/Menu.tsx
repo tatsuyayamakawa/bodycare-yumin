@@ -5,7 +5,11 @@ import ImageWrapper from "./parts/ImageWrapper";
 import menuImg01 from "public/images/menu-01.jpg";
 import menuImg02 from "public/images/menu-02.jpg";
 import menuImg03 from "public/images/menu-03.jpg";
-import { WaveTop, WaveBottom, Calendar } from "@/components/parts/SvgIcons";
+import {
+  SvgWaveTop,
+  SvgWaveBottom,
+  SvgCalendar,
+} from "@/components/parts/SvgIcons";
 import { Button } from "@material-tailwind/react";
 import { motion } from "framer-motion";
 import { container, item, scale } from "@/utiles/motion";
@@ -43,7 +47,7 @@ const Menu = () => {
 
   return (
     <section id="menu">
-      <WaveTop />
+      <SvgWaveTop />
       <div className="bg-secondary pb-24 pt-14">
         <HeadingTemp heading2="料金" heading3="Price" isAlign={true} />
         <motion.div
@@ -94,7 +98,7 @@ const Menu = () => {
               className="flex gap-4 px-10 py-5 font-notojp text-xl font-bold laptop:text-2xl"
             >
               <div className="flex items-center justify-center gap-4">
-                <Calendar />
+                <SvgCalendar />
                 LINEで予約する
               </div>
             </Button>
@@ -111,7 +115,7 @@ const Menu = () => {
           </p>
         </motion.div>
       </div>
-      <WaveBottom />
+      <SvgWaveBottom />
     </section>
   );
 };

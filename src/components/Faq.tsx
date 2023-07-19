@@ -1,7 +1,7 @@
 "use client";
 
 import HeadingTemp from "@/components/parts/SectionHeader";
-import { ArrowDown } from "@/components/parts/SvgIcons";
+import { SvgArrowDown } from "@/components/parts/SvgIcons";
 import { useState } from "react";
 import {
   Accordion,
@@ -83,7 +83,7 @@ const Faq = () => {
             return (
               <Accordion
                 open={open === question.id}
-                icon={<ArrowDown id={question.id} open={open} />}
+                icon={<SvgArrowDown id={question.id} open={open} />}
                 animate={customAnimation}
                 key={question.id}
                 className="[&:not(:first-of-type)]:mt-5 laptop:[&:not(:first-of-type)]:mt-10"
