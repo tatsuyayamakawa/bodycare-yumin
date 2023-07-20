@@ -2,7 +2,7 @@
 
 import SectionHeader from "@/components/parts/SectionHeader";
 import Image from "next/image";
-import aboutImage from "public/images/about.png";
+import aboutImage from "public/images/about.jpg";
 import { motion } from "framer-motion";
 import { left, right } from "@/utiles/motion";
 

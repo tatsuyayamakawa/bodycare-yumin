@@ -1,7 +1,7 @@
 "use client";
 
 import ImageWrapper from "./parts/ImageWrapper";
-import media01Image from "public/images/media-01.png";
+import media01Image from "public/images/media-01.jpg";
 import media02Image from "public/images/media-02.png";
 import { useEffect } from "react";
 import { useAnimation, motion } from "framer-motion";
