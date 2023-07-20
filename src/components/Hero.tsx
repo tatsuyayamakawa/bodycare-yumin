@@ -9,9 +9,8 @@ const Hero = () => {
       <figure>
         <Image
           src={heroImg}
-          width={1152}
-          height={480}
           alt="手もみ整体 癒眠 待合室写真"
+          sizes="100vw"
           quality={75}
           priority
           className="mx-auto desktop:rounded-lg"
