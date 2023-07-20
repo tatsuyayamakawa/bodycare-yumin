@@ -54,12 +54,15 @@ const Profile = () => {
           whileInView="visible"
           variants={scale}
           viewport={{ once: true }}
+          className="basis-full"
         >
-          <figure className="mask">
+          <figure
+            className={`[mask-image:url("../../public/images/shape-8s.svg")] [mask-position:center] [mask-repeat:no-repeat] [mask-size:135%]`}
+          >
             <ImageWrapper src={profileImage} alt="山川 達也 ポートレート" />
           </figure>
         </motion.div>
-        <div>
+        <div className="basis-auto">
           <h2 className="mb-6 font-notojp text-2xl font-medium text-accent laptop:text-3xl">
             {heading2.split(" ").map((word, index) => {
               return (
