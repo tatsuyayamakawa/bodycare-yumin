@@ -92,12 +92,12 @@ const Menu = () => {
           viewport={{ once: true }}
           className="mx-10 mb-4 mt-8 flex flex-col items-center"
         >
-          <a href="https://lin.ee/wzPQgmv" target="_blank" className="mx-auto">
+          <a href="https://lin.ee/wzPQgmv" target="_blank">
             <Button
               color="green"
               className="flex gap-4 px-10 py-5 font-notojp text-xl font-bold laptop:text-2xl"
             >
-              <div className="flex items-center justify-center gap-4">
+              <div className="flex items-center gap-4">
                 <SvgCalendar />
                 LINEで予約する
               </div>
