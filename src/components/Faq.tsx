@@ -2,6 +2,7 @@
 
 import HeadingTemp from "@/components/parts/SectionHeader";
 import { SvgArrowDown } from "@/components/parts/SvgIcons";
+import { notojp, b612mono } from "@/utiles/fonts";
 import { useState } from "react";
 import {
   Accordion,
@@ -69,7 +70,7 @@ const Faq = () => {
   ];
 
   return (
-    <section className="lg:container">
+    <section className={`${b612mono.variable} ${notojp.variable} lg:container`}>
       <div className="my-24 laptop:mx-10 desktop:mx-40">
         <HeadingTemp heading2="よくあるご質問" heading3="FAQ" isAlign={false} />
         <motion.div
@@ -93,7 +94,7 @@ const Faq = () => {
                     className="rounded-lg border-b-0 bg-gray-200 px-6 py-4"
                     onClick={() => handleOpen(question.id)}
                   >
-                    <h4 className="flex items-center font-notojp text-base font-normal text-gray-75 before:mr-5 before:font-b612mono before:text-2xl before:content-['Q'] laptop:text-lg before:laptop:text-3xl">
+                    <h4 className="flex items-center font-notojp text-base font-normal tracking-widest text-gray-75 before:mr-5 before:font-b612mono before:text-2xl before:content-['Q'] laptop:text-lg before:laptop:text-3xl">
                       {question.question}
                     </h4>
                   </AccordionHeader>

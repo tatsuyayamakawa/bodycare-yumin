@@ -2,6 +2,7 @@
 
 import ImageWrapper from "./parts/ImageWrapper";
 import profileImage from "public/images/profile.jpg";
+import { notojp, zenmincho } from "@/utiles/fonts";
 import { useEffect } from "react";
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
@@ -47,7 +48,9 @@ const Profile = () => {
   };
 
   return (
-    <section className="laptop:container">
+    <section
+      className={`${notojp.variable} ${zenmincho.variable} laptop:container`}
+    >
       <div className="mx-10 my-24 flex flex-col items-center gap-10 laptop:mx-20 laptop:flex-row laptop:gap-20 desktop:mx-52">
         <motion.div
           initial="hidden"
@@ -63,7 +66,7 @@ const Profile = () => {
           </figure>
         </motion.div>
         <div className="basis-auto">
-          <h2 className="mb-6 font-notojp text-2xl font-medium text-accent laptop:text-3xl">
+          <h2 className="mb-6 font-notojp text-2xl font-medium tracking-wide text-accent laptop:text-3xl">
             {heading2.split(" ").map((word, index) => {
               return (
                 <motion.div
@@ -93,7 +96,7 @@ const Profile = () => {
               );
             })}
           </h2>
-          <h3 className="mb-10 font-zenmincho text-4xl font-bold text-primary laptop:text-5xl">
+          <h3 className="mb-10 font-zenmincho text-4xl font-bold tracking-wide text-primary laptop:text-5xl">
             {heading3.split(" ").map((word, index) => {
               return (
                 <motion.div
@@ -123,7 +126,7 @@ const Profile = () => {
               );
             })}
           </h3>
-          <h4 className="mb-6 font-notojp text-xl font-medium text-primary laptop:text-2xl">
+          <h4 className="mb-6 font-notojp text-xl font-medium tracking-wide text-primary laptop:text-2xl">
             {heading4.split(" ").map((word, index) => {
               return (
                 <motion.div
@@ -158,7 +161,7 @@ const Profile = () => {
             whileInView="visible"
             variants={display}
             viewport={{ once: true }}
-            className="[&>p]:py-4 [&>p]:font-notojp [&>p]:text-base [&>p]:tracking-widest"
+            className="[&>p]:py-4 [&>p]:font-notojp [&>p]:text-base [&>p]:font-normal [&>p]:tracking-widest"
           >
             <p>
               当店は2012年8月に開業した一軒家の一室を利用して施術を行っている整体サロンです。

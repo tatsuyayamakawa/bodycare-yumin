@@ -1,6 +1,5 @@
-import Script from "next/script";
 import "@/app/globals.css";
-import { notojp, zenmincho, allura, b612mono } from "@/utiles/fonts";
+import GoogleAnalytics from "@/components/parts/GoogleAnalytics";
 import type { Metadata } from "next";
 import Data from "@/data/data.json";
 
@@ -36,22 +35,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html
-      lang="ja-JP"
-      className={`${notojp.variable} ${zenmincho.variable} ${allura.variable} ${b612mono.variable}`}
-    >
-      <Script
-        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_ANALYTICS_ID}`}
-      />
-      <Script id="google-analytics">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-
-          gtag('config', '${process.env.NEXT_PUBLIC_ANALYTICS_ID}');
-        `}
-      </Script>
+    <html lang="ja-JP">
+      <GoogleAnalytics />
       <body>{children}</body>
     </html>
   );

@@ -3,12 +3,13 @@
 import SectionHeader from "@/components/parts/SectionHeader";
 import Image from "next/image";
 import aboutImage from "public/images/about.jpg";
+import { notojp } from "@/utiles/fonts";
 import { motion } from "framer-motion";
 import { left, right } from "@/utiles/motion";
 
 const About = () => {
   return (
-    <section id="about" className="laptop:container">
+    <section id="about" className={`${notojp.variable} laptop:container`}>
       <div className="my-24 laptop:mx-10 desktop:mx-40">
         <SectionHeader
           heading2="癒眠について"
@@ -21,7 +22,7 @@ const About = () => {
             whileInView="visible"
             variants={left}
             viewport={{ once: true }}
-            className="bg-secondary px-10 py-6 laptop:absolute laptop:left-0 laptop:top-24 laptop:z-20 laptop:max-w-[492px] laptop:rounded-lg [&>p]:py-4 [&>p]:font-notojp [&>p]:text-base [&>p]:tracking-widest"
+            className="bg-secondary px-10 py-6 font-notojp laptop:absolute laptop:left-0 laptop:top-24 laptop:z-20 laptop:max-w-[492px] laptop:rounded-lg [&>p]:py-4 [&>p]:text-base [&>p]:tracking-widest"
           >
             <p>
               日常生活で凝り固まった筋肉や外から受ける精神的なストレスは交感神経を刺激し、倦怠感、不眠症、頭痛などあらゆる身体的症状を引き起こします。

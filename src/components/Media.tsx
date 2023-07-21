@@ -3,6 +3,7 @@
 import ImageWrapper from "./parts/ImageWrapper";
 import media01Image from "public/images/media-01.jpg";
 import media02Image from "public/images/media-02.png";
+import { notojp } from "@/utiles/fonts";
 import { useEffect } from "react";
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
@@ -46,9 +47,9 @@ const Media = () => {
   };
 
   return (
-    <section className="laptop:container">
+    <section className={`${notojp.variable} laptop:container`}>
       <div className="my-24 tablet:mx-10 desktop:mx-40">
-        <h2 className="mx-10 mb-10 text-center font-notojp text-2xl font-bold text-accent laptop:text-4xl">
+        <h2 className="mx-10 mb-10 text-center font-notojp text-2xl font-bold tracking-wide text-accent laptop:text-4xl">
           {heading2.split(" ").map((word, index) => {
             return (
               <motion.div

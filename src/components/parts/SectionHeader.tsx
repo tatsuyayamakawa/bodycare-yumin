@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { zenmincho, allura } from "@/utiles/fonts";
 
 const SectionHeader = ({
   heading2,
@@ -46,7 +47,7 @@ const SectionHeader = ({
       <h2
         aria-label={`${heading2}`}
         role="heading"
-        className="mb-4 font-zenmincho text-3xl font-bold leading-relaxed text-primary laptop:text-5xl"
+        className={`${zenmincho.className} mb-4 text-3xl font-bold leading-relaxed tracking-wide text-primary laptop:text-5xl`}
       >
         {heading2.split(" ").map((word, index) => {
           return (
@@ -80,7 +81,7 @@ const SectionHeader = ({
       <h3
         aria-label={`${heading3}`}
         role="heading"
-        className="font-allura text-2xl font-normal leading-normal text-accent laptop:text-4xl"
+        className={`${allura.className} text-2xl font-normal leading-normal tracking-normal text-accent laptop:text-4xl`}
       >
         {heading3.split(" ").map((word, index) => {
           return (

@@ -1,8 +1,10 @@
 import Image from "next/image";
 import logoImage from "public/images/logo.png";
+import { notojp } from "@/utiles/fonts";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Link as Scroll } from "react-scroll";
+import Data from "@/data/data.json";
 
 // デスクトップ版ナビゲーション
 const CustomLink = ({ href, to, title, className }: NavProps) => {
@@ -13,7 +15,7 @@ const CustomLink = ({ href, to, title, className }: NavProps) => {
       smooth={true}
       duration={600}
       offset={-50}
-      className={`${className} cursor-pointer hover:opacity-50`}
+      className={`${className} cursor-pointer font-notojp text-lg font-normal tracking-wide text-gray-75 hover:opacity-50`}
     >
       {title}
     </Scroll>
@@ -29,7 +31,7 @@ const CustomMobileLink = ({ to, title, className, toggle }: NavProps) => {
   return (
     <Scroll to={to} smooth={true} duration={600} offset={-50}>
       <button
-        className={`${className} my-2 cursor-pointer hover:opacity-50`}
+        className={`${className} my-2 cursor-pointer font-notojp text-lg font-normal tracking-wide text-white hover:opacity-50`}
         onClick={handleClick}
       >
         {title}
@@ -54,7 +56,7 @@ const Nav = () => {
             src={logoImage}
             width={225}
             height={27}
-            alt="手もみ整体 癒眠｜山形で自律神経を改善するための整体サロン"
+            alt={Data.data.info.title}
             priority
           />
         </figure>
@@ -84,11 +86,10 @@ const Nav = () => {
       </button>
 
       {/* グローバルナビゲーション */}
-      <div className="hidden items-center justify-between lg:flex">
-        <nav
-          aria-label="グローバルナビゲーション"
-          className="font-notojp text-lg font-normal text-gray-75"
-        >
+      <div
+        className={`${notojp.variable} hidden items-center justify-between lg:flex`}
+      >
+        <nav aria-label="グローバルナビゲーション" className="">
           <CustomLink
             href="#about"
             to="about"
@@ -114,7 +115,7 @@ const Nav = () => {
         >
           <nav
             aria-label="グローバルナビゲーション"
-            className="flex flex-col items-center justify-center font-notojp text-lg font-normal text-white"
+            className="flex flex-col items-center justify-center"
           >
             <CustomMobileLink
               href="#about"

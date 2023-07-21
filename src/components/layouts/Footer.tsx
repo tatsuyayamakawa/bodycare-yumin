@@ -8,13 +8,14 @@ import {
   SvgThreads,
   SvgGithub,
 } from "@/components/parts/SvgIcons";
+import { notojp } from "@/utiles/fonts";
 import { Button } from "@material-tailwind/react";
 import { motion } from "framer-motion";
 import { scale } from "@/utiles/motion";
 
 const Footer = () => {
   return (
-    <footer className="bg-secondary py-10 text-lg font-normal laptop:px-10">
+    <footer className={`${notojp.variable} bg-secondary py-10 laptop:px-10`}>
       <div className="mx-10 mb-20 mt-10 flex flex-col items-center justify-center gap-10 laptop:flex-row laptop:gap-20">
         <motion.div
           initial="hidden"
@@ -30,7 +31,7 @@ const Footer = () => {
           >
             <Button
               color="white"
-              className="w-full bg-white px-10 py-5 font-notojp text-xl font-bold laptop:text-2xl"
+              className="w-full bg-white px-10 py-5 font-notojp text-xl font-bold tracking-wide laptop:text-2xl"
             >
               <div className="flex items-center justify-center gap-4 text-primary">
                 <SvgMobilePhone />
@@ -57,7 +58,7 @@ const Footer = () => {
           >
             <Button
               color="white"
-              className="w-full bg-white py-5 font-notojp text-xl font-bold laptop:text-2xl"
+              className="w-full bg-white py-5 font-notojp text-xl font-bold tracking-wide laptop:text-2xl"
             >
               <div className="flex items-center justify-center gap-4 text-primary">
                 <SvgMail />
@@ -73,16 +74,18 @@ const Footer = () => {
       </div>
       <div className="mx-10 my-10 border border-gray-25/20" />
       <div className="mx-10 flex flex-col items-center justify-between gap-10 laptop:flex-row">
-        <div className="flex flex-col items-center justify-between ">
-          <small className="mx-10 mb-5 font-notojp text-sm font-normal">
+        <div className="flex flex-col items-center justify-between">
+          <small className="mx-10 mb-5 font-notojp text-sm font-normal tracking-normal">
             &copy; 手もみ整体 癒眠
           </small>
-          <p className="font-notojp text-sm font-normal">
+          <p className="font-notojp text-sm font-normal tracking-normal">
             《適格請求書発行事業者登録番号》
           </p>
-          <p className="font-notojp text-sm font-normal">T8 8108 1135 4453</p>
+          <p className="font-notojp text-sm font-normal tracking-normal">
+            T8 8108 1135 4453
+          </p>
         </div>
-        <div className="mx-10 flex justify-center gap-10 font-notojp text-sm font-normal">
+        <div className="mx-10 flex items-center justify-center gap-10">
           <SvgInstagram />
           <SvgThreads />
           <SvgGithub />

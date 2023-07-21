@@ -10,6 +10,7 @@ import {
   SvgWaveBottom,
   SvgCalendar,
 } from "@/components/parts/SvgIcons";
+import { notojp, zenmincho } from "@/utiles/fonts";
 import { Button } from "@material-tailwind/react";
 import { motion } from "framer-motion";
 import { container, item, scale } from "@/utiles/motion";
@@ -70,14 +71,20 @@ const Menu = () => {
                   className="rounded-t-md"
                 />
                 <div className="mx-6 mb-6 mt-8">
-                  <h4 className="mb-1 text-center font-notojp text-lg font-bold text-primary">
+                  <h4
+                    className={`${notojp.className} mb-1 text-center text-lg font-bold text-primary`}
+                  >
                     {menu.title}
                     <span className="text-sm">{menu.time}</span>
                   </h4>
-                  <h5 className="mb-6 text-center font-zenmincho text-base font-bold text-primary">
+                  <h5
+                    className={`${zenmincho.className} mb-6 text-center text-base font-bold text-primary`}
+                  >
                     {menu.price}
                   </h5>
-                  <p className="font-notojp text-sm font-normal leading-5 tracking-widest text-primary">
+                  <p
+                    className={`${notojp.className} text-sm font-normal tracking-widest text-primary`}
+                  >
                     {menu.content}
                   </p>
                 </div>
@@ -90,12 +97,12 @@ const Menu = () => {
           whileInView="visible"
           variants={scale}
           viewport={{ once: true }}
-          className="mx-10 mb-4 mt-8 flex flex-col items-center"
+          className="mx-10 mb-4 mt-8 flex flex-col items-center justify-center gap-4"
         >
           <a href="https://lin.ee/wzPQgmv" target="_blank">
             <Button
               color="green"
-              className="flex gap-4 px-10 py-5 font-notojp text-xl font-bold laptop:text-2xl"
+              className={`${notojp.className} px-10 py-5 text-xl font-bold tracking-wide laptop:text-2xl`}
             >
               <div className="flex items-center gap-4">
                 <SvgCalendar />
@@ -103,7 +110,9 @@ const Menu = () => {
               </div>
             </Button>
           </a>
-          <p className="mt-8 font-notojp text-sm font-normal text-gray-50">
+          <p
+            className={`${notojp.className} text-sm font-normal tracking-wide text-gray-50`}
+          >
             <a
               href="https://kosodate.pref.yamagata.jp/passport"
               target="_blank"
