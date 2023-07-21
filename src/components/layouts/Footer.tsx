@@ -9,7 +9,6 @@ import {
   SvgGithub,
 } from "@/components/parts/SvgIcons";
 import { notojp } from "@/utiles/fonts";
-import { Button } from "@material-tailwind/react";
 import { motion } from "framer-motion";
 import { scale } from "@/utiles/motion";
 
@@ -29,9 +28,8 @@ const Footer = () => {
             aria-label="LINEで予約"
             target="_blank"
           >
-            <Button
-              color="white"
-              className="w-full bg-white px-10 py-5 font-notojp text-xl font-bold tracking-wide laptop:text-2xl"
+            <button
+              className={`${notojp.className} w-full rounded-lg bg-white px-10 py-5 text-xl font-bold tracking-wide shadow-lg hover:shadow-none laptop:text-2xl`}
             >
               <div className="flex items-center justify-center gap-4 text-primary">
                 <SvgMobilePhone />
@@ -41,7 +39,7 @@ const Footer = () => {
               <div className="mt-2 text-xs font-normal text-gray-50 laptop:text-sm">
                 当日受付 9:00 ～ 15:00 木曜日定休
               </div>
-            </Button>
+            </button>
           </a>
         </motion.div>
         <motion.div
@@ -56,9 +54,8 @@ const Footer = () => {
             aria-label="お問い合わせ"
             target="_blank"
           >
-            <Button
-              color="white"
-              className="w-full bg-white py-5 font-notojp text-xl font-bold tracking-wide laptop:text-2xl"
+            <button
+              className={`${notojp.className} w-full rounded-lg bg-white px-10 py-5 text-xl font-bold tracking-wide shadow-lg hover:shadow-none laptop:text-2xl`}
             >
               <div className="flex items-center justify-center gap-4 text-primary">
                 <SvgMail />
@@ -68,7 +65,7 @@ const Footer = () => {
               <div className="mt-2 text-xs font-normal text-gray-50 laptop:text-sm">
                 不明な点はお問い合わせください
               </div>
-            </Button>
+            </button>
           </a>
         </motion.div>
       </div>

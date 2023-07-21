@@ -11,7 +11,6 @@ import {
   SvgCalendar,
 } from "@/components/parts/SvgIcons";
 import { notojp, zenmincho } from "@/utiles/fonts";
-import { Button } from "@material-tailwind/react";
 import { motion } from "framer-motion";
 import { container, item, scale } from "@/utiles/motion";
 
@@ -97,21 +96,18 @@ const Menu = () => {
           whileInView="visible"
           variants={scale}
           viewport={{ once: true }}
-          className="mx-10 mb-4 mt-8 flex flex-col items-center justify-center gap-4"
+          className="mx-10 mb-4 mt-8 flex flex-col items-center justify-center"
         >
           <a href="https://lin.ee/wzPQgmv" target="_blank">
-            <Button
-              color="green"
-              className={`${notojp.className} px-10 py-5 text-xl font-bold tracking-wide laptop:text-2xl`}
+            <button
+              className={`${notojp.className} flex items-center justify-center gap-4 rounded-lg bg-green-400 px-10 py-5 text-xl font-bold tracking-wide text-white shadow-lg hover:shadow-none laptop:text-2xl`}
             >
-              <div className="flex items-center gap-4">
-                <SvgCalendar />
-                LINEで予約する
-              </div>
-            </Button>
+              <SvgCalendar />
+              LINEで予約する
+            </button>
           </a>
           <p
-            className={`${notojp.className} text-sm font-normal tracking-wide text-gray-50`}
+            className={`${notojp.className} mt-8 text-sm font-normal tracking-normal text-gray-50`}
           >
             <a
               href="https://kosodate.pref.yamagata.jp/passport"
@@ -120,7 +116,7 @@ const Menu = () => {
             >
               子育て応援パスポート
             </a>
-            のご提示で&#34;10%割引&#34;できます！
+            のご提示で&#34;10%割引&#34;
           </p>
         </motion.div>
       </div>
