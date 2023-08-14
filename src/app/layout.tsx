@@ -1,9 +1,10 @@
-import "@/app/globals.css";
-import GoogleAnalytics from "@/components/parts/GoogleAnalytics";
-import type { Metadata } from "next";
-import Data from "@/data/data.json";
+import React from 'react';
 
-const data = Data.data;
+import './globals.css';
+import { data } from 'src/constants/data';
+import { GA } from 'src/libs/google-analytics/google-analytics';
+
+import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.URL ?? `${data.info.domain}`),
@@ -13,11 +14,11 @@ export const metadata: Metadata = {
     title: data.info.title,
     description: data.info.description,
     siteName: data.info.title,
-    locale: "ja_JP",
-    type: "website",
+    locale: 'ja_JP',
+    type: 'website',
   },
   twitter: {
-    card: "summary_large_image",
+    card: 'summary_large_image',
     title: data.info.title,
     description: data.info.description,
   },
@@ -29,15 +30,11 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="ja-JP">
-      <GoogleAnalytics />
-      <body>{children}</body>
+      <GA />
+      <body id="header">{children}</body>
     </html>
   );
 }

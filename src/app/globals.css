@@ -10,7 +10,52 @@
 body {
   color: rgb(var(--foreground-rgb));
   background-color: rgb(var(--background-rgb));
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+}
+
+/* Noto Sans JP - normal */
+@font-face {
+  src: url('../../public/resources/fonts/NotoSansJP-Regular.woff') format('woff');
+  font-family: 'Noto Sans JP', 'sans-serif';
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Noto Sans JP - medium */
+@font-face {
+  src: url('../../public/resources/fonts/NotoSansJP-Medium.woff') format('woff');
+  font-family: 'Noto Sans JP', 'sans-serif';
+  font-style: medium;
+  font-display: swap;
+}
+
+/* Noto Sans JP - bold */
+@font-face {
+  src: url('../../public/resources/fonts/NotoSansJP-Bold.woff') format('woff');
+  font-family: 'Noto Sans JP', 'sans-serif';
+  font-style: bold;
+  font-display: swap;
+}
+
+/* Zen Old Micho - bold */
+@font-face {
+  src: url('../../public/resources/fonts/ZenOldMincho-Bold.woff') format('woff');
+  font-family: 'Zen Old Mincho';
+  font-style: bold;
+  font-display: swap;
+}
+
+/* Allura - normal */
+@font-face {
+  src: url('../../public/resources/fonts/Allura-Regular.woff') format('woff');
+  font-family: 'Allura';
+  font-style: normal;
+  font-display: swap;
+}
+
+/* B612 Mono - normal */
+@font-face {
+  src: url('../../public/resources/fonts/B612Mono-Regular.woff') format('woff');
+  font-family: 'B612 Mono', 'monospace';
+  font-style: normal;
+  font-display: swap;
 }

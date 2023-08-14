@@ -1,6 +1,8 @@
-import Header from "@/components/layouts/Header";
-import Main from "@/components/layouts/Main";
-import Footer from "@/components/layouts/Footer";
+'use client';
+
+import { Footer } from 'src/components/common/Footer';
+import { Header } from 'src/components/common/Header';
+import { Main } from 'src/components/common/Main';
 
 export default function Home() {
   return (

@@ -1,7 +1,7 @@
+'use client';
+
+import { Spinner } from '@material-tailwind/react';
+
 export default function Loading() {
-  return (
-    <div className="flex h-[50vh] items-center justify-center">
-      <div className="h-14 w-14 animate-spin rounded-full border-8 border-t-8 border-solid border-lime-400 border-t-white"></div>
-    </div>
-  );
+  return <Spinner color="amber" className="h-12 w-12 text-gray-25" />;
 }
