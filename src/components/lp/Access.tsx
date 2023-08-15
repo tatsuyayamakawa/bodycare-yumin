@@ -25,7 +25,7 @@ export const Access = () => {
                 <div className="flex flex-col gap-1 md:flex-row">
                   <div className="md:mr-2">山形県山形市大字上椹沢195-2</div>
                   <div>
-                    <ExternalLink url={data.google.map} ariaLabel="手もみ整体 癒眠 Googleマップへ" className="rounded-xl bg-primary px-2 py-1 text-xs text-white">
+                    <ExternalLink url={data.google.map} ariaLabel="Google map" className="rounded-xl bg-primary px-2 py-1 text-xs text-white">
                       Google map
                     </ExternalLink>
                   </div>
