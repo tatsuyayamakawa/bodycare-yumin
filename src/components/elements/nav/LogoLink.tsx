@@ -11,7 +11,7 @@ export const LogoLink = ({ handler }: NavStateProps) => {
     <h1>
       <figure>
         {/* handler propsが有効な場合、クリックイベントを発生させる */}
-        <Scroll to="header" smooth={true} duration={600} className="cursor-pointer" onClick={handler}>
+        <Scroll href="#header" to="header" smooth={true} duration={600} className="cursor-pointer" onClick={handler}>
           <Image width={255} height={30} src={logoImage} alt={data.info.title} sizes="100vw" priority className="h-auto" />
         </Scroll>
       </figure>
