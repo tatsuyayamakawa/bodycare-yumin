@@ -10,7 +10,7 @@ import media02Image from 'public/images/media-02.png';
 import { display } from 'src/constants/motion';
 
 export const Media = () => {
-  const heading2 = '不眠症改善の専門家として全国誌掲載されました！';
+  const heading2 = '不眠症改善の専門家として全国誌掲載されました';
 
   const ctrls = useAnimation();
 
@@ -49,7 +49,7 @@ export const Media = () => {
   return (
     <section className="container">
       <div className="mx-auto my-[6.25rem] max-w-[62rem]">
-        <h2 className="mx-5 mb-10 text-center font-notojp text-3xl font-bold text-accent lg:text-4xl">
+        <h2 className="mx-5 mb-10 text-center font-notojp text-3xl font-bold not-italic leading-normal tracking-normal text-accent lg:text-4xl">
           {heading2.split(' ').map((word, index) => {
             return (
               <motion.div
