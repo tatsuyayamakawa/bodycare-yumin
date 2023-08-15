@@ -2,11 +2,17 @@ import { useState } from 'react';
 
 import { Accordion, AccordionHeader, AccordionBody } from '@material-tailwind/react';
 import { motion } from 'framer-motion';
+import { FaChevronDown } from 'react-icons/fa6';
 
 import { SectionHeading } from 'src/components/elements/heading/SectionHeading';
-import { SvgArrowDown } from 'src/components/elements/icon/SvgIcons';
 import { container, item } from 'src/constants/motion';
 import { questions } from 'src/constants/questions';
+
+import type { ToggleArrowProps } from 'src/@types/global';
+
+const SvgArrowDown = ({ id, open }: ToggleArrowProps) => {
+  return <FaChevronDown size={20} color={'#707070'} className={`${id === open ? 'rotate-180' : ''} transition-transform`} />;
+};
 
 export const Faq = () => {
   const [open, setOpen] = useState(0);
@@ -35,7 +41,9 @@ export const Faq = () => {
                     </h4>
                   </AccordionHeader>
                   <AccordionBody className="mt-5 px-6">
-                    <p className="whitespace-pre-wrap font-notojp text-sm font-normal not-italic leading-relaxed tracking-wide text-gray-50 lg:text-base">{question.answer}</p>
+                    <p className="whitespace-pre-wrap font-notojp text-sm font-normal not-italic leading-relaxed tracking-wide text-gray-50 lg:text-base">
+                      {question.answer}
+                    </p>
                   </AccordionBody>
                 </motion.div>
               </Accordion>

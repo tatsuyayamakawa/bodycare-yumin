@@ -9,6 +9,7 @@ import Image from 'next/image';
 
 import logoImage from 'public/images/logo.png';
 import Loading from 'src/app/loading';
+import { ExternalLink } from 'src/components/elements/link/ExternalLink';
 import { data } from 'src/constants/data';
 import { mapStyles } from 'src/libs/google-maps/google-maps-styles';
 
@@ -74,9 +75,9 @@ const Map = ({ googleMapsApiKey }: MapKeyProps) => {
               }}
               options={infoWindowOptions}
             >
-              <a href="https://goo.gl/maps/GJBU6sFQGz2it5g1A" target="_blank" aria-label="手もみ整体 癒眠 Googleマップへ">
+              <ExternalLink url={data.google.map} icon={false} ariaLabel="手もみ整体 癒眠 Googleマップへ">
                 <Image width={150} height={18} src={logoImage} alt={data.info.title} />
-              </a>
+              </ExternalLink>
             </InfoWindow>
           )}
         </GoogleMap>

@@ -1,3 +1,5 @@
+import React from 'react';
+
 // @see https://github.com/vercel/next.js/issues/29788
 declare type StaticImageData = {
   src: string;
@@ -11,6 +13,14 @@ export type ImageWrapperProps = {
   height?: number | `${number}` | undefined;
   src: StaticImageData;
   alt: string;
+  className?: string;
+};
+
+export type ExternalLinkProps = {
+  url: string;
+  children: React.ReactNode;
+  ariaLabel: string;
+  icon?: boolean;
   className?: string;
 };
 

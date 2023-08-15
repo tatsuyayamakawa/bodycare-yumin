@@ -1,10 +1,11 @@
 import { Link as Scroll } from 'react-scroll';
 
 import { Typography, IconButton, Button, Dialog, DialogHeader, DialogBody, DialogFooter, List, ListItem } from '@material-tailwind/react';
+import { FaMobileScreenButton } from 'react-icons/fa6';
 
 import { NavStateProps } from 'src/@types/global';
-import { SvgCalendar } from 'src/components/elements/icon/SvgIcons';
 import { LogoLink } from 'src/components/elements/nav/LogoLink';
+import { data } from 'src/constants/data';
 import { navs } from 'src/constants/navs';
 
 export const ModalWindow = ({ isOpen, handler }: NavStateProps) => {
@@ -12,7 +13,14 @@ export const ModalWindow = ({ isOpen, handler }: NavStateProps) => {
     <Dialog open={isOpen as boolean} handler={handler as () => void}>
       <DialogHeader className="justify-between">
         <LogoLink handler={handler} />
-        <IconButton variant="text" size="sm" color="gray" ripple={false} className="hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden" onClick={handler}>
+        <IconButton
+          variant="text"
+          size="sm"
+          color="gray"
+          ripple={false}
+          className="hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
+          onClick={handler}
+        >
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" className="h-8 w-8 text-gray-75/80" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
           </svg>
@@ -34,10 +42,10 @@ export const ModalWindow = ({ isOpen, handler }: NavStateProps) => {
         </List>
       </DialogBody>
       <DialogFooter className="justify-center">
-        <a href="https://lin.ee/wzPQgmv" target="_blank" aria-label="LINEで予約する" className="w-full">
+        <a href={data.sns.line} target="_blank" rel="noopener noreferrer" aria-label="LINEで予約する" className="w-full">
           <Button variant="filled" size="lg" color="green" ripple={true} fullWidth={true} className="bg-green font-notojp text-lg font-bold text-white">
-            <div className="flex items-center justify-center gap-2">
-              <SvgCalendar />
+            <div className="flex items-center justify-center gap-4">
+              <FaMobileScreenButton size={24} />
               当日予約も受付中‼
             </div>
           </Button>

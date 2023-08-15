@@ -1,19 +1,30 @@
 import { Button } from '@material-tailwind/react';
 import { motion } from 'framer-motion';
+import { FaMobileScreenButton } from 'react-icons/fa6';
 
 import { SectionHeading } from 'src/components/elements/heading/SectionHeading';
-import { SvgWaveTop, SvgWaveBottom, SvgCalendar } from 'src/components/elements/icon/SvgIcons';
 import { ImageWrapper } from 'src/components/elements/image/ImageWrapper';
+import { SvgWaveTop, SvgWaveBottom } from 'src/components/elements/image/SvgWave';
+import { ExternalLink } from 'src/components/elements/link/ExternalLink';
+import { data } from 'src/constants/data';
 import { menus } from 'src/constants/menus';
 import { container, item, scale } from 'src/constants/motion';
 
 export const Menu = () => {
   return (
     <section id="menu">
-      <SvgWaveTop />
+      <div className="botom-0 left-0 w-full overflow-hidden">
+        <SvgWaveTop />
+      </div>
       <div className="bg-secondary py-[6.25rem]">
         <SectionHeading heading2="料金" heading3="Price" isAlign={true} />
-        <motion.div initial="hidden" whileInView="visible" variants={container} viewport={{ once: true }} className="flex flex-col items-center justify-center gap-5 lg:flex-row">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          variants={container}
+          viewport={{ once: true }}
+          className="flex flex-col items-center justify-center gap-5 lg:flex-row"
+        >
           {menus.map((menu) => {
             return (
               <motion.div
@@ -47,17 +58,25 @@ export const Menu = () => {
             );
           })}
         </motion.div>
-        <motion.div initial="hidden" whileInView="visible" variants={scale} viewport={{ once: true }} className="mx-10 mb-4 mt-8 flex flex-col items-center justify-center">
-          <Button variant="filled" size="lg" color="green" ripple={true} fullWidth={false} className="bg-green font-notojp text-lg font-bold text-white">
-            <div className="flex items-center justify-center gap-2">
-              <SvgCalendar />
-              LINEで予約する
-            </div>
-          </Button>
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          variants={scale}
+          viewport={{ once: true }}
+          className="mx-10 mb-4 mt-8 flex flex-col items-center justify-center"
+        >
+          <ExternalLink url={data.sns.line} icon={false} ariaLabel="LINEで予約する">
+            <Button variant="filled" size="lg" color="green" ripple={true} fullWidth={false} className="bg-green font-notojp text-lg font-bold text-white">
+              <div className="flex items-center justify-center gap-4">
+                <FaMobileScreenButton size={24} />
+                LINEで予約する
+              </div>
+            </Button>
+          </ExternalLink>
           <p className="mt-4 font-notojp text-sm font-normal not-italic tracking-wide text-gray-50">
-            <a href="https://kosodate.pref.yamagata.jp/passport" target="_blank" className="underline" rel="noreferrer">
+            <ExternalLink url="https://kosodate.pref.yamagata.jp/passport" ariaLabel="やまがた子育て応援パスポート公式サイト" className="underline">
               子育て応援パスポート
-            </a>
+            </ExternalLink>
             のご提示で&#34;10%割引&#34;
           </p>
         </motion.div>
