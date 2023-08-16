@@ -2,7 +2,8 @@ import React from 'react';
 
 import './globals.css';
 import { data } from 'src/constants/data';
-import { GA } from 'src/libs/google-analytics/google-analytics';
+import { GoogleTagManager } from 'src/libs/google-tagmanager/google-tagmanager';
+import { LineConversion } from 'src/libs/line-conversion/line-conversion';
 
 import type { Metadata } from 'next';
 
@@ -33,7 +34,8 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="ja-JP">
-      <GA />
+      <GoogleTagManager />
+      <LineConversion />
       <body id="header">{children}</body>
     </html>
   );
