@@ -3,7 +3,6 @@ import React from 'react';
 import './globals.css';
 import { data } from 'src/constants/data';
 import { GoogleTagManager } from 'src/libs/google-tagmanager/google-tagmanager';
-import { LineConversion } from 'src/libs/line-conversion/line-conversion';
 
 import type { Metadata } from 'next';
 
@@ -35,7 +34,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="ja-JP">
       <GoogleTagManager />
-      <LineConversion />
       <body id="header">{children}</body>
     </html>
   );
