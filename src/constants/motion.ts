@@ -1,81 +1,65 @@
-export const container = {
-  hidden: {
+// フェイドアップアニメーションのオプション
+export const fadeUpComponent = {
+  start: {
+    translateY: 40,
     opacity: 0,
   },
-  visible: {
+  end: {
+    translateY: 0,
     opacity: 1,
-    transition: {
-      delayChildren: 0.5,
-      staggerChildren: 0.25,
-    },
+  },
+  transition: {
+    transitionDuration: 0.4,
+    transitionTimingFunction: 'ease-in-out',
   },
 };
 
-export const item = {
-  hidden: {
-    y: 40,
+// フェードダウンアニメーションのオプション
+export const fadeDownAnimation = {
+  start: {
+    translateY: -40,
     opacity: 0,
   },
-  visible: {
-    y: 0,
+  end: {
+    translateY: 0,
     opacity: 1,
+  },
+  transition: {
+    transitionDuration: 0.4,
+    transitionTimingFunction: 'ease-in-out',
   },
 };
 
-export const display = {
-  hidden: {
+// 左から右へのアニメーションのオプション
+export const slideInLeftAnimation = {
+  start: {
+    translateX: -40,
     opacity: 0,
   },
-  visible: {
+  end: {
+    translateX: 0,
     opacity: 1,
-    transition: {
-      duration: 0.25,
-      delay: 0.05,
-    },
+  },
+  transition: {
+    transitionDelay: 0.1,
+    transitionDuration: 0.4,
+    transitionTimingFunction: 'ease-in-out',
   },
 };
 
-export const left = {
-  hidden: {
-    x: -40,
+// 右から左へのアニメーションのオプション
+export const slideInRightAnimation = {
+  start: {
+    translateX: 40,
     opacity: 0,
   },
-  visible: {
-    x: 0,
+  end: {
+    translateX: 0,
     opacity: 1,
-    transition: {
-      duration: 0.25,
-      delay: 0.05,
-    },
   },
-};
-
-export const right = {
-  hidden: {
-    x: 40,
-    opacity: 0,
-  },
-  visible: {
-    x: 0,
-    opacity: 1,
-    transition: {
-      duration: 0.25,
-      delay: 0.05,
-    },
-  },
-};
-
-export const scale = {
-  hidden: {
-    scale: 0,
-    opacity: 0,
-  },
-  visible: {
-    scale: 1,
-    opacity: 1,
-    transition: {
-      duration: 0.25,
-      delay: 0.05,
-    },
+  transition: {
+    transitionDelay: 0.1,
+    transitionDuration: 0.4,
+    transitionTimingFunction: 'ease-in-out',
   },
 };

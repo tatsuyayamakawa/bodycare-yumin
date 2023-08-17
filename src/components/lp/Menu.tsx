@@ -1,5 +1,6 @@
+import { ScrollAnimator } from 'react-animate-observer';
+
 import { Button } from '@material-tailwind/react';
-import { motion } from 'framer-motion';
 import { FaMobileScreenButton } from 'react-icons/fa6';
 
 import { SectionHeading } from 'src/components/elements/heading/SectionHeading';
@@ -8,7 +9,7 @@ import { SvgWaveTop, SvgWaveBottom } from 'src/components/elements/image/SvgWave
 import { ExternalLink } from 'src/components/elements/link/ExternalLink';
 import { data } from 'src/constants/data';
 import { menus } from 'src/constants/menus';
-import { container, item, scale } from 'src/constants/motion';
+import { fadeUpComponent } from 'src/constants/motion';
 
 export const Menu = () => {
   return (
@@ -18,19 +19,17 @@ export const Menu = () => {
       </div>
       <div className="bg-secondary py-[6.25rem]">
         <SectionHeading heading2="料金" heading3="Price" isAlign={true} />
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          variants={container}
-          viewport={{ once: true }}
-          className="flex flex-col items-center justify-center gap-5 lg:flex-row"
-        >
-          {menus.map((menu) => {
+        <div className="flex flex-col items-center justify-center gap-5 lg:flex-row">
+          {menus.map((menu, index) => {
             return (
-              <motion.div
-                variants={item}
+              <ScrollAnimator
+                key={index}
+                transition={{
+                  transitionDelay: 0.25 + index * 0.25,
+                  transitionDuration: 0.4,
+                  transitionTimingFunction: 'ease-in-out',
+                }}
                 className="flex min-h-[28rem] max-w-[20rem] flex-col items-center rounded-lg bg-white shadow-lg md:mx-5 md:min-h-full md:max-w-full md:flex-row lg:mx-0 lg:min-h-[28rem] lg:max-w-[20rem] lg:flex-col [&:nth-child(2)]:border-4 [&:nth-child(2)]:border-gray-300 [&:nth-child(2)]:bg-gray-100"
-                key={menu.id}
               >
                 <div className="relative">
                   <div className="h-full">
@@ -54,17 +53,11 @@ export const Menu = () => {
                     <div className="rounded-lg bg-secondary/80 px-3 py-2 font-notojp text-sm not-italic tracking-wide text-primary">{menu.option}</div>
                   </div>
                 </div>
-              </motion.div>
+              </ScrollAnimator>
             );
           })}
-        </motion.div>
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          variants={scale}
-          viewport={{ once: true }}
-          className="mx-10 mb-4 mt-8 flex flex-col items-center justify-center"
-        >
+        </div>
+        <ScrollAnimator {...fadeUpComponent} className="mx-10 mb-4 mt-8 flex flex-col items-center justify-center">
           <ExternalLink url={data.sns.line} icon={false} ariaLabel="LINEで予約する">
             <Button variant="filled" size="lg" color="green" ripple={true} fullWidth={false} className="bg-green font-notojp text-lg font-bold text-white">
               <div className="flex items-center justify-center gap-4">
@@ -79,7 +72,7 @@ export const Menu = () => {
             </ExternalLink>
             のご提示で&#34;10%割引&#34;
           </p>
-        </motion.div>
+        </ScrollAnimator>
       </div>
       <SvgWaveBottom />
     </section>
