@@ -3,8 +3,10 @@ import React from 'react';
 import './globals.css';
 import { data } from 'src/constants/data';
 import { GoogleTagManager } from 'src/libs/google-tagmanager/google-tagmanager';
+import { googleTagManagerId } from 'src/libs/google-tagmanager/google-tagmanager-id';
 
 import type { Metadata } from 'next';
+import type { GoogleTagManagerId } from 'src/libs/google-tagmanager/google-tagmanager';
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.URL ?? `${data.info.domain}`),
@@ -33,7 +35,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="ja-JP">
-      <GoogleTagManager />
+      <GoogleTagManager googleTagManagerId={googleTagManagerId as GoogleTagManagerId} />
       <body id="header">{children}</body>
     </html>
   );
