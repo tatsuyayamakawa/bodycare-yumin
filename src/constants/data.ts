@@ -9,7 +9,7 @@ export const data = {
   sns: {
     instagram: 'https://www.instagram.com/bodycare_yumin',
     youtube: 'https://www.youtube.com/channel/UCvs4R788ur4xAaGtVLhasHA',
-    line: 'https://lin.ee/wzPQgmv',
+    line: 'https://lin.ee/ZQL7WyjC',
   },
   google: {
     map: 'https://goo.gl/maps/GJBU6sFQGz2it5g1A',
