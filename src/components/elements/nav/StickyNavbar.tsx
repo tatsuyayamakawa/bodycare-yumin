@@ -8,6 +8,7 @@ import { HamburgerButton } from 'src/components/elements/nav/HamburgerButton';
 import { LogoLink } from 'src/components/elements/nav/LogoLink';
 import { ModalWindow } from 'src/components/elements/nav/ModalWindow';
 import { NavList } from 'src/components/elements/nav/NavList';
+import { ProgressBar } from 'src/libs/progress-bar/progress-bar';
 
 export const StickyNavbar = () => {
   // ヘッダースクロール時の影表示を管理する
@@ -43,6 +44,7 @@ export const StickyNavbar = () => {
           <ModalWindow isOpen={isOpen} handler={handleClick} />
         </div>
       </Navbar>
+      <ProgressBar />
     </>
   );
 };
