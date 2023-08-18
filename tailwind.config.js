@@ -35,6 +35,17 @@ module.exports = withMT({
         'gray-50': '#707070',
         'gray-75': '#444444',
       },
+      keyframes: {
+        popping: {
+          '0%': { transform: 'translateY(0)' },
+          '30%': { transform: 'translateY(0.5em)' },
+          '60%': { transform: 'translateY(0)' },
+          '100%': { transform: 'translateY(0)' },
+        },
+      },
+      animation: {
+        popping: 'popping 2s infinite ease-out',
+      },
     },
   },
   plugins: [],
