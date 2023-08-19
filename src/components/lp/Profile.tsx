@@ -96,8 +96,8 @@ export const Profile = () => {
             observerOptions={observerOptions}
             className="[&>p]:py-4 [&>p]:font-notojp [&>p]:text-base [&>p]:font-normal [&>p]:not-italic [&>p]:leading-relaxed [&>p]:tracking-wide [&>p]:text-gray-75 lg:[&>p]:tracking-widest"
           >
-            <p>当店は一軒家の一室で施術を行っている小さな整体サロンです。2012年8月に開業いたしました。</p>
-            <p>当店で行っている東洋整体術（東洋カイロプラクティック）はカイロプラクティックと整体に中国の推拿の技術を取り入れ発展してきた独自技術です。</p>
+            <p>当院は一軒家の一室で施術を行っている小さな整体院です。2012年8月に開業いたしました。</p>
+            <p>当院で行っている東洋整体術（東洋カイロプラクティック）はカイロプラクティックと整体に中国の推拿の技術を取り入れ発展してきた独自技術です。</p>
             <p>おひとりおひとりの要望をお聞きしながら、手もみ中心の施術をさせていただきますので、どなたでも安心してお受けいただけます。</p>
           </ScrollAnimator>
         </div>
