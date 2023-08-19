@@ -13,12 +13,12 @@ export const Profile = () => {
   return (
     <section>
       <div className="mx-auto mb-[6.25rem] mt-0 flex flex-col items-center gap-20 lg:mt-[6.25rem] lg:max-w-[53.875rem] lg:flex-row">
-        <ScrollAnimator start={{ opacity: 0 }} end={{ opacity: 1 }} observerOptions={observerOptions} className="mx-auto mt-20 lg:mt-0 lg:w-full">
-          <figure className={`lg:[mask-image:url("../../public/images/shape-8s.svg")] lg:[mask-position:center] lg:[mask-repeat:no-repeat] lg:[mask-size:135%]`}>
-            <ImageWrapper width="400" height="400" src={profileImage} alt="山川 達也 ポートレート" className="h-auto" />
+        <ScrollAnimator start={{ opacity: 0 }} end={{ opacity: 1 }} observerOptions={observerOptions} className="mx-5 mt-20 lg:mx-auto lg:mt-0 lg:w-full">
+          <figure>
+            <ImageWrapper width="400" height="400" src={profileImage} alt="山川 達也 ポートレート" className="h-auto rounded-lg shadow-lg" />
           </figure>
         </ScrollAnimator>
-        <div className="mx-5">
+        <div className="mx-5 lg:mx-auto">
           <h2 className="mb-5 font-notojp text-2xl font-medium text-accent lg:text-3xl">
             {heading2.split(' ').map((word, index) => {
               return (

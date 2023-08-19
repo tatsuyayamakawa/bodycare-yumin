@@ -1,9 +1,8 @@
 import { ScrollAnimator } from 'react-animate-observer';
 
-import { ImageWrapper } from '@/components/elements/image/ImageWrapper';
-
 import media01Image from 'public/images/media-01.jpg';
 import media02Image from 'public/images/media-02.png';
+import { ImageWrapper } from 'src/components/elements/image/ImageWrapper';
 import { fadeUpComponent } from 'src/constants/motion';
 import { observerOptions } from 'src/constants/optionObserver';
 
