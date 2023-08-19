@@ -25,7 +25,7 @@ export const Menu = () => {
                   transitionTimingFunction: 'ease-in-out',
                 }}
                 observerOptions={observerOptions}
-                className="flex min-h-[28rem] max-w-[20rem] flex-col items-center rounded-lg bg-white shadow-lg md:mx-5 md:min-h-full md:max-w-full md:flex-row lg:mx-0 lg:min-h-[28rem] lg:max-w-[20rem] lg:flex-col [&:nth-child(2)]:border-4 [&:nth-child(2)]:border-gray-300 [&:nth-child(2)]:bg-gray-100"
+                className="flex min-h-[28rem] max-w-[20rem] flex-col items-center rounded-lg bg-white shadow-lg md:mx-5 md:min-h-full md:max-w-full md:flex-row lg:mx-0 lg:min-h-[28rem] lg:max-w-[20rem] lg:flex-col"
               >
                 <div className="relative">
                   <div className="h-full">
