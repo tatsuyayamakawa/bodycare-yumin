@@ -1,15 +1,10 @@
 import { ScrollAnimator } from 'react-animate-observer';
 
-import { Button } from '@material-tailwind/react';
-import { FaMobileScreenButton } from 'react-icons/fa6';
-
 import { SectionHeading } from 'src/components/elements/heading/SectionHeading';
 import { ImageWrapper } from 'src/components/elements/image/ImageWrapper';
 import { SvgWaveTop, SvgWaveBottom } from 'src/components/elements/image/SvgWave';
-import { ExternalLink } from 'src/components/elements/link/ExternalLink';
-import { data } from 'src/constants/data';
 import { menus } from 'src/constants/menus';
-import { fadeUpComponent } from 'src/constants/motion';
+import { observerOptions } from 'src/constants/optionObserver';
 
 export const Menu = () => {
   return (
@@ -25,10 +20,11 @@ export const Menu = () => {
               <ScrollAnimator
                 key={index}
                 transition={{
-                  transitionDelay: 0.25 + index * 0.25,
+                  transitionDelay: 0.2 + index * 0.2,
                   transitionDuration: 0.4,
                   transitionTimingFunction: 'ease-in-out',
                 }}
+                observerOptions={observerOptions}
                 className="flex min-h-[28rem] max-w-[20rem] flex-col items-center rounded-lg bg-white shadow-lg md:mx-5 md:min-h-full md:max-w-full md:flex-row lg:mx-0 lg:min-h-[28rem] lg:max-w-[20rem] lg:flex-col [&:nth-child(2)]:border-4 [&:nth-child(2)]:border-gray-300 [&:nth-child(2)]:bg-gray-100"
               >
                 <div className="relative">
@@ -57,22 +53,6 @@ export const Menu = () => {
             );
           })}
         </div>
-        <ScrollAnimator {...fadeUpComponent} className="mx-10 mb-4 mt-8 flex flex-col items-center justify-center">
-          <ExternalLink url={data.sns.line} icon={false} ariaLabel="LINEで予約する">
-            <Button variant="filled" size="lg" color="green" ripple={true} fullWidth={false} className="bg-green font-notojp text-lg font-bold text-white">
-              <div className="flex items-center justify-center gap-4">
-                <FaMobileScreenButton size={24} />
-                LINEで予約する
-              </div>
-            </Button>
-          </ExternalLink>
-          <p className="mt-4 font-notojp text-sm font-normal not-italic tracking-wide text-gray-50">
-            <ExternalLink url="https://kosodate.pref.yamagata.jp/passport" ariaLabel="やまがた子育て応援パスポート公式サイト" className="underline">
-              子育て応援パスポート
-            </ExternalLink>
-            のご提示で&#34;10%割引&#34;
-          </p>
-        </ScrollAnimator>
       </div>
       <SvgWaveBottom />
     </section>

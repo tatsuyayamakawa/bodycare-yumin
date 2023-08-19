@@ -32,7 +32,7 @@ export const ModalWindow = ({ isOpen, handler }: NavStateProps) => {
           {navs.map((nav) => {
             return (
               <ListItem className="block" key={nav.id}>
-                <Scroll href={nav.link} to={nav.link} smooth={true} duration={600} offset={100} className="cursor-pointer" onClick={handler}>
+                <Scroll href={nav.link} to={nav.link} smooth={true} duration={600} offset={50} className="cursor-pointer" onClick={handler}>
                   <Typography variant="small" color="gray" as="div" className="text-center font-notojp text-lg font-normal text-gray-75">
                     {nav.title}
                   </Typography>

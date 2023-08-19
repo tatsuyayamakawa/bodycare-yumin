@@ -1,7 +1,7 @@
 // フェイドアップアニメーションのオプション
 export const fadeUpComponent = {
   start: {
-    translateY: 40,
+    translateY: 20,
     opacity: 0,
   },
   end: {
@@ -9,6 +9,7 @@ export const fadeUpComponent = {
     opacity: 1,
   },
   transition: {
+    transitionDelay: 0.2,
     transitionDuration: 0.4,
     transitionTimingFunction: 'ease-in-out',
   },
@@ -17,7 +18,7 @@ export const fadeUpComponent = {
 // フェードダウンアニメーションのオプション
 export const fadeDownAnimation = {
   start: {
-    translateY: -40,
+    translateY: -20,
     opacity: 0,
   },
   end: {
@@ -25,6 +26,7 @@ export const fadeDownAnimation = {
     opacity: 1,
   },
   transition: {
+    transitionDelay: 0.2,
     transitionDuration: 0.4,
     transitionTimingFunction: 'ease-in-out',
   },
@@ -33,7 +35,7 @@ export const fadeDownAnimation = {
 // 左から右へのアニメーションのオプション
 export const slideInLeftAnimation = {
   start: {
-    translateX: -40,
+    translateX: -20,
     opacity: 0,
   },
   end: {
@@ -41,7 +43,7 @@ export const slideInLeftAnimation = {
     opacity: 1,
   },
   transition: {
-    transitionDelay: 0.1,
+    transitionDelay: 0.4,
     transitionDuration: 0.4,
     transitionTimingFunction: 'ease-in-out',
   },
@@ -50,7 +52,7 @@ export const slideInLeftAnimation = {
 // 右から左へのアニメーションのオプション
 export const slideInRightAnimation = {
   start: {
-    translateX: 40,
+    translateX: 20,
     opacity: 0,
   },
   end: {
@@ -58,7 +60,7 @@ export const slideInRightAnimation = {
     opacity: 1,
   },
   transition: {
-    transitionDelay: 0.1,
+    transitionDelay: 0.2,
     transitionDuration: 0.4,
     transitionTimingFunction: 'ease-in-out',
   },

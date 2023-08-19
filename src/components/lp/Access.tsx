@@ -9,6 +9,7 @@ import { ExternalLink } from 'src/components/elements/link/ExternalLink';
 import { LogoLink } from 'src/components/elements/nav/LogoLink';
 import { data } from 'src/constants/data';
 import { fadeUpComponent } from 'src/constants/motion';
+import { observerOptions } from 'src/constants/optionObserver';
 import { GoogleMaps } from 'src/libs/google-maps/google-maps';
 
 export const Access = () => {
@@ -20,7 +21,7 @@ export const Access = () => {
           <SectionHeading heading2="アクセス" heading3="Access" isAlign={true} />
           <div className="mx-5 flex flex-col justify-center gap-10 lg:flex-row">
             <div className="flex flex-col md:basis-2/5">
-              <ScrollAnimator {...fadeUpComponent} className="w-full">
+              <ScrollAnimator {...fadeUpComponent} observerOptions={observerOptions} className="w-full">
                 <LogoLink />
                 <div className="mt-5 font-notojp text-base font-normal leading-relaxed tracking-wide text-gray-75">
                   <div>〒990-0851</div>
@@ -58,7 +59,7 @@ export const Access = () => {
               </ScrollAnimator>
             </div>
             <div className="h-[50vh] md:basis-3/5">
-              <ScrollAnimator {...fadeUpComponent} className="w-full">
+              <ScrollAnimator {...fadeUpComponent} observerOptions={observerOptions} className="w-full">
                 <GoogleMaps />
               </ScrollAnimator>
             </div>

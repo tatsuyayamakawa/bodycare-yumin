@@ -1,5 +1,7 @@
 import { ScrollAnimator } from 'react-animate-observer';
 
+import { observerOptions } from 'src/constants/optionObserver';
+
 import type { SectionHeadingProps } from 'src/@types/global';
 
 export const SectionHeading = ({ heading2, heading3, isAlign = true }: SectionHeadingProps) => {
@@ -8,17 +10,18 @@ export const SectionHeading = ({ heading2, heading3, isAlign = true }: SectionHe
       <h2 aria-label={`${heading2}`} role="heading" className="mx-10 mb-5 font-zenmincho text-4xl font-bold not-italic leading-normal text-primary lg:text-5xl">
         {heading2.split(' ').map((word, index) => {
           return (
-            <ScrollAnimator key={index} start={{ opacity: 0 }} end={{ opacity: 1 }} className="inline-block">
+            <ScrollAnimator key={index} start={{ opacity: 0 }} end={{ opacity: 1 }} observerOptions={observerOptions} className="inline-block">
               {word.split('').map((character, index) => (
                 <ScrollAnimator
                   key={index}
                   start={{ opacity: 0 }}
                   end={{ opacity: 1 }}
                   transition={{
-                    transitionDelay: 0.25 + index * 0.1,
-                    transitionDuration: 0.4,
+                    transitionDelay: 0.05 + index * 0.05,
+                    transitionDuration: 0.1,
                     transitionTimingFunction: 'ease-in-out',
                   }}
+                  observerOptions={observerOptions}
                   className="inline-block"
                 >
                   {character}
@@ -31,17 +34,18 @@ export const SectionHeading = ({ heading2, heading3, isAlign = true }: SectionHe
       <h3 aria-label={`${heading3}`} role="heading" className="mx-10 mb-10 font-allura text-3xl font-normal not-italic leading-normal text-accent lg:text-[2.5rem]">
         {heading3.split(' ').map((word, index) => {
           return (
-            <ScrollAnimator key={index} start={{ opacity: 0 }} end={{ opacity: 1 }} className="inline-block">
+            <ScrollAnimator key={index} start={{ opacity: 0 }} end={{ opacity: 1 }} observerOptions={observerOptions} className="inline-block">
               {word.split('').map((character, index) => (
                 <ScrollAnimator
                   key={index}
                   start={{ opacity: 0 }}
                   end={{ opacity: 1 }}
                   transition={{
-                    transitionDelay: 0.25 + index * 0.1,
-                    transitionDuration: 0.4,
+                    transitionDelay: 0.05 + index * 0.1,
+                    transitionDuration: 0.1,
                     transitionTimingFunction: 'ease-in-out',
                   }}
+                  observerOptions={observerOptions}
                   className="inline-block"
                 >
                   {character}
