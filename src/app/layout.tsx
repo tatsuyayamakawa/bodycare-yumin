@@ -35,6 +35,8 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="ja-JP">
+      <link rel="manifest" href="/manifest.json" />
+      <meta name="theme-color" content="#FF9933" />
       <GoogleTagManager googleTagManagerId={googleTagManagerId as GoogleTagManagerId} />
       <body id="header">{children}</body>
     </html>
