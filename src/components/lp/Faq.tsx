@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { ScrollAnimator } from 'react-animate-observer';
 
-import { Accordion, AccordionHeader, AccordionBody } from '@material-tailwind/react';
+import { Accordion, AccordionHeader, AccordionBody, Typography } from '@material-tailwind/react';
 import { FaChevronDown } from 'react-icons/fa6';
 
 import { SectionHeading } from 'src/components/elements/heading/SectionHeading';
@@ -37,12 +37,17 @@ export const Faq = () => {
               return (
                 <Accordion open={open === question.id} icon={<SvgArrowDown id={question.id} open={open} />} animate={customAnimation} key={question.id} className="my-5">
                   <AccordionHeader className="rounded-lg bg-gray-10 px-5 py-5" onClick={() => handleOpen(question.id)}>
-                    <h4 className="flex items-center font-notojp text-base font-normal not-italic leading-relaxed tracking-wide text-gray-75 before:mr-5 before:font-b612mono before:text-2xl before:content-['Q'] lg:text-lg before:lg:text-3xl">
+                    <Typography
+                      variant="h4"
+                      className="flex items-center font-notojp text-base font-medium leading-relaxed tracking-wide text-gray-75 before:mr-5 before:font-b612mono before:text-2xl before:content-['Q'] lg:text-lg before:lg:text-3xl"
+                    >
                       {question.question}
-                    </h4>
+                    </Typography>
                   </AccordionHeader>
                   <AccordionBody className="mt-5 px-6">
-                    <p className="whitespace-pre-wrap font-notojp text-sm font-normal not-italic leading-relaxed tracking-wide text-gray-50 lg:text-base">{question.answer}</p>
+                    <Typography variant="small" className="font-notojp leading-relaxed tracking-wide text-gray-75">
+                      {question.answer}
+                    </Typography>
                   </AccordionBody>
                 </Accordion>
               );

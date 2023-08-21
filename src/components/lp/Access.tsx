@@ -1,5 +1,6 @@
 import { ScrollAnimator } from 'react-animate-observer';
 
+import { Typography } from '@material-tailwind/react';
 import { Button } from '@material-tailwind/react';
 import { FaMobileScreenButton, FaRegEnvelope, FaAngleRight } from 'react-icons/fa6';
 
@@ -23,36 +24,52 @@ export const Access = () => {
             <div className="flex flex-col md:basis-2/5">
               <ScrollAnimator {...fadeUpComponent} observerOptions={observerOptions} className="w-full">
                 <LogoLink />
-                <div className="mt-5 font-notojp text-base font-normal leading-relaxed tracking-wide text-gray-75">
-                  <div>〒990-0851</div>
-                  <div className="flex flex-col gap-1 md:flex-row">
-                    <div className="md:mr-2">山形県山形市大字上椹沢195-2</div>
-                    <div>
-                      <ExternalLink url={data.google.map} ariaLabel="Google map" className="rounded-xl bg-primary px-2 py-1 text-xs text-white">
-                        Google map
-                      </ExternalLink>
-                    </div>
+                <div className="mt-5">
+                  <Typography variant="paragraph" className="tracking-wide text-gray-75">
+                    〒990-0851
+                  </Typography>
+                  <div className="flex flex-col items-start gap-1 md:flex-row lg:items-center">
+                    <Typography variant="paragraph" className="font-notojp tracking-wide md:mr-2">
+                      山形県山形市大字上椹沢195-2
+                    </Typography>
+                    <ExternalLink url={data.google.map} ariaLabel="Google map" icon={false}>
+                      <Button size="sm" variant="filled" color="blue-gray" className="rounded-full shadow-none hover:shadow-none">
+                        <div className="flex items-center gap-2">
+                          <Typography variant="small" className="font-notojp tracking-wide">
+                            GOOGLE MAP
+                          </Typography>
+                        </div>
+                      </Button>
+                    </ExternalLink>
                   </div>
                 </div>
                 <div className="mt-10 flex flex-col gap-5">
                   <ExternalLink url={data.sns.line} ariaLabel="LINEで予約する" icon={false}>
-                    <Button variant="filled" size="lg" color="white" ripple={true} fullWidth={true} className="bg-white font-notojp text-lg font-bold text-primary">
+                    <Button variant="filled" size="lg" color="white" ripple={true} fullWidth={true} className="bg-white text-primary">
                       <div className="flex items-center justify-center gap-4">
                         <FaMobileScreenButton size={24} />
-                        LINEで予約
+                        <Typography variant="lead" className="font-notojp text-lg font-bold">
+                          LINEで予約
+                        </Typography>
                         <FaAngleRight size={24} />
                       </div>
-                      <div className="mt-2 text-xs font-normal text-gray-50">当日受付 9:00 ～ 15:00 木曜日定休</div>
+                      <Typography variant="small" className="mt-2 font-notojp text-gray-50">
+                        当日受付 9:00 ～ 15:00 木曜日定休
+                      </Typography>
                     </Button>
                   </ExternalLink>
                   <ExternalLink url={data.google.form} ariaLabel="お問い合わせ" icon={false}>
-                    <Button variant="filled" size="lg" color="white" ripple={true} fullWidth={true} className="bg-white font-notojp text-lg font-bold text-primary">
+                    <Button variant="filled" size="lg" color="white" ripple={true} fullWidth={true} className="bg-white text-primary">
                       <div className="flex items-center justify-center gap-4">
                         <FaRegEnvelope size={24} />
-                        お問い合わせ
+                        <Typography variant="lead" className="font-notojp text-lg font-bold">
+                          お問い合わせ
+                        </Typography>
                         <FaAngleRight size={24} />
                       </div>
-                      <div className="mt-2 text-xs font-normal text-gray-50">不明な点はお問い合わせください</div>
+                      <Typography variant="small" className="mt-2 font-notojp text-gray-50">
+                        不明な点はお問い合わせください
+                      </Typography>
                     </Button>
                   </ExternalLink>
                 </div>

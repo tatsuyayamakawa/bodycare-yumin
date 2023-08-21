@@ -1,5 +1,7 @@
 import { ScrollAnimator } from 'react-animate-observer';
 
+import { Typography } from '@material-tailwind/react';
+
 import media01Image from 'public/images/media-01.jpg';
 import media02Image from 'public/images/media-02.png';
 import { ImageWrapper } from 'src/components/elements/image/ImageWrapper';
@@ -12,7 +14,7 @@ export const Media = () => {
   return (
     <section className="container">
       <div className="mx-auto my-[6.25rem] max-w-[62rem]">
-        <h2 className="mx-5 mb-10 text-center font-notojp text-3xl font-bold not-italic leading-normal tracking-normal text-accent lg:text-4xl">
+        <Typography variant="h2" className="mx-5 mb-10 text-center font-notojp text-3xl font-medium text-accent lg:text-4xl">
           {heading2.split(' ').map((word, index) => {
             return (
               <ScrollAnimator key={index} start={{ opacity: 0 }} end={{ opacity: 1 }} observerOptions={observerOptions} className="inline-block">
@@ -35,7 +37,7 @@ export const Media = () => {
               </ScrollAnimator>
             );
           })}
-        </h2>
+        </Typography>
         <ScrollAnimator
           {...fadeUpComponent}
           observerOptions={observerOptions}

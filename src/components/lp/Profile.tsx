@@ -1,5 +1,7 @@
 import { ScrollAnimator } from 'react-animate-observer';
 
+import { Typography } from '@material-tailwind/react';
+
 import profileImage from 'public/images/profile.jpg';
 import { ImageWrapper } from 'src/components/elements/image/ImageWrapper';
 import { fadeDownAnimation } from 'src/constants/motion';
@@ -19,7 +21,7 @@ export const Profile = () => {
           </figure>
         </ScrollAnimator>
         <div className="mx-5 lg:mx-auto">
-          <h2 className="mb-5 font-notojp text-2xl font-medium text-accent lg:text-3xl">
+          <Typography variant="h2" className="mb-5 font-notojp text-2xl font-medium text-accent lg:text-3xl">
             {heading2.split(' ').map((word, index) => {
               return (
                 <ScrollAnimator key={index} start={{ opacity: 0 }} end={{ opacity: 1 }} observerOptions={observerOptions} className="inline-block">
@@ -42,8 +44,8 @@ export const Profile = () => {
                 </ScrollAnimator>
               );
             })}
-          </h2>
-          <h3 className="mb-10 font-zenmincho text-4xl font-bold text-primary lg:text-5xl">
+          </Typography>
+          <Typography variant="h3" className="mb-10 font-zenmincho text-4xl text-primary lg:text-5xl">
             {heading3.split(' ').map((word, index) => {
               return (
                 <ScrollAnimator key={index} start={{ opacity: 0 }} end={{ opacity: 1 }} observerOptions={observerOptions} className="inline-block">
@@ -66,8 +68,8 @@ export const Profile = () => {
                 </ScrollAnimator>
               );
             })}
-          </h3>
-          <h4 className="mb-5 font-notojp text-xl font-medium text-primary lg:text-2xl">
+          </Typography>
+          <Typography variant="h4" className="mb-5 font-notojp font-medium text-primary">
             {heading4.split(' ').map((word, index) => {
               return (
                 <ScrollAnimator key={index} start={{ opacity: 0 }} end={{ opacity: 1 }} observerOptions={observerOptions} className="inline-block">
@@ -90,15 +92,17 @@ export const Profile = () => {
                 </ScrollAnimator>
               );
             })}
-          </h4>
-          <ScrollAnimator
-            {...fadeDownAnimation}
-            observerOptions={observerOptions}
-            className="[&>p]:py-4 [&>p]:font-notojp [&>p]:text-base [&>p]:font-normal [&>p]:not-italic [&>p]:leading-relaxed [&>p]:tracking-wide [&>p]:text-gray-75 lg:[&>p]:tracking-widest"
-          >
-            <p>当院は一軒家の一室で施術を行っている小さな整体院です。2012年8月に開業いたしました。</p>
-            <p>当院で行っている東洋整体術（東洋カイロプラクティック）はカイロプラクティックと整体に中国の推拿の技術を取り入れ発展してきた独自技術です。</p>
-            <p>おひとりおひとりの要望をお聞きしながら、手もみ中心の施術をさせていただきますので、どなたでも安心してお受けいただけます。</p>
+          </Typography>
+          <ScrollAnimator {...fadeDownAnimation} observerOptions={observerOptions}>
+            <Typography variant="paragraph" className="py-4 text-justify font-notojp tracking-wide">
+              当院は一軒家の一室で施術を行っている小さな整体院です。2012年8月に開業いたしました。
+            </Typography>
+            <Typography variant="paragraph" className="py-4 text-justify font-notojp tracking-wide">
+              当院で行っている東洋整体術（東洋カイロプラクティック）はカイロプラクティックと整体に中国の推拿の技術を取り入れ発展してきた独自技術です。
+            </Typography>
+            <Typography variant="paragraph" className="py-4 text-justify font-notojp tracking-wide">
+              おひとりおひとりの要望をお聞きしながら、手もみ中心の施術をさせていただきますので、どなたでも安心してお受けいただけます。
+            </Typography>
           </ScrollAnimator>
         </div>
       </div>
