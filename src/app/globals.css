@@ -12,11 +12,19 @@ body {
   background-color: rgb(var(--background-rgb));
 }
 
-/* Noto Sans JP - normal */
+/* Noto Sans JP - light */
+@font-face {
+  src: url('../../public/resources/fonts/NotoSansJP-Light.woff') format('woff');
+  font-family: 'Noto Sans JP', 'sans-serif';
+  font-style: Light;
+  font-display: swap;
+}
+
+/* Noto Sans JP - regular */
 @font-face {
   src: url('../../public/resources/fonts/NotoSansJP-Regular.woff') format('woff');
   font-family: 'Noto Sans JP', 'sans-serif';
-  font-style: normal;
+  font-style: Regular;
   font-display: swap;
 }
 
@@ -24,38 +32,38 @@ body {
 @font-face {
   src: url('../../public/resources/fonts/NotoSansJP-Medium.woff') format('woff');
   font-family: 'Noto Sans JP', 'sans-serif';
-  font-style: medium;
+  font-style: Medium;
   font-display: swap;
 }
 
-/* Noto Sans JP - bold */
+/* Noto Sans JP - semi bold */
 @font-face {
-  src: url('../../public/resources/fonts/NotoSansJP-Bold.woff') format('woff');
+  src: url('../../public/resources/fonts/NotoSansJP-SemiBold.woff') format('woff');
   font-family: 'Noto Sans JP', 'sans-serif';
-  font-style: bold;
+  font-style: SemiBold;
   font-display: swap;
 }
 
-/* Zen Old Micho - bold */
+/* Zen Old Micho - semi bold */
 @font-face {
-  src: url('../../public/resources/fonts/ZenOldMincho-Bold.woff') format('woff');
+  src: url('../../public/resources/fonts/ZenOldMincho-SemiBold.woff') format('woff');
   font-family: 'Zen Old Mincho';
-  font-style: bold;
+  font-style: SemiBold;
   font-display: swap;
 }
 
-/* Allura - normal */
+/* Allura - regular */
 @font-face {
   src: url('../../public/resources/fonts/Allura-Regular.woff') format('woff');
   font-family: 'Allura';
-  font-style: normal;
+  font-style: Regular;
   font-display: swap;
 }
 
-/* B612 Mono - normal */
+/* B612 Mono - regular */
 @font-face {
   src: url('../../public/resources/fonts/B612Mono-Regular.woff') format('woff');
-  font-family: 'B612 Mono', 'monospace';
-  font-style: normal;
+  font-family: 'B612 Mono', monospace;
+  font-style: Regular;
   font-display: swap;
 }
