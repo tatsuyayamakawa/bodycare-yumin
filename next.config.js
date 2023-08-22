@@ -6,6 +6,8 @@ const withPWA = require('next-pwa')({
   disable: process.env.NEXT_PUBLIC_NODE_ENV === 'development',
 });
 
-const nextConfig = withPWA({});
+const nextConfig = withPWA({
+  reactStrictMode: true,
+});
 
 module.exports = nextConfig;
