@@ -1,12 +1,9 @@
-'use client';
-
-import React, { useEffect } from 'react';
+import React from 'react';
 
 import './globals.css';
 import { data } from 'src/constants/data';
 import { GoogleTagManager } from 'src/libs/google-tagmanager/google-tagmanager';
 import { googleTagManagerId } from 'src/libs/google-tagmanager/google-tagmanager-id';
-import { registerServiceWorker } from 'src/utils/registerServiceWorker';
 
 import type { Metadata } from 'next';
 import type { GoogleTagManagerId } from 'src/libs/google-tagmanager/google-tagmanager';
@@ -36,10 +33,6 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  useEffect(() => {
-    registerServiceWorker();
-  }, []);
-
   return (
     <html lang="ja-JP">
       <link rel="manifest" href="/manifest.json" />
