@@ -1,12 +1,7 @@
 {
-  "theme_color": "#FFFFFF",
-  "background_color": "#FFFFFF",
-  "display": "standalone",
-  "scope": "/",
-  "start_url": "/",
-  "name": "\u624b\u3082\u307f\u6574\u4f53 \u7652\u7720",
   "short_name": "\u7652\u7720",
-  "description": "\u624b\u3082\u307f\u6574\u4f53 \u7652\u7720 \u516c\u5f0f\u30b5\u30a4\u30c8",
+  "name": "\u624b\u3082\u307f\u6574\u4f53 \u7652\u7720",
+  "description": "\u5c71\u5f62\u5e02\u3067\u81ea\u5f8b\u795e\u7d4c\u3092\u6574\u3048\u308b\u305f\u3081\u306e\u6574\u4f53\u30b5\u30ed\u30f3",
   "icons": [
     {
       "src": "images/icon-192x192.png",
@@ -29,5 +24,9 @@
       "sizes": "512x512",
       "type": "image/png"
     }
-  ]
+  ],
+  "start_url": "/?utm_source=pwa",
+  "display": "standalone",
+  "theme_color": "#FF9933",
+  "background_color": "#F9F9F9"
 }
