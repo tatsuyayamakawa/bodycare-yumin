@@ -1,3 +1,5 @@
+'use client';
+
 import { StickyNavbar } from 'src/components/elements/nav/StickyNavbar';
 
 export const Header = () => {

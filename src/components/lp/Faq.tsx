@@ -1,3 +1,5 @@
+'use client';
+
 import { useState } from 'react';
 import { ScrollAnimator } from 'react-animate-observer';
 
@@ -35,7 +37,7 @@ export const Faq = () => {
           <ScrollAnimator {...fadeUpComponent} observerOptions={observerOptions}>
             {questions.map((question) => {
               return (
-                <Accordion open={open === question.id} icon={<SvgArrowDown id={question.id} open={open} />} animate={customAnimation} key={question.id} className="my-5">
+                <Accordion open={open === question.id} icon={<SvgArrowDown id={question.id} open={open} />} animate={customAnimation} key={question.id} className="my-6">
                   <AccordionHeader className="rounded-lg bg-gray-10 px-5 py-5" onClick={() => handleOpen(question.id)}>
                     <Typography
                       variant="h4"
@@ -44,8 +46,8 @@ export const Faq = () => {
                       {question.question}
                     </Typography>
                   </AccordionHeader>
-                  <AccordionBody className="mt-5 px-6">
-                    <Typography variant="small" className="font-notojp leading-relaxed tracking-wide text-gray-75">
+                  <AccordionBody className="mt-6 px-6">
+                    <Typography variant="paragraph" className="font-notojp leading-relaxed tracking-wide text-gray-75">
                       {question.answer}
                     </Typography>
                   </AccordionBody>
