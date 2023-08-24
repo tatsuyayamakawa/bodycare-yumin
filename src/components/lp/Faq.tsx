@@ -41,7 +41,7 @@ export const Faq = () => {
                   <AccordionHeader className="rounded-lg bg-gray-10 px-5 py-5" onClick={() => handleOpen(question.id)}>
                     <Typography
                       variant="h4"
-                      className="flex items-center font-notojp text-base font-medium leading-relaxed tracking-wide text-gray-75 before:mr-5 before:font-b612mono before:text-2xl before:content-['Q'] lg:text-lg before:lg:text-3xl"
+                      className="flex items-center font-notojp text-base font-normal leading-relaxed tracking-wide text-gray-75 before:mr-5 before:font-b612mono before:text-2xl before:content-['Q'] lg:text-lg before:lg:text-3xl"
                     >
                       {question.question}
                     </Typography>

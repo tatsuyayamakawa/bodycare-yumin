@@ -27,7 +27,7 @@ export const Menu = () => {
       </div>
       <div className="bg-secondary py-[6.25rem]">
         <SectionHeading heading2="料金" heading3="Price" isAlign={true} />
-        <div className="flex flex-col items-center justify-center gap-5 lg:flex-row">
+        <div className="flex flex-col items-center justify-center gap-7 lg:flex-row">
           {menus.map((menu, index) => {
             return (
               <ScrollAnimator
@@ -51,7 +51,7 @@ export const Menu = () => {
                     />
                   </div>
                 </div>
-                <div className="mx-6 flex flex-col items-center justify-center py-8 md:basis-1/2 md:py-0 lg:basis-auto lg:py-8">
+                <div className="mx-6 flex flex-col items-center justify-center py-8 md:mx-auto md:basis-1/2 md:py-0 lg:mx-6 lg:basis-auto lg:py-8">
                   <Typography variant="h4" className="text-center font-notojp text-lg text-primary">
                     {menu.title}
                     <span className="text-sm">{menu.time}</span>
