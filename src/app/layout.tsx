@@ -4,6 +4,8 @@ import 'src/styles/globals.css';
 import { data } from 'src/constants/data';
 import { GoogleTagManager } from 'src/libs/google-tagmanager/google-tagmanager';
 import { googleTagManagerId } from 'src/libs/google-tagmanager/google-tagmanager-id';
+import { OneSignal } from 'src/libs/onesignal/onesignal';
+import { oneSignalId, oneSignalSafariId, oneSignalSubDomain } from 'src/libs/onesignal/onesignal-id';
 
 import type { Metadata } from 'next';
 import type { GoogleTagManagerId } from 'src/libs/google-tagmanager/google-tagmanager';
@@ -37,6 +39,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="ja-JP">
+      <OneSignal oneSignalId={oneSignalId} oneSignalSafariId={oneSignalSafariId} oneSignalSubDomain={oneSignalSubDomain} />
       <GoogleTagManager googleTagManagerId={googleTagManagerId as GoogleTagManagerId} />
       <body id="header">{children}</body>
     </html>
