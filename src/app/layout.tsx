@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './globals.css';
+import 'src/styles/globals.css';
 import { data } from 'src/constants/data';
 import { GoogleTagManager } from 'src/libs/google-tagmanager/google-tagmanager';
 import { googleTagManagerId } from 'src/libs/google-tagmanager/google-tagmanager-id';
@@ -10,6 +10,8 @@ import type { GoogleTagManagerId } from 'src/libs/google-tagmanager/google-tagma
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.URL ?? `${data.info.domain}`),
+  manifest: '/manifest.json',
+  themeColor: '#F9F9F9',
   title: data.info.title,
   description: data.info.description,
   openGraph: {
@@ -35,8 +37,6 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="ja-JP">
-      <link rel="manifest" href="/manifest.json" />
-      <meta name="theme-color" content="#F9F9F9" />
       <GoogleTagManager googleTagManagerId={googleTagManagerId as GoogleTagManagerId} />
       <body id="header">{children}</body>
     </html>

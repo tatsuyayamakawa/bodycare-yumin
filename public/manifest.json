@@ -4,27 +4,28 @@
   "description": "\u5c71\u5f62\u5e02\u3067\u81ea\u5f8b\u795e\u7d4c\u3092\u6574\u3048\u308b\u305f\u3081\u306e\u6574\u4f53\u30b5\u30ed\u30f3",
   "icons": [
     {
-      "src": "images/icon-192x192.png",
+      "src": "resources/manifest/icon-192x192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "images/maskable-icon-192x192.png",
+      "src": "resources/manifest/maskable-icon-192x192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "maskable"
     },
     {
-      "src": "images/icon-512x512.png",
+      "src": "resources/manifest/icon-512x512.png",
       "sizes": "512x512",
       "type": "image/png"
     },
     {
-      "src": "images/maskable-icon-512x512.png",
+      "src": "resources/manifest/maskable-icon-512x512.png",
       "sizes": "512x512",
       "type": "image/png"
     }
   ],
+  "id": "/?utm_source=pwa",
   "start_url": "/?utm_source=pwa",
   "display": "standalone",
   "theme_color": "#FF9933",
