@@ -45,7 +45,7 @@ export const Profile = () => {
               );
             })}
           </Typography>
-          <Typography variant="h3" className="mb-10 font-zenmincho text-4xl text-primary lg:text-5xl">
+          <Typography variant="h3" className="mb-10 font-zenmincho text-4xl font-semibold text-primary lg:text-5xl">
             {heading3.split(' ').map((word, index) => {
               return (
                 <ScrollAnimator key={index} start={{ opacity: 0 }} end={{ opacity: 1 }} observerOptions={observerOptions} className="inline-block">
@@ -94,13 +94,13 @@ export const Profile = () => {
             })}
           </Typography>
           <ScrollAnimator {...fadeDownAnimation} observerOptions={observerOptions}>
-            <Typography variant="paragraph" className="py-4 text-justify font-notojp tracking-wide">
+            <Typography variant="paragraph" className="py-4 text-justify font-notojp font-normal tracking-wide">
               当院は一軒家の一室で施術を行っている小さな整体院です。2012年8月に開業いたしました。
             </Typography>
-            <Typography variant="paragraph" className="py-4 text-justify font-notojp tracking-wide">
+            <Typography variant="paragraph" className="py-4 text-justify font-notojp font-normal tracking-wide">
               当院で行っている東洋整体術（東洋カイロプラクティック）はカイロプラクティックと整体に中国の推拿の技術を取り入れ発展してきた独自技術です。
             </Typography>
-            <Typography variant="paragraph" className="py-4 text-justify font-notojp tracking-wide">
+            <Typography variant="paragraph" className="py-4 text-justify font-notojp font-normal tracking-wide">
               おひとりおひとりの要望をお聞きしながら、手もみ中心の施術をさせていただきますので、どなたでも安心してお受けいただけます。
             </Typography>
           </ScrollAnimator>

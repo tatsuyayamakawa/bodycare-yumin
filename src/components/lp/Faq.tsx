@@ -47,7 +47,7 @@ export const Faq = () => {
                     </Typography>
                   </AccordionHeader>
                   <AccordionBody className="mt-6 px-6">
-                    <Typography variant="paragraph" className="font-notojp leading-relaxed tracking-wide text-gray-75">
+                    <Typography variant="paragraph" className="font-notojp font-normal leading-relaxed tracking-wide text-gray-75">
                       {question.answer}
                     </Typography>
                   </AccordionBody>

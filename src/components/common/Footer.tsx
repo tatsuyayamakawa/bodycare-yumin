@@ -24,7 +24,7 @@ export const Footer = () => {
       <div className="mx-5 border border-gray-25/20"></div>
       <div className="mx-5 flex flex-col items-center justify-between gap-6 py-[2.5rem] md:mx-10 md:flex-row lg:mx-20">
         <div className="flex items-center justify-center gap-6">
-          <Typography variant="paragraph" className="font-zenmincho tracking-wide text-gray-75">
+          <Typography variant="paragraph" className="font-zenmincho font-semibold tracking-wide text-gray-75">
             FOLLOW ME
           </Typography>
           <ExternalLink url={data.sns.instagram} ariaLabel="Instagram" icon={false}>

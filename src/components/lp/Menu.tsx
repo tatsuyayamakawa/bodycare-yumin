@@ -52,19 +52,19 @@ export const Menu = () => {
                   </div>
                 </div>
                 <div className="mx-6 flex flex-col items-center justify-center py-8 md:mx-auto md:basis-1/2 md:py-0 lg:mx-6 lg:basis-auto lg:py-8">
-                  <Typography variant="h4" className="text-center font-notojp text-lg text-primary">
+                  <Typography variant="h4" className="text-center font-notojp text-lg font-semibold text-primary">
                     {menu.title}
                     <span className="text-sm">{menu.time}</span>
                   </Typography>
-                  <Typography variant="h5" className="mt-1 text-center font-zenmincho text-base text-primary">
+                  <Typography variant="h5" className="mt-1 text-center font-zenmincho text-base font-semibold text-primary">
                     {menu.price}
                   </Typography>
-                  <Typography variant="small" className="mt-4 text-justify font-notojp leading-normal tracking-wide text-primary">
+                  <Typography variant="small" className="mt-4 text-justify font-notojp font-normal leading-normal tracking-wide text-primary">
                     {menu.content}
                   </Typography>
                   <div className="mt-4 flex w-full justify-between">
-                    <div className="flex items-center rounded-lg bg-secondary/80 px-3 py-3">
-                      <Typography variant="small" className="font-notojp tracking-wide text-primary">
+                    <div className="flex items-center rounded-lg bg-secondary/80 px-4 py-3">
+                      <Typography variant="small" className="font-notojp font-normal tracking-wide text-primary">
                         {menu.option}
                       </Typography>
                     </div>
@@ -72,7 +72,7 @@ export const Menu = () => {
                       <Button size="sm" variant="outlined" className="border border-gray-25 shadow-none" onClick={handleClick}>
                         <div className="flex items-center gap-2">
                           <FaYoutube size={24} color="red" />
-                          <Typography variant="small" className="font-notojp tracking-wide text-gray-50">
+                          <Typography variant="small" className="font-notojp font-normal tracking-wide text-gray-50">
                             施術の流れ
                           </Typography>
                         </div>
@@ -89,7 +89,7 @@ export const Menu = () => {
                           <Button size="sm" variant="outlined" className="border border-gray-25 shadow-none">
                             <div className="flex items-center gap-2">
                               <FaYoutube size={24} color="red" />
-                              <Typography variant="small" className="font-notojp tracking-wide text-gray-50">
+                              <Typography variant="small" className="font-notojp font-normal tracking-wide text-gray-50">
                                 YOUTUBEで見る
                               </Typography>
                             </div>

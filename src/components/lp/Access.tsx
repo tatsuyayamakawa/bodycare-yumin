@@ -25,17 +25,17 @@ export const Access = () => {
               <ScrollAnimator {...fadeUpComponent} observerOptions={observerOptions} className="w-full">
                 <LogoLink />
                 <div className="mt-5">
-                  <Typography variant="paragraph" className="tracking-wide text-gray-75">
+                  <Typography variant="paragraph" className="font-notojp font-normal tracking-wide text-gray-75">
                     〒990-0851
                   </Typography>
                   <div className="flex flex-col items-start gap-1 md:flex-row lg:items-center">
-                    <Typography variant="paragraph" className="font-notojp tracking-wide md:mr-2">
+                    <Typography variant="paragraph" className="font-notojp font-normal tracking-wide md:mr-2">
                       山形県山形市大字上椹沢195-2
                     </Typography>
                     <ExternalLink url={data.google.map} ariaLabel="Google map" icon={false}>
                       <Button size="sm" variant="filled" color="blue-gray" className="rounded-full shadow-none hover:shadow-none">
                         <div className="flex items-center gap-2">
-                          <Typography variant="small" className="font-notojp tracking-wide">
+                          <Typography variant="small" className="font-notojp font-normal tracking-wide">
                             GOOGLE MAP
                           </Typography>
                         </div>
@@ -48,12 +48,12 @@ export const Access = () => {
                     <Button variant="filled" size="lg" color="white" ripple={true} fullWidth={true} className="bg-white text-primary">
                       <div className="flex items-center justify-center gap-4">
                         <FaMobileScreenButton size={24} />
-                        <Typography variant="lead" className="font-notojp text-lg font-bold">
+                        <Typography variant="lead" className="font-notojp text-lg font-medium">
                           LINEで予約
                         </Typography>
                         <FaAngleRight size={24} />
                       </div>
-                      <Typography variant="small" className="mt-2 font-notojp text-gray-50">
+                      <Typography variant="small" className="mt-2 font-notojp font-normal text-gray-50">
                         当日受付 9:00 ～ 15:00 木曜日定休
                       </Typography>
                     </Button>
@@ -62,12 +62,12 @@ export const Access = () => {
                     <Button variant="filled" size="lg" color="white" ripple={true} fullWidth={true} className="bg-white text-primary">
                       <div className="flex items-center justify-center gap-4">
                         <FaRegEnvelope size={24} />
-                        <Typography variant="lead" className="font-notojp text-lg font-bold">
+                        <Typography variant="lead" className="font-notojp text-lg font-medium">
                           お問い合わせ
                         </Typography>
                         <FaAngleRight size={24} />
                       </div>
-                      <Typography variant="small" className="mt-2 font-notojp text-gray-50">
+                      <Typography variant="small" className="mt-2 font-notojp font-normal text-gray-50">
                         不明な点はお問い合わせください
                       </Typography>
                     </Button>

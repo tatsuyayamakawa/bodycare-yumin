@@ -2,6 +2,7 @@ import React from 'react';
 
 import 'src/styles/globals.css';
 import { data } from 'src/constants/data';
+import { notojp, zenmincho, allura, b612mono } from 'src/constants/fonts';
 import { GoogleTagManager } from 'src/libs/google-tagmanager/google-tagmanager';
 import { googleTagManagerId } from 'src/libs/google-tagmanager/google-tagmanager-id';
 
@@ -38,7 +39,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="ja-JP">
+    <html lang="ja-JP" className={`${notojp.variable} ${zenmincho.variable} ${allura.variable} ${b612mono.variable}`}>
       <GoogleTagManager googleTagManagerId={googleTagManagerId as GoogleTagManagerId} />
       <body id="header">{children}</body>
     </html>

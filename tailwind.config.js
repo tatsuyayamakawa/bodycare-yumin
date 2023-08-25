@@ -19,10 +19,10 @@ module.exports = withMT({
         center: true,
       },
       fontFamily: {
-        notojp: ['Noto Sans JP', 'sans-serif'],
-        zenmincho: ['Zen Old Mincho'],
-        allura: ['Allura'],
-        b612mono: ['B612 Mono'],
+        notojp: ['var(--font-notojp)'],
+        zenmincho: ['var(--font-zenmincho)'],
+        allura: ['var(--font-allura)'],
+        b612mono: ['var(--font-b612mono)'],
       },
       colors: {
         primary: '#71645D',

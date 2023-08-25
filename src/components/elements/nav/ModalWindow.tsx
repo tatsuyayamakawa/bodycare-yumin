@@ -13,7 +13,15 @@ export const ModalWindow = ({ isOpen, handler }: NavStateProps) => {
     <Dialog open={isOpen as boolean} handler={handler as () => void}>
       <DialogHeader className="justify-between">
         <LogoLink handler={handler} />
-        <IconButton variant="text" size="sm" color="gray" ripple={false} aria-label="メインメニューを閉じる" className="hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden" onClick={handler}>
+        <IconButton
+          variant="text"
+          size="sm"
+          color="gray"
+          ripple={false}
+          aria-label="メインメニューを閉じる"
+          className="hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
+          onClick={handler}
+        >
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" className="h-8 w-8 text-gray-75/80" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
           </svg>
@@ -25,7 +33,7 @@ export const ModalWindow = ({ isOpen, handler }: NavStateProps) => {
             return (
               <ListItem className="block" key={nav.id}>
                 <Scroll href={nav.link} to={nav.link} smooth={true} duration={600} offset={50} className="cursor-pointer" onClick={handler}>
-                  <Typography variant="lead" color="gray" as="div" className="text-center font-notojp text-gray-75">
+                  <Typography variant="lead" color="gray" as="div" className="text-center font-notojp font-normal text-gray-75">
                     {nav.title}
                   </Typography>
                 </Scroll>
