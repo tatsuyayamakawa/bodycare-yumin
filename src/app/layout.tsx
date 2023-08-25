@@ -4,8 +4,6 @@ import 'src/styles/globals.css';
 import { data } from 'src/constants/data';
 import { GoogleTagManager } from 'src/libs/google-tagmanager/google-tagmanager';
 import { googleTagManagerId } from 'src/libs/google-tagmanager/google-tagmanager-id';
-import { OneSignal } from 'src/libs/onesignal/onesignal';
-import { oneSignalId, oneSignalSafariId, oneSignalSubDomain } from 'src/libs/onesignal/onesignal-id';
 
 import type { Metadata } from 'next';
 import type { GoogleTagManagerId } from 'src/libs/google-tagmanager/google-tagmanager';
@@ -22,11 +20,13 @@ export const metadata: Metadata = {
     siteName: data.info.title,
     locale: 'ja_JP',
     type: 'website',
+    images: '/opengraph-image.png',
   },
   twitter: {
     card: 'summary_large_image',
     title: data.info.title,
     description: data.info.description,
+    images: '/opengraph-image.png',
   },
   verification: {
     google: process.env.NEXT_PUBLIC_GOOGLE,
@@ -39,7 +39,6 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="ja-JP">
-      <OneSignal oneSignalId={oneSignalId} oneSignalSafariId={oneSignalSafariId} oneSignalSubDomain={oneSignalSubDomain} />
       <GoogleTagManager googleTagManagerId={googleTagManagerId as GoogleTagManagerId} />
       <body id="header">{children}</body>
     </html>
