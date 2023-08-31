@@ -1,13 +1,23 @@
-import menuImg01 from 'public/images/menu-01.jpg';
-import menuImg02 from 'public/images/menu-02.jpg';
-import menuImg03 from 'public/images/menu-03.jpg';
+import menuImage01 from '../public/images/menu-01.jpg';
+import menuImage02 from '../public/images/menu-02.jpg';
+import menuImage03 from '../public/images/menu-03.jpg';
 
-import type { MenuItemProps } from 'src/@types/global';
+import type { StaticImageData } from 'next/image';
+
+type MenuItemProps = {
+  id: number;
+  src: StaticImageData;
+  title: string;
+  time: string;
+  price: string;
+  content: string;
+  option: string;
+};
 
 export const menus: MenuItemProps[] = [
   {
     id: 1,
-    src: menuImg01,
+    src: menuImage01,
     title: 'リラックス',
     time: '（45分）',
     price: '￥3,000',
@@ -16,7 +26,7 @@ export const menus: MenuItemProps[] = [
   },
   {
     id: 2,
-    src: menuImg02,
+    src: menuImage02,
     title: 'ベーシック',
     time: '（75分）',
     price: '￥5,000',
@@ -25,7 +35,7 @@ export const menus: MenuItemProps[] = [
   },
   {
     id: 3,
-    src: menuImg03,
+    src: menuImage03,
     title: 'スペシャル',
     time: '（90分）',
     price: '￥8,000',

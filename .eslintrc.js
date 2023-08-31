@@ -14,7 +14,7 @@ module.exports = {
   },
   plugins: ['@typescript-eslint', 'react', 'unused-imports', 'import'],
   rules: {
-    // React + TypeScript import 順をカスタマイズ
+    // Customize React + TypeScript import order
     // @see https://chaika.hatenablog.com/entry/2022/01/17/083000
     '@typescript-eslint/no-unused-vars': 'off',
     'unused-imports/no-unused-imports': 'error',

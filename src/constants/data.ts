@@ -13,6 +13,5 @@ export const data = {
   },
   google: {
     map: 'https://goo.gl/maps/GJBU6sFQGz2it5g1A',
-    form: 'https://forms.gle/a8qo8Cr1snXYHTMp8',
   },
 };

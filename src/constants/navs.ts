@@ -1,6 +1,10 @@
-import type { NavItemProps } from 'src/@types/global';
+type NavItem = {
+  id: number;
+  title: string;
+  link: string;
+};
 
-export const navs: NavItemProps[] = [
+export const navs: NavItem[] = [
   {
     id: 1,
     title: '癒眠について',

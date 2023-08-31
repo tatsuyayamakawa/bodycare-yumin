@@ -1,14 +1,14 @@
 'use client';
 
-import { Footer } from 'src/components/common/Footer';
-import { Header } from 'src/components/common/Header';
-import { About } from 'src/components/lp/About';
-import { Access } from 'src/components/lp/Access';
-import { Faq } from 'src/components/lp/Faq';
-import { Hero } from 'src/components/lp/Hero';
-import { Media } from 'src/components/lp/Media';
-import { Menu } from 'src/components/lp/Menu';
-import { Profile } from 'src/components/lp/Profile';
+import { About } from '../ui/about';
+import { Access } from '../ui/access';
+import { Faq } from '../ui/faq';
+import { Footer } from '../ui/footer';
+import { Header } from '../ui/header';
+import { Hero } from '../ui/hero';
+import { Media } from '../ui/media';
+import { Menu } from '../ui/menu';
+import { Profile } from '../ui/profile';
 
 export default function Home() {
   return (

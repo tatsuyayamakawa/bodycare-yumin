@@ -1,4 +1,4 @@
-// フェイドアップアニメーションのオプション
+// fade up animation
 export const fadeUpComponent = {
   start: {
     translateY: 20,
@@ -15,7 +15,7 @@ export const fadeUpComponent = {
   },
 };
 
-// フェードダウンアニメーションのオプション
+// fade down animation
 export const fadeDownAnimation = {
   start: {
     translateY: -20,
@@ -32,7 +32,7 @@ export const fadeDownAnimation = {
   },
 };
 
-// 左から右へのアニメーションのオプション
+// left to right animation
 export const slideInLeftAnimation = {
   start: {
     translateX: -20,
@@ -49,7 +49,7 @@ export const slideInLeftAnimation = {
   },
 };
 
-// 右から左へのアニメーションのオプション
+// right to left animation
 export const slideInRightAnimation = {
   start: {
     translateX: 20,

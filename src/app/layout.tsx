@@ -1,13 +1,13 @@
 import React from 'react';
 
-import 'src/styles/globals.css';
-import { data } from 'src/constants/data';
-import { notojp, zenmincho, allura, b612mono } from 'src/constants/fonts';
-import { GoogleTagManager } from 'src/libs/google-tagmanager/google-tagmanager';
-import { googleTagManagerId } from 'src/libs/google-tagmanager/google-tagmanager-id';
+import '../styles/globals.css';
+import { data } from '../constants/data';
+import { notojp, zenmincho, allura, b612mono } from '../constants/fonts';
+import { GoogleTagManager } from '../lib/google-tagmanager/google-tagmanager';
+import { googleTagManagerId } from '../lib/google-tagmanager/google-tagmanager-id';
 
+import type { GoogleTagManagerId } from '../lib/google-tagmanager/google-tagmanager';
 import type { Metadata } from 'next';
-import type { GoogleTagManagerId } from 'src/libs/google-tagmanager/google-tagmanager';
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.URL ?? `${data.info.domain}`),

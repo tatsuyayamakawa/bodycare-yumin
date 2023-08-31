@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 
 export const useReadingProgress = () => {
-  const [completion, setCompletion] = useState(0);
+  const [completion, setCompletion] = useState<number>(0);
 
   useEffect(() => {
     const handleScroll = () => {

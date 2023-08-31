@@ -1,6 +1,6 @@
 import { MetadataRoute } from 'next';
 
-import { data } from 'src/constants/data';
+import { data } from '../constants/data';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
