@@ -12,8 +12,8 @@ export const Media = () => {
   const heading2 = '不眠症改善の専門家として紹介されました';
 
   return (
-    <section className="container">
-      <div className="mx-auto my-[6.25rem] max-w-[62rem]">
+    <section>
+      <div className="mx-5 my-[6.25rem] max-w-[62rem] lg:mx-auto">
         <Typography variant="h2" className="mx-5 mb-10 text-center font-notojp text-3xl font-medium leading-relaxed tracking-wide text-accent lg:text-4xl">
           {heading2.split(' ').map((word, index) => {
             return (
@@ -38,11 +38,7 @@ export const Media = () => {
             );
           })}
         </Typography>
-        <ScrollAnimator
-          {...fadeUpComponent}
-          observerOptions={observerOptions}
-          className="flex flex-col items-center justify-between gap-10 bg-gray-10 p-10 md:rounded-lg lg:flex-row lg:p-10"
-        >
+        <ScrollAnimator {...fadeUpComponent} observerOptions={observerOptions} className="flex flex-col items-center justify-between gap-10 bg-gray-10 p-10 md:rounded-lg lg:flex-row lg:p-10">
           <ImageWrapper width="328" height="467" src={mediaImage01} alt="はつらつ元気 2014年9月号" className="h-auto" />
           <ImageWrapper width="640" height="426" src={mediaImage02} alt="特集掲載ページ" className="h-auto" />
         </ScrollAnimator>

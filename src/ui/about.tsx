@@ -13,7 +13,7 @@ export const About = () => {
     <section id="about">
       <div className="mx-auto mt-[6.25rem] max-w-[62rem]">
         <Heading heading2="癒眠について" heading3="About" isAlign={false} />
-        <div className="md:relative md:mb-[46.875rem]">
+        <div className="mx-5 md:relative md:mb-[46.875rem]">
           <ScrollAnimator
             {...fadeUpComponent}
             observerOptions={observerOptions}
