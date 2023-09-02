@@ -11,13 +11,13 @@ import aboutImage from '../public/images/about.jpg';
 export const About = () => {
   return (
     <section id="about">
-      <div className="mt-[6.25rem] max-w-[62rem] lg:mx-5 xl:mx-auto">
+      <div className="mx-auto mt-[6.25rem] max-w-[62rem]">
         <Heading heading2="癒眠について" heading3="About" isAlign={false} />
-        <div className="lg:relative lg:mb-[46.875rem]">
+        <div className="md:relative md:mb-[46.875rem]">
           <ScrollAnimator
             {...fadeUpComponent}
             observerOptions={observerOptions}
-            className="z-20 bg-secondary/80 px-5 py-5 backdrop-blur-xl lg:absolute lg:left-0 lg:top-[6.25rem] lg:max-w-[30.75rem] lg:rounded-lg lg:px-[3.125rem] lg:py-[2.125rem]"
+            className="z-20 bg-secondary/80 px-5 py-5 backdrop-blur-xl md:absolute md:left-0 md:top-[6.25rem] md:max-w-[30.75rem] md:rounded-lg md:px-[3.125rem] md:py-[2.125rem]"
           >
             <Typography variant="paragraph" className="py-4 text-justify font-notojp font-normal tracking-wide">
               日々のストレス、不規則な生活習慣などが重なると交感神経優位となり、自律神経は乱れ、倦怠感、不眠症、頭痛などを引き起こします。
@@ -42,7 +42,7 @@ export const About = () => {
                 sizes="100vw"
                 quality={75}
                 priority
-                className="m-auto mt-6 hidden h-auto rounded-lg lg:absolute lg:right-0 lg:top-0 lg:block"
+                className="m-auto mt-6 hidden h-auto rounded-lg md:absolute md:right-0 md:top-0 md:block"
               />
             </figure>
           </ScrollAnimator>
