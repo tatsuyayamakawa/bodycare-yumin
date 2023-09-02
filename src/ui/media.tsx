@@ -13,7 +13,7 @@ export const Media = () => {
 
   return (
     <section>
-      <div className="mx-5 my-[6.25rem] max-w-[62rem] lg:mx-auto">
+      <div className="my-[6.25rem] max-w-[62rem] md:mx-5 lg:mx-auto">
         <Typography variant="h2" className="mx-5 mb-10 text-center font-notojp text-3xl font-medium leading-relaxed tracking-wide text-accent lg:text-4xl">
           {heading2.split(' ').map((word, index) => {
             return (
