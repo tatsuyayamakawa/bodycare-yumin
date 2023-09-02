@@ -3,6 +3,8 @@ import React, { useEffect, useState } from 'react';
 import { Input, Button, Typography, Textarea, Dialog, DialogBody } from '@material-tailwind/react';
 import axios from 'axios';
 
+import { Toast } from './toast';
+
 export const ContactForm = ({ isOpen, handler }: { isOpen: boolean; handler: () => void }) => {
   const [name, setName] = useState<string>('');
   const [email, setEmail] = useState<string>('');
@@ -51,14 +53,6 @@ export const ContactForm = ({ isOpen, handler }: { isOpen: boolean; handler: () 
     }
   }, [alertMessage]);
 
-  const renderAlert = () => {
-    return (
-      <Typography variant="paragraph" className="font-notojp text-base font-normal">
-        {alertMessage}
-      </Typography>
-    );
-  };
-
   const disableSend = name === '' || email === '' || message === '';
 
   return (
@@ -74,7 +68,11 @@ export const ContactForm = ({ isOpen, handler }: { isOpen: boolean; handler: () 
           <Input variant="static" size="lg" color="blue-gray" label="お名前" value={name} required onChange={(e) => setName(e.target.value)} />
           <Input variant="static" size="lg" color="blue-gray" label="メールアドレス" value={email} required onChange={(e) => setEmail(e.target.value)} />
           <Textarea variant="static" size="lg" color="blue-gray" label="内容" value={message} required onChange={(e) => setMessage(e.target.value)} />
-          {alertMessage && renderAlert()}
+          {alertMessage && (
+            <Toast variant="paragraph" className="font-notojp text-base font-normal">
+              {alertMessage}
+            </Toast>
+          )}
           <Button variant="filled" size="lg" color="blue-gray" type="submit" ripple={true} fullWidth={true} disabled={disableSend}>
             <Typography variant="lead" className="font-notojp text-lg font-medium">
               内容を送信する
