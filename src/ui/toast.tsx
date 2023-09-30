@@ -1,11 +1,11 @@
 import React from 'react';
 
-import { Typography } from '@material-tailwind/react';
+import { Alert } from '@material-tailwind/react';
 
-export const Toast = ({ variant, children, className }: { variant: string; children: React.ReactNode; className: string }) => {
+export const Toast = ({ children, className }: { className?: string; children: React.ReactNode }) => {
   return (
-    <Typography variant={variant} className={className}>
+    <Alert variant="outlined" className={`${className} font-notojp text-base font-normal leading-6 tracking-wide`}>
       {children}
-    </Typography>
+    </Alert>
   );
 };
