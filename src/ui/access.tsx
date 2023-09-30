@@ -4,9 +4,9 @@ import React, { useState } from 'react';
 import { ScrollAnimator } from 'react-animate-observer';
 
 import { Button, Typography } from '@material-tailwind/react';
+import Link from 'next/link';
 import { FaMobileScreenButton, FaRegEnvelope, FaAngleRight } from 'react-icons/fa6';
 
-import { ContactForm } from './contact-form';
 import { ExternalLink } from './external-link';
 import { Heading } from './heading';
 import { Logo } from './logo';
@@ -30,7 +30,7 @@ export const Access = () => {
         <div className="container">
           <Heading heading2="アクセス" heading3="Access" isAlign={true} />
           <div className="mx-5 flex flex-col justify-center gap-10 lg:flex-row">
-            <div className="flex flex-col md:basis-2/5">
+            <div className="flex flex-col justify-center md:basis-2/5">
               <ScrollAnimator {...fadeUpComponent} observerOptions={observerOptions} className="w-full">
                 <Logo />
                 <div className="mt-5">
@@ -42,8 +42,8 @@ export const Access = () => {
                       山形県山形市大字上椹沢195-2
                     </Typography>
                     <ExternalLink url={data.google.map} ariaLabel="Google map" icon={false}>
-                      <Button size="sm" variant="filled" color="blue-gray" className="rounded-full shadow-none hover:shadow-none">
-                        <div className="flex items-center gap-2">
+                      <Button size="sm" variant="filled" color="blue-gray" className="rounded-full px-3 py-1 shadow-none hover:shadow-none">
+                        <div className="flex items-center">
                           <Typography variant="small" className="font-notojp font-normal tracking-wide">
                             GOOGLE MAP
                           </Typography>
@@ -67,19 +67,28 @@ export const Access = () => {
                       </Typography>
                     </Button>
                   </ExternalLink>
-                  <Button variant="filled" size="lg" color="white" ripple={true} fullWidth={true} className="bg-white text-primary" onClick={handleClick}>
-                    <div className="flex items-center justify-center gap-4">
-                      <FaRegEnvelope size={24} />
-                      <Typography variant="lead" className="font-notojp text-lg font-medium">
-                        お問い合わせ
+                  <Link href="/contact">
+                    <Button
+                      variant="filled"
+                      size="lg"
+                      color="white"
+                      ripple={true}
+                      fullWidth={true}
+                      className="bg-white text-primary"
+                      onClick={handleClick}
+                    >
+                      <div className="flex items-center justify-center gap-4">
+                        <FaRegEnvelope size={24} />
+                        <Typography variant="lead" className="font-notojp text-lg font-medium">
+                          お問い合わせ
+                        </Typography>
+                        <FaAngleRight size={24} />
+                      </div>
+                      <Typography variant="small" className="mt-2 font-notojp font-normal text-gray-50">
+                        不明な点はお問い合わせください
                       </Typography>
-                      <FaAngleRight size={24} />
-                    </div>
-                    <Typography variant="small" className="mt-2 font-notojp font-normal text-gray-50">
-                      不明な点はお問い合わせください
-                    </Typography>
-                  </Button>
-                  <ContactForm isOpen={isOpen} handler={handleClick} />
+                    </Button>
+                  </Link>
                 </div>
               </ScrollAnimator>
             </div>
