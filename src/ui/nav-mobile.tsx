@@ -17,14 +17,7 @@ const Hamburger = ({ handler }: { isOpen?: boolean; handler?: () => void }) => {
       className="hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
       onClick={handler}
     >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        className="h-8 w-8 text-gray-75/80"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-        strokeWidth={2}
-      >
+      <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-gray-75/80" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
       </svg>
     </IconButton>
@@ -67,7 +60,7 @@ export const NavMobile = ({ isOpen, handler }: { isOpen?: boolean; handler?: () 
           </ul>
         </DialogBody>
         <DialogFooter>
-          <Button size="lg" variant="text" color="blue" onClick={handler}>
+          <Button size="lg" variant="text" color="blue" onClick={handler} className="font-notojp">
             閉じる
           </Button>
         </DialogFooter>

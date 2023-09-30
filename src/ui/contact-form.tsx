@@ -203,7 +203,7 @@ export const ContactForm = () => {
             </div>
             <Dialog size="md" open={isOpen} handler={handleClick}>
               <DialogHeader>
-                <Typography variant="h4" className="tracking-wide text-gray-75">
+                <Typography variant="h4" className="font-notojp tracking-wide text-gray-75">
                   個人情報の取り扱いについて
                 </Typography>
               </DialogHeader>
@@ -253,7 +253,7 @@ export const ContactForm = () => {
                 </Typography>
               </DialogBody>
               <DialogFooter>
-                <Button size="lg" variant="text" color="blue" onClick={handleClick}>
+                <Button size="lg" variant="text" color="blue" onClick={handleClick} className="font-notojp">
                   閉じる
                 </Button>
               </DialogFooter>
