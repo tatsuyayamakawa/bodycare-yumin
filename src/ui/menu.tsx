@@ -33,7 +33,7 @@ export const Menu = () => {
   };
 
   return (
-    <section id="menu">
+    <section>
       <div className="botom-0 left-0 w-full overflow-hidden">
         <SvgWaveTop />
       </div>

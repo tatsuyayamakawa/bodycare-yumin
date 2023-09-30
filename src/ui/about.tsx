@@ -3,14 +3,15 @@ import { ScrollAnimator } from 'react-animate-observer';
 import { Typography } from '@material-tailwind/react';
 import Image from 'next/image';
 
+import aboutImage from 'public/about.jpg';
+
 import { Heading } from './heading';
 import { fadeUpComponent, slideInRightAnimation } from '../constants/motion';
 import { observerOptions } from '../constants/observer-options';
-import aboutImage from '../public/images/about.jpg';
 
 export const About = () => {
   return (
-    <section id="about">
+    <section>
       <div className="mx-auto mt-[6.25rem] max-w-[62rem]">
         <Heading heading2="癒眠について" heading3="About" isAlign={false} />
         <div className="md:relative md:mx-5 md:mb-[46.875rem]">

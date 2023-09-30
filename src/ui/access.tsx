@@ -24,7 +24,7 @@ export const Access = () => {
   };
 
   return (
-    <section id="access">
+    <section>
       <SvgWaveTop />
       <div className="bg-secondary py-[6.25rem]">
         <div className="container">
@@ -68,15 +68,7 @@ export const Access = () => {
                     </Button>
                   </ExternalLink>
                   <Link href="/contact">
-                    <Button
-                      variant="filled"
-                      size="lg"
-                      color="white"
-                      ripple={true}
-                      fullWidth={true}
-                      className="bg-white text-primary"
-                      onClick={handleClick}
-                    >
+                    <Button variant="filled" size="lg" color="white" ripple={true} fullWidth={true} className="bg-white text-primary" onClick={handleClick}>
                       <div className="flex items-center justify-center gap-4">
                         <FaRegEnvelope size={24} />
                         <Typography variant="lead" className="font-notojp text-lg font-medium">
