@@ -11,12 +11,7 @@ export const PrivacyPolicy = () => {
       <div className="bg-secondary py-[6.25rem]">
         <div className="mx-5 rounded-md bg-white py-10 lg:mx-auto lg:max-w-[53.875rem]">
           <Heading heading2="個人情報の取り扱いについて" heading3="Privacy&nbsp;policy" isAlign={true} />
-          <ScrollAnimator
-            start={{ opacity: 0 }}
-            end={{ opacity: 1 }}
-            observerOptions={observerOptions}
-            className="mx-5 mb-10 flex flex-col gap-10 md:mx-10"
-          >
+          <ScrollAnimator start={{ opacity: 0 }} end={{ opacity: 1 }} observerOptions={observerOptions} className="mx-5 mb-10 flex flex-col gap-10 md:mx-10">
             <Typography variant="paragraph" className="font-notojp font-normal text-gray-75">
               手もみ整体
               癒眠（以下、当院と言います）は、お客様の個人情報について以下の通りプライバシーポリシーを定めます。これは、当院がどのような個人情報を取得し、どのように利用・管理するかをご説明するものです。
@@ -31,7 +26,7 @@ export const PrivacyPolicy = () => {
               <li>お客様の初来院時にアンケートをご記入いただき、氏名、住所、電話番号、その他の記述により、個人情報を取得します。</li>
               <li>ウェブ予約のご利用時に、氏名、メールアドレス、電話番号の記述により、個人情報を取得します。</li>
               <li>ウェブサイトからのお問い合わせをご利用時に、氏名、メールアドレス、電話番号の記述により、個人情報を取得します。</li>
-              <li>ウェブサイトからのお問い合わせをご利用時に、氏名、メールアドレス、電話番号の記述により、個人情報を取得します。</li>
+              <li>会員ページをご利用時に、氏名、メールアドレス、電話番号の記述、また画像データの登録により、個人情報を取得します。</li>
             </ol>
             <Typography variant="h5" className="font-notojp font-semibold text-gray-75">
               個人情報の利用について
