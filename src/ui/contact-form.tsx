@@ -279,7 +279,7 @@ export const ContactForm = () => {
           </form>
         </ScrollAnimator>
         {alertMessage && (
-          <Toast className={`${alertColor} w-auto`}>
+          <Toast className={`${alertColor} mx-5 w-auto md:mx-10`}>
             {alertResult ? (
               <FaCircleCheck size="24" className="mr-3 inline text-green-500" />
             ) : (
