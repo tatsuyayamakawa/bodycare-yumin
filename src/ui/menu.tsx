@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { ScrollAnimator } from 'react-animate-observer';
+import Youtube from 'react-youtube';
 
 import { Button, Dialog, DialogBody, DialogFooter, Typography } from '@material-tailwind/react';
 import { FaYoutube } from 'react-icons/fa6';
@@ -18,6 +19,17 @@ export const Menu = () => {
 
   const handleClick = () => {
     setOpen(!open);
+  };
+
+  const opts = {
+    playerVars: {
+      playsinline: 1,
+      autoplay: 1,
+      mute: 1,
+      loop: 1,
+      width: '640',
+      height: '480',
+    },
   };
 
   return (
@@ -80,9 +92,10 @@ export const Menu = () => {
                     )}
                     <Dialog size="lg" open={open} handler={handleClick}>
                       <DialogBody className="p-0">
-                        <video className="h-full w-full rounded-t-lg" controls autoPlay muted>
-                          <source src="video/basic.mp4" type="video/mp4" />
-                        </video>
+                        {/* <video className="h-full w-full rounded-t-lg" controls autoPlay muted> */}
+                        {/* <source src="video/basic.mp4" type="video/mp4" /> */}
+                        <Youtube videoId="xZo39vNkaUk" opts={opts} iframeClassName="iframe" className="youtube" />
+                        {/* </video> */}
                       </DialogBody>
                       <DialogFooter className="justify-end">
                         <ExternalLink url="https://youtu.be/xZo39vNkaUk" ariaLabel="YOUTUBEで見る" icon={false}>
