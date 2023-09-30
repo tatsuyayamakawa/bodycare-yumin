@@ -13,7 +13,8 @@ export const faqs: FaqItem[] = [
   {
     id: 2,
     question: '支払方法はどうなりますか？',
-    answer: '現金、クレジットカード（VISA、MASTER CARD、AMERICAN EXPRESS、JCB）、QRコード決済（PayPay、楽天ペイ）、電子マネー（iD）に対応しております。',
+    answer:
+      '現金、クレジットカード（VISA、MASTER CARD、AMERICAN EXPRESS、JCB）、QRコード決済（PayPay、楽天ペイ）、電子マネー（iD）に対応しております。',
   },
   {
     id: 3,
@@ -23,7 +24,8 @@ export const faqs: FaqItem[] = [
   {
     id: 4,
     question: '急な予約時間の変更、キャンセルはできますか？',
-    answer: '2時間前までは変更・キャンセル可能です。2時間を過ぎた場合は1,500円、無連絡キャンセルは3,000円のキャンセル料金を請求させていただきます。',
+    answer:
+      '2時間前までは変更・キャンセル可能です。2時間を過ぎた場合は1,650円、無連絡キャンセルはご予約の料金全額のキャンセル料金を請求させていただきます。',
   },
   {
     id: 5,

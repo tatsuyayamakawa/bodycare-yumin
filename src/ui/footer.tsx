@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 
 import { Typography } from '@material-tailwind/react';
+import Link from 'next/link';
 import { FaInstagram, FaYoutube } from 'react-icons/fa6';
 
 import { ExternalLink } from './external-link';
@@ -21,9 +22,8 @@ export const Footer = () => {
 
   return (
     <footer className="bg-secondary">
-      <div className="mx-5 border border-gray-25/20"></div>
       <div className="mx-5 flex flex-col items-center justify-between gap-6 py-[2.5rem] md:mx-10 md:flex-row lg:mx-20">
-        <div className="flex items-center justify-center gap-6">
+        <div className="flex items-center justify-center space-x-6">
           <Typography variant="paragraph" className="font-zenmincho font-semibold tracking-wide text-gray-75">
             FOLLOW ME
           </Typography>
@@ -34,7 +34,15 @@ export const Footer = () => {
             <FaYoutube size={24} title="YouTube" />
           </ExternalLink>
         </div>
-        <div className="flex items-center justify-between">
+        <div className="flex flex-col items-center justify-center space-y-3 md:items-start">
+          <Link href="/privacy">
+            <Typography
+              variant="small"
+              className="font-notojp text-sm font-normal tracking-wide text-gray-75 hover:underline hover:underline-offset-4"
+            >
+              プライバシーポリシー
+            </Typography>
+          </Link>
           <small className="font-notojp text-sm font-normal tracking-wide text-gray-75">
             &copy; 2012-{year} {data.info.name}
           </small>

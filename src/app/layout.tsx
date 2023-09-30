@@ -37,10 +37,19 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <html lang="ja-JP" className={`${notojp.variable} ${zenmincho.variable} ${allura.variable} ${b612mono.variable}`}>
-      <GoogleTagManager googleTagManagerId={googleTagManagerId as GoogleTagManagerId} />
+    <html
+      lang="ja-JP"
+      className={`${notojp.variable} ${zenmincho.variable} ${allura.variable} ${b612mono.variable}`}
+    >
+      <GoogleTagManager
+        googleTagManagerId={googleTagManagerId as GoogleTagManagerId}
+      />
       <body id="header">{children}</body>
     </html>
   );

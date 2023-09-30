@@ -11,7 +11,11 @@ type HeadingProps = {
 export const Heading = ({ heading2, heading3, isAlign = true }: HeadingProps) => {
   return (
     <div className={isAlign ? 'my-10 text-center' : 'my-10'}>
-      <h2 aria-label={`${heading2}`} role="heading" className="mx-10 mb-5 font-zenmincho text-4xl font-semibold not-italic leading-normal text-primary lg:text-5xl">
+      <h2
+        aria-label={`${heading2}`}
+        role="heading"
+        className="mx-10 mb-5 font-zenmincho text-4xl font-semibold not-italic leading-normal text-primary lg:text-5xl"
+      >
         {heading2.split(' ').map((word, index) => {
           return (
             <ScrollAnimator key={index} start={{ opacity: 0 }} end={{ opacity: 1 }} observerOptions={observerOptions} className="inline-block">
@@ -35,7 +39,11 @@ export const Heading = ({ heading2, heading3, isAlign = true }: HeadingProps) =>
           );
         })}
       </h2>
-      <h3 aria-label={`${heading3}`} role="heading" className="mx-10 mb-10 font-allura text-3xl font-normal not-italic leading-normal text-accent lg:text-[2.5rem]">
+      <h3
+        aria-label={`${heading3}`}
+        role="heading"
+        className="mx-10 mb-10 font-allura text-3xl font-normal not-italic leading-normal text-accent lg:text-[2.5rem]"
+      >
         {heading3.split(' ').map((word, index) => {
           return (
             <ScrollAnimator key={index} start={{ opacity: 0 }} end={{ opacity: 1 }} observerOptions={observerOptions} className="inline-block">

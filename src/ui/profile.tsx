@@ -2,10 +2,11 @@ import { ScrollAnimator } from 'react-animate-observer';
 
 import { Typography } from '@material-tailwind/react';
 
+import profileImage from 'public/profile.jpg';
+
 import { ImageWrapper } from './image-wrapper';
 import { fadeDownAnimation } from '../constants/motion';
 import { observerOptions } from '../constants/observer-options';
-import profileImage from '../public/images/profile.jpg';
 
 export const Profile = () => {
   const heading2 = '整体師';

@@ -4,13 +4,14 @@
 
 import { useMemo, useState } from 'react';
 
+import { Typography } from '@material-tailwind/react';
 import { GoogleMap, useLoadScript, MarkerF, InfoWindow } from '@react-google-maps/api';
 import Image from 'next/image';
 
-import Loading from '../../app/loading';
+import logoImage from 'public/logo.png';
+
 import { data } from '../../constants/data';
 import { mapStyles } from '../../lib/google-maps/google-maps-styles';
-import logoImage from '../../public/images/logo.png';
 import { ExternalLink } from '../../ui/external-link';
 
 export type Coordinates = {
@@ -58,14 +59,16 @@ const Map = ({ googleMapsApiKey }: MapKey) => {
 
   if (loadError)
     return (
-      <div className="h-[50vh]">
-        <Loading />
+      <div className="flex h-[50vh] items-center justify-center">
+        <Typography variant="paragraph" className="font-notojp text-base font-normal">
+          地図の読み込みに失敗しました。
+        </Typography>
       </div>
     );
 
   return (
     <>
-      {isLoaded ? (
+      {isLoaded && (
         <GoogleMap options={googleMapOptions} zoom={15} center={center} mapContainerStyle={containerStyle} onLoad={() => createOffsetSize()}>
           <MarkerF
             position={center}
@@ -88,10 +91,6 @@ const Map = ({ googleMapsApiKey }: MapKey) => {
             </InfoWindow>
           )}
         </GoogleMap>
-      ) : (
-        <div className="flex h-[50vh] items-center justify-center">
-          <Loading />
-        </div>
       )}
     </>
   );
@@ -100,7 +99,14 @@ const Map = ({ googleMapsApiKey }: MapKey) => {
 export const GoogleMaps = () => {
   const googleMapsApiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
   if (googleMapsApiKey === undefined) {
-    return <div>地図を表示できませんでした。</div>;
+    console.log('');
+    return (
+      <div className="flex h-[50vh] items-center justify-center">
+        <Typography variant="paragraph" className="font-notojp text-base font-normal">
+          地図を表示できませんでした。
+        </Typography>
+      </div>
+    );
   }
   return <Map googleMapsApiKey={googleMapsApiKey} />;
 };

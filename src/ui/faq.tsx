@@ -35,7 +35,13 @@ export const Faq = () => {
           <ScrollAnimator {...fadeUpComponent} observerOptions={observerOptions}>
             {faqs.map((faq) => {
               return (
-                <Accordion open={isOpen === faq.id} icon={<SvgArrowDown id={faq.id} open={isOpen} />} animate={customAnimation} key={faq.id} className="my-6">
+                <Accordion
+                  open={isOpen === faq.id}
+                  icon={<SvgArrowDown id={faq.id} open={isOpen} />}
+                  animate={customAnimation}
+                  key={faq.id}
+                  className="my-6"
+                >
                   <AccordionHeader className="rounded-lg bg-gray-10 px-5 py-5" onClick={() => handleOpen(faq.id)}>
                     <Typography
                       variant="h4"
