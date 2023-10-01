@@ -16,7 +16,7 @@ export const Nav = () => {
 
   return (
     <Navbar className="rounded-none border-none shadow-none transition-shadow" fullWidth={true} aria-label="メインナビゲーション">
-      <div className="mx-auto flex max-w-[72rem] items-center justify-between lg:px-10 lg:py-5">
+      <div className="mx-auto flex max-w-[72rem] items-center justify-between lg:px-10 lg:py-2">
         <NavDesktop />
         <NavMobile isOpen={isOpen} handler={handleClick} />
       </div>
