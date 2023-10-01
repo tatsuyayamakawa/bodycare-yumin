@@ -7,6 +7,7 @@ import { SubmitHandler, useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Button, Dialog, DialogBody, DialogFooter, DialogHeader, Typography } from '@material-tailwind/react';
 import axios from 'axios';
+import Link from 'next/link';
 import { FaCircleCheck, FaCircleXmark } from 'react-icons/fa6';
 
 import { ContactSchema, ContactType } from '@/schema/contact';
@@ -111,6 +112,27 @@ export const ContactForm = () => {
 
   return (
     <div className="bg-secondary py-[6.25rem]">
+      <div className="mx-5 lg:mx-auto lg:max-w-[53.875rem]">
+        <nav aria-label="パンくずリスト" className="w-max">
+          <ol className="mb-5 flex w-full items-center rounded-md bg-white px-4 py-2">
+            <li className="flex cursor-pointer items-center">
+              <Link className="text-blue-500 opacity-60" href="/">
+                <Typography as="button" variant="small">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path>
+                  </svg>
+                </Typography>
+              </Link>
+            </li>
+            <li className="mx-2 text-gray-50">/</li>
+            <li aria-current="page" className="flex items-center">
+              <Typography variant="small" className="font-notojp font-medium text-gray-75">
+                お問い合わせ
+              </Typography>
+            </li>
+          </ol>
+        </nav>
+      </div>
       <div className="mx-5 rounded-md bg-white pb-20 pt-10 lg:mx-auto lg:max-w-[53.875rem]">
         <Heading heading2="お問い合わせ" heading3="Contact" isAlign={true} />
         <ScrollAnimator start={{ opacity: 0 }} end={{ opacity: 1 }} observerOptions={observerOptions}>
