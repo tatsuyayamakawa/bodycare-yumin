@@ -27,19 +27,16 @@ export const Footer = () => {
           <Typography variant="paragraph" className="font-zenmincho font-semibold tracking-wide text-gray-75">
             FOLLOW ME
           </Typography>
-          <ExternalLink url={data.sns.instagram} ariaLabel="Instagram" icon={false}>
+          <ExternalLink url={data.sns.instagram} ariaLabel="Instagram" className="text-inherit">
             <FaInstagram size={24} title="Instagram" />
           </ExternalLink>
-          <ExternalLink url={data.sns.youtube} ariaLabel="YouTube" icon={false}>
+          <ExternalLink url={data.sns.youtube} ariaLabel="YouTube" className="text-inherit">
             <FaYoutube size={24} title="YouTube" />
           </ExternalLink>
         </div>
         <div className="flex flex-col items-center justify-center space-y-3 md:items-start">
           <Link href="/privacy">
-            <Typography
-              variant="small"
-              className="font-notojp text-sm font-normal tracking-wide text-gray-75 hover:underline hover:underline-offset-4"
-            >
+            <Typography variant="small" className="font-notojp text-sm font-normal tracking-wide text-gray-75 hover:underline hover:underline-offset-4">
               プライバシーポリシー
             </Typography>
           </Link>

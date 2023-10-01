@@ -1,7 +1,7 @@
 import { Typography, IconButton, Button, Dialog, DialogBody, DialogFooter, DialogHeader, MenuItem } from '@material-tailwind/react';
 import Link from 'next/link';
-import { FcPhoneAndroid } from 'react-icons/fc';
 
+import { ExternalLink } from './external-link';
 import { Logo } from './logo';
 import { data } from '../constants/data';
 import { navs } from '../constants/navs';
@@ -35,21 +35,20 @@ export const NavMobile = ({ isOpen, handler }: { isOpen?: boolean; handler?: () 
         <DialogBody divider={true}>
           <ul className="flex flex-col space-y-3">
             <li>
-              <a href={data.sns.line} target="_blank" rel="noopener noreferrer" aria-label="LINEで予約する">
+              <ExternalLink url={data.sns.line} ariaLabel="LINEで予約する" className="hover:no-underline">
                 <MenuItem className="flex items-center gap-3">
-                  <FcPhoneAndroid size={24} />
-                  <Typography variant="small" className="font-notojp font-semibold text-gray-75">
+                  <Typography variant="small" className="font-notojp text-base font-semibold text-gray-75 ">
                     LINEで予約
                   </Typography>
                 </MenuItem>
-              </a>
+              </ExternalLink>
             </li>
             {navs.map((nav) => {
               return (
                 <li key={nav.id} className="list-none">
                   <Link href={`${nav.link}`} onClick={handler}>
                     <MenuItem>
-                      <Typography variant="small" className="font-notojp font-semibold text-gray-75 before:pl-1 before:pr-4 before:content-['・']">
+                      <Typography variant="small" className="font-notojp text-base font-semibold text-gray-75">
                         {nav.title}
                       </Typography>
                     </MenuItem>

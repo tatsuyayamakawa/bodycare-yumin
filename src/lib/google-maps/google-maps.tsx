@@ -85,7 +85,7 @@ const Map = ({ googleMapsApiKey }: MapKey) => {
               }}
               options={infoWindowOptions}
             >
-              <ExternalLink url={data.google.map} icon={false} ariaLabel="手もみ整体 癒眠 Googleマップへ">
+              <ExternalLink url={data.google.map} ariaLabel="手もみ整体 癒眠 Googleマップへ">
                 <Image width={150} height={18} src={logoImage} alt={data.info.title} />
               </ExternalLink>
             </InfoWindow>

@@ -41,7 +41,7 @@ export const Access = () => {
                     <Typography variant="paragraph" className="font-notojp font-normal tracking-wide md:mr-2">
                       山形県山形市大字上椹沢195-2
                     </Typography>
-                    <ExternalLink url={data.google.map} ariaLabel="Google map" icon={false}>
+                    <ExternalLink url={data.google.map} ariaLabel="Google map" className="no-underline">
                       <Button size="sm" variant="filled" color="blue-gray" className="rounded-full px-3 py-1 shadow-none hover:shadow-none">
                         <div className="flex items-center">
                           <Typography variant="small" className="font-notojp font-normal tracking-wide">
@@ -53,7 +53,7 @@ export const Access = () => {
                   </div>
                 </div>
                 <div className="mt-10 flex flex-col gap-5">
-                  <ExternalLink url={data.sns.line} ariaLabel="LINEで予約する" icon={false}>
+                  <ExternalLink url={data.sns.line} ariaLabel="LINEで予約する" className="hover:no-underline">
                     <Button variant="filled" size="lg" color="white" ripple={true} fullWidth={true} className="bg-white text-primary">
                       <div className="flex items-center justify-center gap-4">
                         <FaMobileScreenButton size={24} />
