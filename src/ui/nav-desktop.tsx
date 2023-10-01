@@ -11,7 +11,7 @@ const NavList = () => {
     <ul className="hidden space-x-5 text-gray-75 lg:flex lg:items-center">
       <li>
         <ExternalLink url={data.sns.line} ariaLabel="LINEで予約する" className="hover:no-underline">
-          <MenuItem>
+          <MenuItem className="px-6 py-3">
             <Typography variant="paragraph" className="font-notojp text-lg font-semibold tracking-wide text-gray-75">
               LINEで予約
             </Typography>
@@ -22,7 +22,7 @@ const NavList = () => {
         return (
           <li key={nav.id} className="list-none">
             <Link href={`${nav.link}`} className="cursor-pointer">
-              <MenuItem>
+              <MenuItem className="px-6 py-3">
                 <Typography variant="paragraph" className="font-notojp text-lg font-semibold tracking-wide text-gray-75">
                   {nav.title}
                 </Typography>
