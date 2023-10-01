@@ -92,13 +92,10 @@ export const Menu = () => {
                     )}
                     <Dialog size="lg" open={open} handler={handleClick}>
                       <DialogBody className="p-0">
-                        {/* <video className="h-full w-full rounded-t-lg" controls autoPlay muted> */}
-                        {/* <source src="video/basic.mp4" type="video/mp4" /> */}
                         <Youtube videoId="xZo39vNkaUk" opts={opts} iframeClassName="iframe" className="youtube" />
-                        {/* </video> */}
                       </DialogBody>
                       <DialogFooter className="justify-end">
-                        <ExternalLink url="https://youtu.be/xZo39vNkaUk" ariaLabel="YOUTUBEで見る" icon={false}>
+                        <ExternalLink url="https://youtu.be/xZo39vNkaUk" ariaLabel="YOUTUBEで見る">
                           <Button size="sm" variant="outlined" className="border border-gray-25 shadow-none">
                             <div className="flex items-center gap-2">
                               <FaYoutube size={24} color="red" />
