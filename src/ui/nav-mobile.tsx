@@ -35,10 +35,10 @@ export const NavMobile = ({ isOpen, handler }: { isOpen?: boolean; handler?: () 
         <DialogBody divider={true}>
           <ul className="flex flex-col space-y-3">
             <li>
-              <ExternalLink url={data.sns.line} ariaLabel="LINEで予約する" className="hover:no-underline">
+              <ExternalLink url={data.booking} ariaLabel="オンラインで予約する" className="hover:no-underline">
                 <MenuItem className="flex items-center gap-3">
                   <Typography variant="small" className="font-notojp text-base font-semibold text-gray-75 ">
-                    LINEで予約
+                    オンライン予約
                   </Typography>
                 </MenuItem>
               </ExternalLink>

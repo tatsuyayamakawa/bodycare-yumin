@@ -53,12 +53,12 @@ export const Access = () => {
                   </div>
                 </div>
                 <div className="mt-10 flex flex-col gap-5">
-                  <ExternalLink url={data.sns.line} ariaLabel="LINEで予約する" className="hover:no-underline">
+                  <ExternalLink url={data.booking} ariaLabel="オンラインで予約する" className="hover:no-underline">
                     <Button variant="filled" size="lg" color="white" ripple={true} fullWidth={true} className="bg-white text-primary">
                       <div className="flex items-center justify-center gap-4">
                         <FaMobileScreenButton size={24} />
                         <Typography variant="lead" className="font-notojp text-lg font-medium">
-                          LINEで予約
+                          オンライン予約
                         </Typography>
                         <FaAngleRight size={24} />
                       </div>

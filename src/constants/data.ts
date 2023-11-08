@@ -17,11 +17,10 @@ export const data = {
     description: '手もみ整体 癒眠 プライバシーポリシーページです。',
   },
   sns: {
-    instagram: 'https://www.instagram.com/bodycare_yumin',
     youtube: 'https://www.youtube.com/channel/UCvs4R788ur4xAaGtVLhasHA',
-    line: 'https://lin.ee/ZQL7WyjC',
   },
   google: {
     map: 'https://goo.gl/maps/GJBU6sFQGz2it5g1A',
   },
+  booking: 'https://squareup.com/appointments/book/u0jc60b4z1ls1d/5G0J44Q57FF95/start',
 };
