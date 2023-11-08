@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 
 import { Typography } from '@material-tailwind/react';
 import Link from 'next/link';
-import { FaInstagram, FaYoutube } from 'react-icons/fa6';
+import { FaYoutube } from 'react-icons/fa6';
 
 import { ExternalLink } from './external-link';
 import { data } from '../constants/data';
@@ -27,9 +27,6 @@ export const Footer = () => {
           <Typography variant="paragraph" className="font-zenmincho font-semibold tracking-wide text-gray-75">
             FOLLOW ME
           </Typography>
-          <ExternalLink url={data.sns.instagram} ariaLabel="Instagram" className="text-inherit">
-            <FaInstagram size={24} title="Instagram" />
-          </ExternalLink>
           <ExternalLink url={data.sns.youtube} ariaLabel="YouTube" className="text-inherit">
             <FaYoutube size={24} title="YouTube" />
           </ExternalLink>
