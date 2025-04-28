@@ -3,6 +3,36 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@theme {
+  /* container */
+  --container-width: 100%;
+  --container-margin-left: auto;
+  --container-margin-right: auto;
+  --container-padding-left: 24px;
+  --container-padding-right: 24px;
+
+  /* padding */
+  --padding-sm: 24px;
+  --padding-md: 48px;
+  --padding-lg: 48px;
+  --padding-xl: 48px;
+  --padding-2xl: 48px;
+
+  /* breakpoint */
+  --breakpoint-sm: 480px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1400px;
+
+  /* font */
+  --font-notojp: var(--font-notojp);
+  --font-zenmincho: var(--font-zenmincho);
+  --font-allura: var(--font-allura);
+  --font-bebas: var(--font-bebas);
+  --font-montserrat: var(--font-montserrat);
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -118,5 +148,36 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .container {
+    @apply mx-auto mr-[var(--container-margin-right)] ml-[var(--container-margin-left)] w-[var(--container-width)] pr-[var(--container-padding-right)] pl-[var(--container-padding-left)];
+  }
+  @media (min-width: [var(--breakpoint-sm)]) {
+    .container {
+      @apply px-[var(--padding-sm)];
+    }
+  }
+  @media (min-width: var(--breakpoint-md)) {
+    .container {
+      @apply px-[var(--padding-md)];
+    }
+  }
+  @media (min-width: var(--breakpoint-lg)) {
+    .container {
+      @apply px-[var(--padding-lg)];
+    }
+  }
+  @media (min-width: var(--breakpoint-xl)) {
+    .container {
+      @apply px-[var(--padding-xl)];
+    }
+  }
+  @media (min-width: var(--breakpoint-2xl)) {
+    .container {
+      @apply px-[var(--padding-2xl)];
+    }
   }
 }

@@ -3,6 +3,10 @@ import type { Metadata } from "next";
 
 import { ConfigProvider } from "../contexts/config-context";
 
+import Footer from "@/components/footer";
+import Header from "@/components/header";
+import { allura, bebas, montserrat, notojp, zenmincho } from "@/lib/fonts";
+
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -20,8 +24,14 @@ export default function RootLayout({
   return (
     <html lang="ja" suppressHydrationWarning>
       {gtmId && <GoogleTagManager gtmId={gtmId} />}
-      <body className={`antialiased`}>
-        <ConfigProvider>{children}</ConfigProvider>
+      <body
+        className={`${notojp.variable} ${zenmincho.variable} ${allura.variable} ${bebas.variable} ${montserrat.variable} font-notojp min-h-dvh antialiased`}
+      >
+        <ConfigProvider>
+          <Header />
+          {children}
+          <Footer />
+        </ConfigProvider>
       </body>
     </html>
   );
