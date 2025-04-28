@@ -1,5 +1,8 @@
 import { GoogleTagManager } from "@next/third-parties/google";
 import type { Metadata } from "next";
+
+import { ConfigProvider } from "../contexts/config-context";
+
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -17,7 +20,9 @@ export default function RootLayout({
   return (
     <html lang="ja" suppressHydrationWarning>
       {gtmId && <GoogleTagManager gtmId={gtmId} />}
-      <body className={`antialiased`}>{children}</body>
+      <body className={`antialiased`}>
+        <ConfigProvider>{children}</ConfigProvider>
+      </body>
     </html>
   );
 }
