@@ -8,11 +8,10 @@ import { Button } from "@/components/ui/button";
 export const DesktopNav = memo(function DesktopNav() {
   return (
     <nav className="hidden md:block">
-      <ul>
-        <li className="space-x-6">
-          {NAV_DATA.map((nav) => (
+      <ul className="flex">
+        {NAV_DATA.map((nav) => (
+          <li key={nav.href}>
             <Button
-              key={nav.href}
               variant="ghost"
               className="px-6 py-3 text-lg/normal font-medium"
               asChild
@@ -21,8 +20,8 @@ export const DesktopNav = memo(function DesktopNav() {
                 {nav.title}
               </Link>
             </Button>
-          ))}
-        </li>
+          </li>
+        ))}
       </ul>
     </nav>
   );

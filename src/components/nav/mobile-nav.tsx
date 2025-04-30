@@ -5,18 +5,15 @@ import Link from "next/link";
 import { memo, useEffect, useState } from "react";
 
 import { NAV_DATA } from "./data";
+import type { NavData } from "./types";
 
 import { Button } from "@/components/ui/button";
 
-const NavItem = memo(function NavItem({
-  href,
-  title,
-  onClose,
-}: {
-  href: string;
-  title: string;
+type NavItemProps = NavData & {
   onClose: () => void;
-}) {
+};
+
+const NavItem = memo(function NavItem({ href, title, onClose }: NavItemProps) {
   return (
     <li>
       <Link
@@ -33,13 +30,11 @@ const NavItem = memo(function NavItem({
 export const MobileNav = memo(function MobileNav() {
   const [isOpen, setIsOpen] = useState(false);
 
-  useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "unset";
-    }
+  const handleToggle = () => setIsOpen((prev) => !prev);
+  const handleClose = () => setIsOpen(false);
 
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? "hidden" : "unset";
     return () => {
       document.body.style.overflow = "unset";
     };
@@ -48,12 +43,7 @@ export const MobileNav = memo(function MobileNav() {
   return (
     <>
       <div className="absolute top-3 right-3 z-40 md:hidden">
-        <Button
-          size="icon"
-          variant="ghost"
-          onClick={() => setIsOpen(!isOpen)}
-          asChild
-        >
+        <Button size="icon" variant="ghost" onClick={handleToggle} asChild>
           <Menu size={40} />
         </Button>
       </div>
@@ -63,22 +53,13 @@ export const MobileNav = memo(function MobileNav() {
           <div className="fixed inset-0 bg-white/80" />
           <nav className="relative z-50 flex h-dvh w-screen flex-col items-center justify-center">
             <div className="fixed top-3 right-3">
-              <Button
-                size="icon"
-                variant="ghost"
-                onClick={() => setIsOpen(false)}
-                asChild
-              >
+              <Button size="icon" variant="ghost" onClick={handleClose} asChild>
                 <X size={40} />
               </Button>
             </div>
             <ul className="flex flex-col items-center gap-8">
               {NAV_DATA.map((nav) => (
-                <NavItem
-                  key={nav.href}
-                  {...nav}
-                  onClose={() => setIsOpen(false)}
-                />
+                <NavItem key={nav.href} {...nav} onClose={handleClose} />
               ))}
             </ul>
           </nav>
