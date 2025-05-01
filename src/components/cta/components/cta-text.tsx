@@ -5,13 +5,13 @@ export default function CtaText() {
 
   return (
     <>
-      <h2 className="text-brand-primary text-xl/normal">
+      <h2 className="text-brand-primary text-xl/normal font-medium tracking-wide">
         <div>
-          <span className="text-2xl/normal text-red-500">
+          <span className="text-2xl/normal font-semibold text-red-500">
             {title.highlight.days}
           </span>
           {title.text[0]}
-          <span className="align-[-2px] text-3xl/normal text-red-500">
+          <span className="align-[-2px] text-3xl/normal font-semibold text-red-500">
             {title.highlight.hour}
           </span>
           {title.text[1]}
