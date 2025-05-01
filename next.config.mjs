@@ -7,6 +7,14 @@ const withBundleAnalyzer = bundleAnalyzer({
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   /* config options here */
+  turbopack: {
+    resolveAlias: {
+      //   add aliases as needed
+    },
+    resolveExtensions: [".tsx", ".ts", ".jsx", ".js", ".json"],
+  },
 };
 
-export default withBundleAnalyzer(nextConfig);
+export default process.env.ANALYZE === "true"
+  ? withBundleAnalyzer(nextConfig)
+  : nextConfig;
