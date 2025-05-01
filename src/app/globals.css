@@ -111,6 +111,26 @@
   /* brand color */
   --color-brand-primary: #6f635d;
   --color-brand-secondary: #f4f3f2;
+  --color-brand-accent: var(--color-orange-400);
+
+  /* animation */
+  --animate-scroll: scroll 2s cubic-bezier(0.4, 0, 0.2, 1) 0s infinite normal;
+
+  /* keyframes */
+  @keyframes scroll {
+    0% {
+      height: 40px;
+    }
+    30% {
+      height: 80px;
+    }
+    60% {
+      height: 40px;
+    }
+    100% {
+      height: 40px;
+    }
+  }
 }
 
 @layer base {
