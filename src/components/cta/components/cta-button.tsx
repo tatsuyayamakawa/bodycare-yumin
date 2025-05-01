@@ -4,6 +4,8 @@ import { Button } from "../../ui/button";
 import { CTA_DATA } from "../data";
 
 export default function CtaButton() {
+  const { button } = CTA_DATA;
+
   return (
     <Button
       variant="default"
@@ -13,7 +15,7 @@ export default function CtaButton() {
     >
       <a href={CTA_DATA.button.url}>
         <MoveRight className="mr-2 h-5 w-5" />
-        {CTA_DATA.button.text}
+        {button.text}
       </a>
     </Button>
   );
