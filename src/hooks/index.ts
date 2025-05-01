@@ -1,2 +1,3 @@
-export type { ScrollState } from "@/hooks/types";
-export { useScrollDirection } from "@/hooks/useScrollDirection";
+export type { ExtendedImageProps, ScrollState } from "./types";
+export { useScrollDirection } from "./useScrollDirection";
+export { useSwitchImage } from "./useSwitchImage";
