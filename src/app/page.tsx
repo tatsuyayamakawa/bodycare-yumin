@@ -1,6 +1,7 @@
 import Cta from "@/components/cta";
 import CustomerVoice from "@/components/customer-voice";
 import Empathy from "@/components/empathy";
+import Faq from "@/components/faq";
 import FlowChart from "@/components/flow-chart";
 import Hero from "@/components/hero";
 import Price from "@/components/price";
@@ -18,6 +19,7 @@ export default function Home() {
       <FlowChart />
       <Profile />
       <Price />
+      <Faq />
     </>
   );
 }
