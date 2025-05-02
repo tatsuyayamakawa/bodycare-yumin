@@ -1,3 +1,4 @@
+import Access from "@/components/access";
 import Cta from "@/components/cta";
 import CustomerVoice from "@/components/customer-voice";
 import Empathy from "@/components/empathy";
@@ -20,6 +21,7 @@ export default function Home() {
       <Profile />
       <Price />
       <Faq />
+      <Access />
     </>
   );
 }
