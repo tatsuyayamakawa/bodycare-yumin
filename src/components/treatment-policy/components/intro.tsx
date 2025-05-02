@@ -13,7 +13,7 @@ export default function Intro() {
         機械を使わない安心安全の整体です
       </h3>
       <div className="text-sm/normal md:text-center md:text-base/normal lg:text-lg/normal [&>p]:mb-4 lg:[&>p]:mb-6 [&>p:last-child]:mb-0">
-        <p>当院は山形県山形市に位置する「手もみ専門」の整体サロンです。</p>
+        <p>手もみ整体 癒眠は「手もみ専門」の整体サロンです。</p>
         <p>
           <span className="md:block">
             一軒家の一室でお客様同士が重ならないよう時間調整を行っており、

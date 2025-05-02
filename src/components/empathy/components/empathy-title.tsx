@@ -7,7 +7,7 @@ export default function EmpathyTitle() {
         をお持ちなら
       </div>
       <div className="pt-1 md:pt-2">
-        きっと当院が
+        きっと当サロンが
         <span className="text-brand-accent font-semibold">お役に立てます!</span>
       </div>
     </h3>
