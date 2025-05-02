@@ -13,7 +13,7 @@ export default function Introduction() {
           placeholder="blur"
           priority
           draggable={false}
-          className="pointer-events-none rounded-md"
+          className="pointer-events-none rounded-lg"
         />
       </div>
       <div className="w-full lg:w-[530px]">

@@ -15,8 +15,8 @@ export default function PriceCard({ price }: { price: MenuData }) {
       <span className="absolute right-3 bg-green-500 p-2 text-sm/normal font-medium text-white after:absolute after:top-full after:left-0 after:h-0 after:w-0 after:border-x-[23px] after:border-b-[6px] after:border-solid after:border-x-green-500 after:border-b-transparent after:content-['']">
         {price.time}
       </span>
-      <Card className="border-border rounded-md pt-0 shadow-xs">
-        <CardHeader className="rounded-t-md bg-neutral-200 py-5">
+      <Card className="border-border rounded-lg pt-0 shadow-xs">
+        <CardHeader className="rounded-t-lg bg-neutral-200 py-5">
           <CardTitle className="text-brand-primary text-center text-xl/normal font-semibold">
             {price.title}
           </CardTitle>
