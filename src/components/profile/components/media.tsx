@@ -1,3 +1,5 @@
+import { ExternalLinkIcon } from "lucide-react";
+
 import Heading from "../../heading";
 import media_01 from "../assets/media-image-01.png";
 import media_02 from "../assets/media-image-02.jpg";
@@ -68,6 +70,7 @@ export default function Media() {
               rel="noopener noreferrer"
             >
               {mediaData.link.text}
+              <ExternalLinkIcon className="h-4 w-4" />
             </a>
           </Button>
         </div>
