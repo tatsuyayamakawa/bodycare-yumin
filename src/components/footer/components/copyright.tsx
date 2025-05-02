@@ -1,10 +1,8 @@
 "use client";
 
-import { memo } from "react";
-
 import { useConfig } from "@/contexts/config-context";
 
-export const Copyright = memo(function Copyright() {
+export default function Copyright() {
   const { APP_NAME } = useConfig();
   const thisYear = new Date().getFullYear();
   const copyrightText = `© 2012 - ${thisYear} ${APP_NAME}`;
@@ -14,4 +12,4 @@ export const Copyright = memo(function Copyright() {
       <small className="text-muted-foreground text-sm">{copyrightText}</small>
     </div>
   );
-});
+}
