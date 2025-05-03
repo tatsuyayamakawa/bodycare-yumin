@@ -5,7 +5,7 @@ import { ConfigProvider } from "../contexts/config-context";
 
 import Footer from "@/components/footer";
 import Header from "@/components/header";
-import { allura, bebas, montserrat, notojp, zenmincho } from "@/lib/fonts";
+import { allura, bebas_neue, noto_sans_jp, zen_old_mincho } from "@/lib/fonts";
 
 import "./globals.css";
 
@@ -25,7 +25,7 @@ export default function RootLayout({
     <html lang="ja" suppressHydrationWarning>
       {gtmId && <GoogleTagManager gtmId={gtmId} />}
       <body
-        className={`${notojp.variable} ${zenmincho.variable} ${allura.variable} ${bebas.variable} ${montserrat.variable} font-notojp min-h-dvh antialiased`}
+        className={`${noto_sans_jp.variable} ${zen_old_mincho.variable} ${allura.variable} ${bebas_neue.variable} font-noto-sans-jp min-h-dvh antialiased`}
       >
         <ConfigProvider>
           <Header />

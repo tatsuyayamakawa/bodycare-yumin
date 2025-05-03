@@ -15,7 +15,7 @@ export default function HeroSymbol() {
         draggable={false}
         className="pointer-events-none relative opacity-25 xl:w-67.5"
       />
-      <h2 className="font-zenmincho text-brand-primary absolute z-10 font-normal tracking-widest [writing-mode:vertical-rl] md:text-sm/normal lg:text-2xl/normal xl:text-4xl/normal">
+      <h2 className="font-zen-old-mincho text-brand-primary absolute z-10 font-normal tracking-widest [writing-mode:vertical-rl] md:text-sm/normal lg:text-2xl/normal xl:text-4xl/normal">
         <div className="flex flex-col">
           {texts.map((text, index) => (
             <span

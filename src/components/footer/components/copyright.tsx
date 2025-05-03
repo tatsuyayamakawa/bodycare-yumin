@@ -9,7 +9,9 @@ export default function Copyright() {
 
   return (
     <div className="text-center">
-      <small className="text-muted-foreground text-sm">{copyrightText}</small>
+      <small className="text-muted-foreground text-sm/normal">
+        {copyrightText}
+      </small>
     </div>
   );
 }

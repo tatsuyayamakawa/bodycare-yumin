@@ -20,7 +20,7 @@ export default function Introduction() {
         <h2 className="text-brand-accent mb-2 text-2xl/normal font-medium lg:mb-6 lg:text-3xl/normal">
           {profileData.title}
         </h2>
-        <h3 className="font-zenmincho text-brand-primary mb-4 text-3xl/normal font-semibold lg:mb-12 lg:text-5xl/normal">
+        <h3 className="font-zen-old-mincho text-brand-primary mb-4 text-3xl/normal font-semibold lg:mb-12 lg:text-5xl/normal">
           {profileData.name}
         </h3>
         <h4 className="text-brand-primary mb-4 text-lg/normal font-medium lg:text-2xl/normal">

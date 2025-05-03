@@ -18,7 +18,7 @@ const HeroMobile = ({ className }: { className?: string }) => {
         draggable={false}
         className="pointer-events-none mt-15 h-[calc(100dvh-60px)] object-cover brightness-110"
       />
-      <h2 className="font-zenmincho text-shadow-accent-foreground absolute z-10 text-3xl/normal tracking-widest text-white [writing-mode:vertical-rl] text-shadow-2xs">
+      <h2 className="font-zen-old-mincho text-shadow-accent-foreground absolute z-10 text-3xl/normal tracking-widest text-white [writing-mode:vertical-rl] text-shadow-2xs">
         <div className="flex flex-col">
           {texts.map((text, index) => (
             <span key={index} className="nth-2:py-4 nth-3:mt-auto">

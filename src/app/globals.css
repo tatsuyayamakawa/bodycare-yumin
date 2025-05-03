@@ -99,19 +99,19 @@
   --breakpoint-2xl: 1400px;
 
   /* font */
-  --font-notojp: var(--font-notojp);
-  --font-zenmincho: var(--font-zenmincho);
+  --font-noto-sans-jp: var(--font-noto-sans-jp);
+  --font-zen-old-mincho: var(--font-zen-old-mincho);
   --font-allura: var(--font-allura);
   --font-bebas: var(--font-bebas);
-  --font-montserrat: var(--font-montserrat);
 
   /* overwrite color */
-  --color-foreground: #18181b;
+  --color-foreground: oklch(0.32 0 0);
 
   /* brand color */
-  --color-brand-primary: #6f635d;
-  --color-brand-secondary: #f4f3f2;
+  --color-brand-primary: oklch(0.51 0.0181 48.35);
+  --color-brand-secondary: oklch(0.96 0.0017 67.8);
   --color-brand-accent: var(--color-orange-400);
+  --color-brand-accent-2: var(--color-green-500);
 
   /* animation */
   --animate-scroll: scroll 2s cubic-bezier(0.4, 0, 0.2, 1) 0s infinite normal;

@@ -13,7 +13,7 @@ export default function FlowChartContent() {
           }`}
         >
           <h2
-            className={`font-zenmincho text-brand-primary order-1 col-span-1 mb-6 text-3xl/normal font-semibold md:col-span-2 md:text-center lg:col-span-1 lg:mb-12 lg:text-5xl/normal ${
+            className={`font-zen-old-mincho text-brand-primary order-1 col-span-1 mb-6 text-3xl/normal font-bold md:col-span-2 md:text-center lg:col-span-1 lg:mb-12 lg:text-5xl/normal ${
               section.reverse
                 ? "lg:col-start-1 lg:col-end-2"
                 : "lg:col-start-2 lg:col-end-3"

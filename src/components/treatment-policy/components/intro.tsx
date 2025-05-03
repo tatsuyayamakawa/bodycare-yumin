@@ -9,7 +9,7 @@ export default function Intro() {
           効果のある施術を行います
         </span>
       </h2>
-      <h3 className="mx-auto my-6 w-fit text-lg/normal font-semibold after:-mt-[8px] after:block after:content-[''] after:[border-top:6px_solid_#FB923C] md:my-[50px] md:text-4xl/normal md:after:-mt-[6px] md:after:[border-top:12px_solid_#FB923C] lg:text-5xl/normal">
+      <h3 className="mx-auto my-6 w-fit text-lg/normal font-semibold after:-mt-[4px] after:block after:rounded-full after:content-[''] after:[border-top:6px_solid_#FB923C] md:my-[50px] md:text-4xl/normal md:after:-mt-[6px] md:after:[border-top:12px_solid_#FB923C] lg:text-5xl/normal">
         機械を使わない安心安全の整体です
       </h3>
       <div className="text-sm/normal md:text-center md:text-base/normal lg:text-lg/normal [&>p]:mb-4 lg:[&>p]:mb-6 [&>p:last-child]:mb-0">

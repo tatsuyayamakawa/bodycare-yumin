@@ -24,7 +24,7 @@ export default function AccessInfo() {
         </div>
         <div className="text-brand-primary mb-3 flex flex-row items-center">
           <PhoneCall size={25} fill="#71645D" stroke="0" className="mr-3" />
-          <div className="font-zenmincho text-2xl/normal font-bold tracking-widest lg:text-3xl/normal">
+          <div className="font-zen-old-mincho text-2xl/normal font-bold tracking-widest lg:text-3xl/normal">
             {PHONE_NUMBER}
           </div>
         </div>
