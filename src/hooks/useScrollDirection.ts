@@ -23,7 +23,6 @@ export function useScrollDirection(): ScrollState {
 
       const newShadowVisible = currentScrollY > 0;
 
-      // If there are no changes, return the previous state to prevent re-rendering.
       if (
         newDirection === prevState.scrollDirection &&
         newShadowVisible === prevState.isHeaderShadowVisible

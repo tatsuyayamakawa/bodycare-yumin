@@ -1,13 +1,13 @@
-import Access from "@/components/access";
-import Cta from "@/components/cta";
-import CustomerVoice from "@/components/customer-voice";
-import Empathy from "@/components/empathy";
-import Faq from "@/components/faq";
-import FlowChart from "@/components/flow-chart";
-import Hero from "@/components/hero";
-import Price from "@/components/price";
-import Profile from "@/components/profile";
-import TreatmentPolicy from "@/components/treatment-policy";
+import Access from "@/components/features/access";
+import CustomerVoice from "@/components/features/customer-voice";
+import Faq from "@/components/features/faq";
+import FlowChart from "@/components/features/flow-chart";
+import Price from "@/components/features/price";
+import Profile from "@/components/features/profile";
+import TreatmentPolicy from "@/components/features/treatment-policy";
+import Cta from "@/components/home/cta";
+import Empathy from "@/components/home/empathy";
+import Hero from "@/components/home/hero";
 
 export default function Home() {
   return (

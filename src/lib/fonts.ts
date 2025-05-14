@@ -10,6 +10,7 @@ export const noto_sans_jp = Noto_Sans_JP({
   subsets: ["latin"],
   weight: ["400", "500", "600"],
   display: "swap",
+  preload: true,
 });
 
 export const zen_old_mincho = Zen_Old_Mincho({
@@ -17,6 +18,7 @@ export const zen_old_mincho = Zen_Old_Mincho({
   subsets: ["latin"],
   weight: ["400", "700"],
   display: "swap",
+  preload: true,
 });
 
 export const allura = Allura({
@@ -24,6 +26,7 @@ export const allura = Allura({
   subsets: ["latin"],
   weight: ["400"],
   display: "swap",
+  preload: true,
 });
 
 export const bebas_neue = Bebas_Neue({
@@ -31,4 +34,5 @@ export const bebas_neue = Bebas_Neue({
   subsets: ["latin"],
   weight: ["400"],
   display: "swap",
+  preload: true,
 });
