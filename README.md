@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 手もみ整体 癒眠
 
-## Getting Started
+手もみ整体 癒眠の公式Webサイトです。
 
-First, run the development server:
+このプロジェクトは [Next.js](https://nextjs.org) を使用して構築されています。
+
+## 技術スタック
+
+- **フレームワーク**: [Next.js](https://nextjs.org) 15.3.1
+- **言語**: [TypeScript](https://www.typescriptlang.org/)
+- **スタイリング**: [Tailwind CSS](https://tailwindcss.com/) v4
+- **UIコンポーネント**: [shadcn/ui](https://ui.shadcn.com/)
+- **フォーム処理**: [React Hook Form](https://react-hook-form.com/) + [Zod](https://zod.dev/)
+- **地図表示**: [@vis.gl/react-google-maps](https://github.com/visgl/react-google-maps)
+- **アイコン**: [Lucide React](https://lucide.dev/guide/packages/lucide-react)
+- **通知**: [Sonner](https://sonner.emilkowal.ski/)
+- **メール送信**: [Resend](https://resend.com/) + [@react-email/components](https://react.email/docs/introduction)
+- **パッケージマネージャー**: [Bun](https://bun.sh/)
+
+## 機能
+
+- レスポンシブデザイン
+- サービス紹介
+- アクセス情報（Googleマップ統合）
+- オンライン予約システム
+- お問い合わせフォーム
+- 営業カレンダー
+
+## 開発環境のセットアップ
+
+1. リポジトリのクローン:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone [https://github.com/tatsuyayamakawa/bodycare-yumin.git]
+cd bodycare-yumin
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. 依存関係のインストール:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+bun install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+3. 環境変数の設定:
 
-## Learn More
+`.env.local`ファイルを作成し、必要な環境変数を設定してください。
 
-To learn more about Next.js, take a look at the following resources:
+```
+NEXT_PUBLIC_GOOGLE_MAPS_API_KEY=your_google_maps_api_key
+RESEND_API_KEY=your_resend_api_key
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+4. 開発サーバーの起動:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+bun run dev
+```
 
-## Deploy on Vercel
+[http://localhost:3000](http://localhost:3000)をブラウザで開いて結果を確認できます。
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 利用可能なスクリプト
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `bun run dev` - 開発サーバーを起動
+- `bun run build` - プロダクション用ビルドを作成
+- `bun run start` - ビルドされたアプリケーションを起動
+- `bun run lint` - ESLintでコード検証を実行
+- `bun run format` - Prettierでコードをフォーマット
+- `bun run type-check` - TypeScriptの型チェックを実行
+- `bun run check` - lint と type-check を実行
+- `bun run clean` - ビルドキャッシュをクリア
+- `bun run analyze` - バンドル分析を実行
+
+&copy; 2012 - 2025 bodycare-yumin.com All rights reserved.
