@@ -30,9 +30,26 @@ export function MobileNav() {
   const handleClose = () => setIsOpen(false);
 
   useEffect(() => {
-    document.body.style.overflow = isOpen ? "hidden" : "unset";
+    // 現在のスクロール位置を保存
+    const scrollY = window.scrollY;
+
+    if (isOpen) {
+      // ヘッダーが表示される前の位置を記録
+      document.body.style.position = "fixed";
+      document.body.style.top = `-${scrollY}px`;
+      document.body.style.width = "100%";
+    } else {
+      // ヘッダーが閉じられたら元の位置に戻す
+      document.body.style.position = "";
+      document.body.style.top = "";
+      document.body.style.width = "";
+      window.scrollTo(0, scrollY);
+    }
+
     return () => {
-      document.body.style.overflow = "unset";
+      document.body.style.position = "";
+      document.body.style.top = "";
+      document.body.style.width = "";
     };
   }, [isOpen]);
 
@@ -59,7 +76,7 @@ export function MobileNav() {
               ))}
             </ul>
             <div className="fixed bottom-5 left-1/2 -translate-x-1/2">
-              <Link href="/" onClick={() => setIsOpen(false)}>
+              <Link href="/" onClick={handleClose}>
                 <Button size="lg" variant="outline">
                   ホームページ
                 </Button>
