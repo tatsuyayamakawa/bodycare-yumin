@@ -30,26 +30,17 @@ export function MobileNav() {
   const handleClose = () => setIsOpen(false);
 
   useEffect(() => {
-    // 現在のスクロール位置を保存
-    const scrollY = window.scrollY;
-
     if (isOpen) {
-      // ヘッダーが表示される前の位置を記録
-      document.body.style.position = "fixed";
-      document.body.style.top = `-${scrollY}px`;
-      document.body.style.width = "100%";
+      // メニュー表示時は本文のスクロールを無効にする
+      document.body.style.overflow = "hidden";
     } else {
-      // ヘッダーが閉じられたら元の位置に戻す
-      document.body.style.position = "";
-      document.body.style.top = "";
-      document.body.style.width = "";
-      window.scrollTo(0, scrollY);
+      // メニュー非表示時は本文のスクロールを有効にする
+      document.body.style.overflow = "";
     }
 
     return () => {
-      document.body.style.position = "";
-      document.body.style.top = "";
-      document.body.style.width = "";
+      // クリーンアップ時にスクロールを有効に戻す
+      document.body.style.overflow = "";
     };
   }, [isOpen]);
 
