@@ -5,7 +5,7 @@ export default function EmpathyTitle() {
     <div>
       <h3 className="text-brand-primary mt-12 text-center text-lg/normal font-semibold md:text-2xl/normal lg:text-3xl/normal xl:mt-24 xl:text-4xl/normal">
         <div className="relative">
-          もしあなたがそのような
+          もしそのような
           <span className="text-brand-accent relative inline-block font-semibold">
             悩み
             <Sparkle
