@@ -8,25 +8,22 @@ import { texts } from "../constants";
 
 import { cn } from "@/lib/utils";
 
-export default function HeroMobile({ className }: { className?: string }) {
-  const [heroHeight, setHeroHeight] = useState("100vh");
+function useInitialHeroHeight(): string {
+  const [heroHeight, setHeroHeight] = useState<string>("calc(100dvh - 60px)");
 
   useEffect(() => {
-    // 初回レンダリング時に一度だけ高さを計算して固定
-    const calculateHeight = () => {
-      const height = window.innerHeight;
-      setHeroHeight(`${height}px`);
-    };
-
-    calculateHeight();
-
-    // 向き変更時のみ再計算
-    window.addEventListener("orientationchange", calculateHeight);
-
-    return () => {
-      window.removeEventListener("orientationchange", calculateHeight);
-    };
+    // 初回レンダリング時にのみ高さを計算
+    // CSS変数の100dvhはモバイルでスクロール時に変動することがあるため
+    // window.innerHeightで固定値をピクセル単位で取得して再計算を防止
+    const height = window.innerHeight;
+    setHeroHeight(`${height}px`);
+    // 空の依存配列で初回レンダリング時のみ実行
   }, []);
+  return heroHeight;
+}
+
+export default function HeroMobile({ className }: { className?: string }) {
+  const heroHeight = useInitialHeroHeight();
 
   return (
     <section className={cn("relative w-dvw overflow-hidden", className)}>
