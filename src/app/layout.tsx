@@ -60,7 +60,7 @@ export default function RootLayout({
         className={`${noto_sans_jp.variable} ${zen_old_mincho.variable} ${allura.variable} ${bebas_neue.variable} font-noto-sans-jp min-h-dvh antialiased`}
       >
         <Header />
-        {children}
+        <main>{children}</main>
         <Footer />
       </body>
     </html>
