@@ -1,36 +1,14 @@
-"use client";
-
 import Image from "next/image";
-import { useEffect, useState } from "react";
 
 import hero_image from "../assets/hero-image.png";
 import { texts } from "../constants";
 
 import { cn } from "@/lib/utils";
 
-function useInitialHeroHeight(): string {
-  const [heroHeight, setHeroHeight] = useState<string>("calc(100dvh - 60px)");
-
-  useEffect(() => {
-    // 初回レンダリング時にのみ高さを計算
-    // CSS変数の100dvhはモバイルでスクロール時に変動することがあるため
-    // window.innerHeightで固定値をピクセル単位で取得して再計算を防止
-    const height = window.innerHeight;
-    setHeroHeight(`${height}px`);
-    // 空の依存配列で初回レンダリング時のみ実行
-  }, []);
-  return heroHeight;
-}
-
 export default function HeroMobile({ className }: { className?: string }) {
-  const heroHeight = useInitialHeroHeight();
-
   return (
     <section className={cn("relative w-dvw overflow-hidden", className)}>
-      <div
-        className="relative mt-[calc(var(--spacing-md)+12px)] flex items-center justify-center"
-        style={{ height: `calc(${heroHeight} - 60px)` }}
-      >
+      <div className="relative mt-[calc(var(--spacing-md)+12px)] flex h-[calc(100svh-60px)] items-center justify-center">
         <div className="absolute inset-0 w-[250%] overflow-hidden">
           <div className="animate-slow-pan-horizontal h-full w-full">
             <Image
