@@ -17,7 +17,7 @@ export const faqData: FaqData = {
     {
       question: "支払い方法どうなりますか？",
       answer:
-        'こちらの支払い方法をご利用いただけます。<ul class="list-disc mt-4 pl-6 space-y-2 text-sm/normal"><li>現金</li><li>クレジットカード（VISA、MASTER CARD、AMERICAN EXPRESS、JCB）</li><li>QRコード決済（PayPay、楽天ペイ）</li><li>電子マネー（iD）</li></ul>',
+        'こちらの支払い方法をご利用いただけます。<ul class="list-disc mt-4 pl-6 space-y-2 text-sm/normal"><li>現金</li><li>クレジットカード（VISA、MASTER CARD、AMERICAN EXPRESS、JCB）</li><li>QRコード決済（PayPay、楽天ペイ、ベニpay）</li><li>電子マネー（iD）</li></ul>',
     },
     {
       question: "どのくらいの間隔で通えばよいですか？",
