@@ -357,7 +357,8 @@ CREATE POLICY "Authenticated users can view booking settings"
 -- ============================================
 
 -- 今後の予約一覧ビュー
-CREATE OR REPLACE VIEW upcoming_bookings AS
+CREATE OR REPLACE VIEW upcoming_bookings
+WITH (security_invoker = true) AS
 SELECT
   b.*,
   c.name as customer_name,
@@ -370,7 +371,8 @@ WHERE b.booking_datetime >= NOW()
 ORDER BY b.booking_datetime ASC;
 
 -- 過去の予約一覧ビュー
-CREATE OR REPLACE VIEW past_bookings AS
+CREATE OR REPLACE VIEW past_bookings
+WITH (security_invoker = true) AS
 SELECT
   b.*,
   c.name as customer_name,
@@ -489,8 +491,24 @@ CREATE TABLE IF NOT EXISTS schema_versions (
   applied_at TIMESTAMPTZ DEFAULT NOW()
 );
 
+-- RLS有効化
+ALTER TABLE schema_versions ENABLE ROW LEVEL SECURITY;
+
+-- 認証済みユーザーは閲覧可能
+CREATE POLICY "Authenticated users can view schema versions"
+  ON schema_versions FOR SELECT
+  TO authenticated
+  USING (true);
+
+-- サービスロールのみが挿入可能
+CREATE POLICY "Service role can insert schema versions"
+  ON schema_versions FOR INSERT
+  TO service_role
+  WITH CHECK (true);
+
 INSERT INTO schema_versions (version, description) VALUES
-  ('1.0.0', '初期スキーマ作成 - 予約システム基盤');
+  ('1.0.0', '初期スキーマ作成 - 予約システム基盤')
+ON CONFLICT DO NOTHING;
 
 -- ============================================
 -- 完了
