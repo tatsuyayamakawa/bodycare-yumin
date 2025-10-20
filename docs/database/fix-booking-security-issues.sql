@@ -107,6 +107,170 @@ WHERE tablename IN ('schema_versions', 'upcoming_bookings', 'past_bookings')
 ORDER BY tablename, policyname;
 
 -- ============================================
+-- 3. ファンクションのsearch_path設定
+-- ============================================
+-- 問題: 全てのファンクションでsearch_pathが設定されていない
+-- 解決: SET search_path = public を追加（セキュリティリスク軽減）
+-- ============================================
+
+-- update_customers_updated_at
+DROP FUNCTION IF EXISTS update_customers_updated_at() CASCADE;
+CREATE OR REPLACE FUNCTION update_customers_updated_at()
+RETURNS TRIGGER
+SET search_path = public
+AS $$
+BEGIN
+  NEW.updated_at = NOW();
+  RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+CREATE TRIGGER trigger_update_customers_updated_at
+  BEFORE UPDATE ON customers
+  FOR EACH ROW
+  EXECUTE FUNCTION update_customers_updated_at();
+
+-- update_bookings_updated_at
+DROP FUNCTION IF EXISTS update_bookings_updated_at() CASCADE;
+CREATE OR REPLACE FUNCTION update_bookings_updated_at()
+RETURNS TRIGGER
+SET search_path = public
+AS $$
+BEGIN
+  NEW.updated_at = NOW();
+  RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+CREATE TRIGGER trigger_update_bookings_updated_at
+  BEFORE UPDATE ON bookings
+  FOR EACH ROW
+  EXECUTE FUNCTION update_bookings_updated_at();
+
+-- update_business_hours_updated_at
+DROP FUNCTION IF EXISTS update_business_hours_updated_at() CASCADE;
+CREATE OR REPLACE FUNCTION update_business_hours_updated_at()
+RETURNS TRIGGER
+SET search_path = public
+AS $$
+BEGIN
+  NEW.updated_at = NOW();
+  RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+CREATE TRIGGER trigger_update_business_hours_updated_at
+  BEFORE UPDATE ON business_hours
+  FOR EACH ROW
+  EXECUTE FUNCTION update_business_hours_updated_at();
+
+-- update_booking_slots_updated_at
+DROP FUNCTION IF EXISTS update_booking_slots_updated_at() CASCADE;
+CREATE OR REPLACE FUNCTION update_booking_slots_updated_at()
+RETURNS TRIGGER
+SET search_path = public
+AS $$
+BEGIN
+  NEW.updated_at = NOW();
+  RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+CREATE TRIGGER trigger_update_booking_slots_updated_at
+  BEFORE UPDATE ON booking_slots
+  FOR EACH ROW
+  EXECUTE FUNCTION update_booking_slots_updated_at();
+
+-- update_booking_settings_updated_at
+DROP FUNCTION IF EXISTS update_booking_settings_updated_at() CASCADE;
+CREATE OR REPLACE FUNCTION update_booking_settings_updated_at()
+RETURNS TRIGGER
+SET search_path = public
+AS $$
+BEGIN
+  NEW.updated_at = NOW();
+  RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+CREATE TRIGGER trigger_update_booking_settings_updated_at
+  BEFORE UPDATE ON booking_settings
+  FOR EACH ROW
+  EXECUTE FUNCTION update_booking_settings_updated_at();
+
+-- generate_booking_slots
+DROP FUNCTION IF EXISTS generate_booking_slots(DATE, INTEGER);
+CREATE OR REPLACE FUNCTION generate_booking_slots(
+  target_date DATE,
+  slot_duration INTEGER DEFAULT 30
+)
+RETURNS TABLE (
+  slot_time TIMESTAMPTZ,
+  is_available BOOLEAN
+)
+SET search_path = public
+AS $$
+DECLARE
+  business_hour RECORD;
+  current_slot TIMESTAMPTZ;
+  end_slot TIMESTAMPTZ;
+BEGIN
+  SELECT * INTO business_hour
+  FROM business_hours
+  WHERE day_of_week = EXTRACT(DOW FROM target_date)::INTEGER;
+
+  IF NOT business_hour.is_open OR EXISTS (
+    SELECT 1 FROM holidays WHERE date = target_date
+  ) THEN
+    RETURN;
+  END IF;
+
+  current_slot := target_date + business_hour.open_time;
+  end_slot := target_date + business_hour.close_time;
+
+  WHILE current_slot < end_slot LOOP
+    RETURN QUERY
+    SELECT
+      current_slot,
+      NOT EXISTS (
+        SELECT 1 FROM bookings
+        WHERE booking_datetime <= current_slot
+          AND end_datetime > current_slot
+          AND status IN ('pending', 'accepted')
+      );
+
+    current_slot := current_slot + (slot_duration || ' minutes')::INTERVAL;
+  END LOOP;
+END;
+$$ LANGUAGE plpgsql;
+
+-- is_slot_available
+DROP FUNCTION IF EXISTS is_slot_available(TIMESTAMPTZ, INTEGER);
+CREATE OR REPLACE FUNCTION is_slot_available(
+  check_datetime TIMESTAMPTZ,
+  duration_minutes INTEGER
+)
+RETURNS BOOLEAN
+SET search_path = public
+AS $$
+DECLARE
+  end_time TIMESTAMPTZ;
+BEGIN
+  end_time := check_datetime + (duration_minutes || ' minutes')::INTERVAL;
+
+  RETURN NOT EXISTS (
+    SELECT 1 FROM bookings
+    WHERE status IN ('pending', 'accepted')
+      AND (
+        (booking_datetime <= check_datetime AND end_datetime > check_datetime)
+        OR (booking_datetime < end_time AND end_datetime >= end_time)
+        OR (booking_datetime >= check_datetime AND end_datetime <= end_time)
+      )
+  );
+END;
+$$ LANGUAGE plpgsql;
+
+-- ============================================
 -- 完了
 -- ============================================
 -- 全てのセキュリティ問題が修正されました
