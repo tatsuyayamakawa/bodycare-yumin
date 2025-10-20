@@ -55,16 +55,17 @@ COMMENT ON VIEW past_bookings IS '過去の予約一覧（SECURITY INVOKER）';
 -- 解決: RLSを有効化し、適切なポリシーを設定
 -- ============================================
 
--- RLSを有効化
+-- RLSを有効化（既に有効な場合はスキップされる）
 ALTER TABLE schema_versions ENABLE ROW LEVEL SECURITY;
 
--- 全ての認証済みユーザーが閲覧可能（バージョン情報は公開情報）
+-- 既存のポリシーを削除してから再作成
+DROP POLICY IF EXISTS "Authenticated users can view schema versions" ON schema_versions;
 CREATE POLICY "Authenticated users can view schema versions"
   ON schema_versions FOR SELECT
   TO authenticated
   USING (true);
 
--- サービスロールのみが挿入可能（マイグレーション用）
+DROP POLICY IF EXISTS "Service role can insert schema versions" ON schema_versions;
 CREATE POLICY "Service role can insert schema versions"
   ON schema_versions FOR INSERT
   TO service_role
