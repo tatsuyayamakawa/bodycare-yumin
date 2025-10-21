@@ -4,9 +4,9 @@
  * 予約の作成・管理を行います
  */
 
-import { squareClient, SQUARE_LOCATION_ID } from './client';
-import type { SquareBooking, BookingStatus } from './types';
-import { handleSquareError } from './utils';
+import { SQUARE_LOCATION_ID, squareClient } from "./client";
+import type { BookingStatus, SquareBooking } from "./types";
+import { handleSquareError } from "./utils";
 
 /**
  * 新しい予約を作成
@@ -24,7 +24,7 @@ export async function createBooking(params: {
     const { customerId, serviceVariationId, startAt, customerNote } = params;
 
     if (!SQUARE_LOCATION_ID) {
-      throw new Error('SQUARE_LOCATION_ID is not configured');
+      throw new Error("SQUARE_LOCATION_ID is not configured");
     }
 
     const { result } = await squareClient.bookingsApi.createBooking({
@@ -38,7 +38,7 @@ export async function createBooking(params: {
     });
 
     if (!result.booking) {
-      throw new Error('予約の作成に失敗しました');
+      throw new Error("予約の作成に失敗しました");
     }
 
     const booking = result.booking;
@@ -56,7 +56,7 @@ export async function createBooking(params: {
       updatedAt: booking.updatedAt!,
     };
   } catch (error) {
-    console.error('Failed to create booking:', error);
+    console.error("Failed to create booking:", error);
     throw new Error(handleSquareError(error));
   }
 }
@@ -67,9 +67,12 @@ export async function createBooking(params: {
  * @param bookingId - Square予約ID
  * @returns 予約情報
  */
-export async function getBooking(bookingId: string): Promise<SquareBooking | null> {
+export async function getBooking(
+  bookingId: string,
+): Promise<SquareBooking | null> {
   try {
-    const { result } = await squareClient.bookingsApi.retrieveBooking(bookingId);
+    const { result } =
+      await squareClient.bookingsApi.retrieveBooking(bookingId);
 
     if (!result.booking) {
       return null;
@@ -90,7 +93,7 @@ export async function getBooking(bookingId: string): Promise<SquareBooking | nul
       updatedAt: booking.updatedAt!,
     };
   } catch (error) {
-    console.error('Failed to get booking:', error);
+    console.error("Failed to get booking:", error);
     throw new Error(handleSquareError(error));
   }
 }
@@ -104,7 +107,7 @@ export async function getBooking(bookingId: string): Promise<SquareBooking | nul
  */
 export async function cancelBooking(
   bookingId: string,
-  version: number
+  version: number,
 ): Promise<SquareBooking> {
   try {
     const { result } = await squareClient.bookingsApi.cancelBooking(bookingId, {
@@ -112,7 +115,7 @@ export async function cancelBooking(
     });
 
     if (!result.booking) {
-      throw new Error('予約のキャンセルに失敗しました');
+      throw new Error("予約のキャンセルに失敗しました");
     }
 
     const booking = result.booking;
@@ -130,7 +133,7 @@ export async function cancelBooking(
       updatedAt: booking.updatedAt!,
     };
   } catch (error) {
-    console.error('Failed to cancel booking:', error);
+    console.error("Failed to cancel booking:", error);
     throw new Error(handleSquareError(error));
   }
 }
@@ -148,7 +151,7 @@ export async function updateBooking(
     version: number;
     startAt?: string;
     customerNote?: string;
-  }
+  },
 ): Promise<SquareBooking> {
   try {
     const { version, startAt, customerNote } = params;
@@ -162,7 +165,7 @@ export async function updateBooking(
     });
 
     if (!result.booking) {
-      throw new Error('予約の更新に失敗しました');
+      throw new Error("予約の更新に失敗しました");
     }
 
     const booking = result.booking;
@@ -180,7 +183,7 @@ export async function updateBooking(
       updatedAt: booking.updatedAt!,
     };
   } catch (error) {
-    console.error('Failed to update booking:', error);
+    console.error("Failed to update booking:", error);
     throw new Error(handleSquareError(error));
   }
 }
@@ -197,11 +200,11 @@ export async function listCustomerBookings(
   params?: {
     startAtMin?: string;
     startAtMax?: string;
-  }
+  },
 ): Promise<SquareBooking[]> {
   try {
     if (!SQUARE_LOCATION_ID) {
-      throw new Error('SQUARE_LOCATION_ID is not configured');
+      throw new Error("SQUARE_LOCATION_ID is not configured");
     }
 
     const { result } = await squareClient.bookingsApi.listBookings({
@@ -229,7 +232,7 @@ export async function listCustomerBookings(
       updatedAt: booking.updatedAt!,
     }));
   } catch (error) {
-    console.error('Failed to list customer bookings:', error);
+    console.error("Failed to list customer bookings:", error);
     throw new Error(handleSquareError(error));
   }
 }

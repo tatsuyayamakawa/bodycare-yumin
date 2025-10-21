@@ -1,6 +1,7 @@
 "use client";
 
 import {
+  Calendar,
   Computer,
   FileText,
   Gauge,
@@ -34,6 +35,7 @@ import { cn } from "@/lib/utils/cn";
 // アイコン名からコンポーネントへのマッピング
 const iconMap = {
   Gauge,
+  Calendar,
   FileText,
   PlusCircle,
   Search,
