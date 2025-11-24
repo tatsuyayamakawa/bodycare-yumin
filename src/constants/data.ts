@@ -24,5 +24,5 @@ export const appInfo: AppInfo = {
 // 連絡先情報
 export const contactInfo: ContactInfo = {
   phoneNumber: "080-6294-5177",
-  email: "info@bodycare-yumin.com",
+  email: "t.yamakawa0121@gmail.com",
 };
