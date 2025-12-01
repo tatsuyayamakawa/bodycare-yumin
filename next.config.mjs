@@ -7,6 +7,9 @@ const withBundleAnalyzer = bundleAnalyzer({
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   /* config options here */
+  images: {
+    unoptimized: true,
+  },
   turbopack: {
     resolveAlias: {
       //   add aliases as needed
